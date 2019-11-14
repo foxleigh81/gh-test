@@ -1,0 +1,77 @@
+Feature: User enters products which do not appear in the list on the Select product 2 page
+    Description:
+        Reference: BPL-1005A
+    
+    Background: Given the user has completed the PL-1005 steps
+
+    @BPL-1005A
+    Scenario: User is directed to the Enter Products 2 page
+        Given the user has been directed to the 'Enter Products 2' page
+        When page ' Enter Products 2' loads
+        Then they will see a 'Back' link
+        And they will see a 'Sign out' link
+        And they will see a sub header 'Vary a marketing authorisation'
+        And they will see a page header 'Enter products to be varied'
+        And they will see the mandatory 'Enter product name' text input box
+        And they will see the mandatory 'Enter authorisation number' text input box
+        And they will see a table with headers 'Product name', 'Authorisation number' and 'Action'
+        And they will see a 'Add this product' option
+        And they will see a 'Continue' option
+
+    @BPL-1005A-1
+    @TestData::KetaminePlus
+    Scenario: User who has previously selected a product, is directed to the Enter Products 2 page
+        Given the user has been directed to the 'Enter Products 2' page
+        And they have selected a product on the 'Product 2' page
+        When page 'Enter Products 2' loads
+        Then they will see a 'Back' link
+        And they will see a 'Sign out' link
+        And they will see a sub header 'Vary a marketing authorisation'
+        And they will see a page header 'Enter products to be varied'
+        And they will see the mandatory 'Enter product name' text input box
+        And they will see the mandatory 'Enter authorisation number' text input box
+        And they will see a table with headers 'Product name', 'Authorisation number' and 'Action'
+        And they will see a table with a row with values 'Ketamine Surprise' and '12345/1234' and a remove link
+        And they will see a 'Add this product' option
+        And they will see a 'Continue' option
+
+    @BPL-1005A-2
+    @TestData::KetaminePlus
+    Scenario: User enters product name and authorisation number
+        Given the user has been directed to the 'Enter Products 2' page
+        And they have entered a valid 'product name'
+        And they have entered a valid 'authorisation number'
+        When they select the 'Add this product' option
+        Then they will be directed back to the Enter products 2' page
+        And they will see a table with a row with values 'Ketamine Surprise' and '12345/1234' and a remove link
+
+    @BPL-1005A-3
+    Scenario: User adds at least two products
+        Given the user is on the 'Enter Products 2' page
+        And there are at least 2 'products' in the table
+        When they select 'Continue'
+        Then they will be directed to the 'Enter Variation Code' page
+
+    @BPL-1005A-4
+    Scenario: User enters either product name or authorisation number
+        Given the user has been directed to the 'Enter Products 2' page
+        And one or more mandatory fields are empty
+        When they select 'Add this product'
+        Then they will see an error message containing 'You must enter product name and authorisation number'
+        And they will not be able to continue
+
+    @BPL-1005A-5
+    Scenario: User who has not previously selected a product, enters one product only
+        Given the user has been directed to the 'Enter Products 2' page
+        And they have not selected a product on the 'Product 2' page
+        And they have not added at least 2 products on the 'Enter Products 2' page
+        When they select 'Continue'
+        Then they will see an error message containing 'You must add at least two products'
+        And they will not be able to continue
+
+    @BPL-1005A-6
+    Scenario: User removes a product
+        Given they can see a 'Remove' link
+        When they select 'Remove'
+        Then they will be directed back to the 'Enter Products 2' page
+        And the 'product' will no longer appear in the table
