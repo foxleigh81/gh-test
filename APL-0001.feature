@@ -6,7 +6,7 @@ Feature: User selects procedure type
     Background: Given the user has completed the GS-1 steps
 
     @APL-0001
-    Scenario: User directed to Procedure Type page 
+    Scenario: User directed to Procedure Type page Demo change
         Given the user has been directed to the 'Procedure type' page
         When page 'Procedure type' loads
         Then a page header 'Select procedure type'
