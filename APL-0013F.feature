@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IB Only submits the application
+Feature: User who has entered a valid code from Data Table IB Submits the application.
     Description:
         Reference: APL-0013F
         Jira: GS-21
