@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table II Only submits the a
     Description:
         Reference: APL-0015F
 
-    Background: Given the user has completed the PL-0015D steps
+    Background: Given the user has completed the GS-29 steps
 
     @APL-0015F
     Scenario: User is directed to the 'Declaration' page
