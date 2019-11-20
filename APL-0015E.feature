@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only changes the variation
     Description:
         Reference: APL-0015E
+        Jira: GS-30
 
-    Background: Given the user has completed the PL-0015D steps
+    Background: Given the user has completed the GS-29 steps
 
     @APL-0015E
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Confirm Change Variation' page 
