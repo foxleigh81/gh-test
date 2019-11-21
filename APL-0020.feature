@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type describes the proposed changes
     Description:
         Reference: APL-0020
+        Jira: GS-43
 
     Background: Given the user has completed the PL-0019 steps
 

@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table II Only submits the application
     Description:
         Reference: APL-0015F
+        Jira: GS-34
 
     Background: Given the user has completed the PL-0015D steps
 
