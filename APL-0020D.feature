@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     Description:
         Reference: APL-0020D
 
-    Background: Given the user has completed the PL-0020C steps
+    Background: Given the user has completed the GS-46 steps
 
     @APL-0020D
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and has selected IA variation type is directed to 'Check your answers' page 

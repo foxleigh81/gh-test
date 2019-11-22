@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB selects the variation type
     Description:
         Reference: APL-0018
+        Jira: GS-42
 
     Background: Given the user has completed the GS-6 steps
 
