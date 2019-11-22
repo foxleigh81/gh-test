@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     Description:
         Reference: APL-0020
 
-    Background: Given the user has completed the PL-0019 steps
+    Background: Given the user has completed the GS-39 steps
 
     @APL-0020
     Scenario: User directed to 'Describe Changes' page 
