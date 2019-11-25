@@ -8,39 +8,39 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected IA variation type is directed to the 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
         And they have entered a value from Data Table 'Data Table Z Only'
-        And they have selected Variation Type 'IA' on the MISSING VALUE page
-        When page 'Check Your Answers' loads
+        And they have selected Variation Type 'IA' 
+        When page 'Vary a marketing authorisation' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Check your answers before submitting'
-        And a section header 'Product Details'
-        And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed and a change link
-        And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed and a change link
-        And a table with a row with the list item 'Products' and the 'selected product' displayed and a change link
-        And a section header 'Variation Details'
-        And a table header 'Variation 1'
-        And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 
-        And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
-        And a table with a row with the list item 'Article 5' and the 'Article 5 answer' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
-        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
-        And a section header 'Supporting Documents' with a 'Change' link
-        And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the 'selection status' displayed 
-        And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
-        And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
-        And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
-        And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
-        And a table with a row with the list item Other Information' and the 'other information text' displayed 
-        And a section header 'Contact Details' with a 'Change' link
-        And a table with a row with the list item 'Contact name' and the 'entered contact name' displayed 
-        And a table with a row with the list item 'Purchase order number' and the 'entered purchase order number' displayed 
-        And a table with a row with the list item 'Contact number' and the 'entered contact number' displayed 
-        And a table with a row with the list item 'Contact email address' and the 'entered contact email address' displayed 
-        And a table with a row with the list item 'Invoice email address' and the 'entered invoice email address' displayed 
-        And a table with a row with the list item 'Further comments' and the 'further comments text'  displayed 
+        And a sub header 'Check your answers before submitting'
+        And a page header 'Product Details'
+        And a section header 'Procedure Type'
+        And a table with a row with the list item 'selected procedure type' and the 'Procedure Option' displayed and a change link
+        And a table with a row with the list item 'selected procedure option' and the 'Products' displayed and a change link
+        And a table with a row with the list item 'selected product' and the 'Variation Details' displayed and a change link
+        And a section header 'Variation 1'
+        And a table header 'Code'
+        And a table with a row with the list item '<Sub Code>' and the 'Description' displayed 
+        And a table with a row containing the list item 'Variation description' and the 'Variation Type' displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'selected variation type' and the 'Implementation Date' displayed and a change link
+        And a table with a row with the list item 'entered implementation Date' and the 'Article 5' displayed and a change link
+        And a table with a row with the list item 'Article 5 answer' and the 'Present' displayed and a change link
+        And a table with a row with the list item 'present situation text' and the Proposed' displayed and a change link
+        And a table with a row with the list item 'proposed change text' and the 'Supporting Documents' displayed and a change link
+        And a section header 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' with a 'Change' link
+        And a table with a row with the list item 'selection status' and the 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' displayed 
+        And a table with a row with the list item 'selection status' and the 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' displayed 
+        And a table with a row with the list item 'selection status' and the 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' displayed 
+        And a table with a row with the list item 'selection status' and the 'Omitted Documents' displayed 
+        And a table with a row with the list item 'omitted documents text' and the 'Other Information' displayed 
+        And a table with a row with the list item 'other information text' and the 'Contact Details' displayed 
+        And a section header 'Contact name' with a 'Change' link
+        And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
+        And a table with a row with the list item 'entered purchase order number' and the 'Contact number' displayed 
+        And a table with a row with the list item 'entered contact number' and the 'Contact email address' displayed 
+        And a table with a row with the list item 'entered contact email address' and the 'Invoice email address' displayed 
+        And a table with a row with the list item 'entered invoice email address' and the 'Further comments' displayed 
+        And a table with a row with the list item 'further comments text'  and the MISSING VALUE displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
         
