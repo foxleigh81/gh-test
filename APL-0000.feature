@@ -4,7 +4,7 @@ Feature: User starts the MA Variation process
         Jira: GS-1
 
     @APL-0000
-    Scenario: MA Starts
+    Scenario: MA Starts FFS Foxy Again
         Given the Public User is authenticated
         When the user has selected the 'MA Variation' option
         And the user has selected 'Start Now'
