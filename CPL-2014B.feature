@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IB Only Uploads dossier
+Feature: User who has entered a valid code from Data Table IA + IB Only Uploads dossier
     Description:
         Reference: CPL-2014B
 

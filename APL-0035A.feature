@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Description:
         Reference: APL-0035A
 
-    Background: Given the user has completed the PL-0035 steps
+    Background: Given the user has completed the GS-56 steps
 
     @APL-0035A
     Scenario: User directed to 'Supporting Documents' page 
