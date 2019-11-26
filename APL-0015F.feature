@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only submits the application
     Description:
         Reference: APL-0015F
+        Jira: GS-28
 
-    Background: Given the user has completed the PL-0015D steps
+    Background: Given the user has completed the GS-33 steps
 
     @APL-0015F
     Scenario: User is directed to the 'Declaration' page

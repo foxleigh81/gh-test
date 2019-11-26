@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type changes the variation
     Description:
         Reference: APL-0020E
+        Jira: GS-36
 
     Background: Given the user has completed the PL-0020D steps
 
@@ -11,8 +12,8 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         Then they will see a 'Back' link
         And a 'Sign out' link
         And a sub header 'Vary a marketing variation'
-        And a page header 'Are you sure you want to change variation: variation: variation:'
-        And they will see the 'Variation <Sub Code>' displayed 
+        And a page header 'Are you sure you want to change variation:'
+        And they will see the '<Sub Code>' displayed 
         And they will see a radio button option for 'Yes'
         And they will see a radio button option for 'No'
         And they will see a 'Continue' option

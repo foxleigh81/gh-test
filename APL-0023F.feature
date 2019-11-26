@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation type submits the application
     Description:
         Reference: APL-0023F
+        Jira: GS-44
 
     Background: Given the user has completed the PL-0023D steps
 

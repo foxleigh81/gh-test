@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation type confirms supporting documents
     Description:
         Reference: APL-0023A
+        Jira: GS-39
 
     Background: Given the user has completed the PL-0023 steps
 

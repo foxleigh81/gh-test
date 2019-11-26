@@ -1,14 +1,15 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type checks and is able to change answers
     Description:
         Reference: APL-0020D
+        Jira: GS-35
 
-    Background: Given the user has completed the PL-0020C steps
+    Background: Given the user has completed the GS-46 steps
 
     @APL-0020D
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and has selected IA variation type is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
         And they have entered a variation code from Data Table 'Data Table IA + IB'
-        And they have selected Variation Type 'IA' on the MISSING VALUE page
+        And they have selected Variation Type 'IA' 
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -32,7 +33,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
         And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
         And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
-        And a table with a row with the list item Other Information' and the 'other information text' displayed 
+        And a table with a row with the list item 'Other Information' and the 'other information text' displayed 
         And a section header 'Contact Details' with a 'Change' link
         And a table with a row with the list item 'Contact name' and the 'entered contact name' displayed 
         And a table with a row with the list item 'Purchase order number' and the 'entered purchase order number' displayed 

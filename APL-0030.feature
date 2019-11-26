@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only and has selected IA variation type answers the Article 5 question
     Description:
         Reference: APL-0030
+        Jira: GS-46
 
     Background: Given the user has completed the PL-0028 steps
 
