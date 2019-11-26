@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters application contact information
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB enters application contact information
     Description:
         Reference: DPL-4017
 
