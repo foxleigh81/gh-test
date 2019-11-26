@@ -16,7 +16,7 @@ Feature: User who has entered a valid code from Data Table IA Only views the App
         And a table with a row with the list item 'Products' and the 'selected product' displayed and a change link
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
-        And a table with a row containing the list item 'Variation 1' and the '<Sub Code>' displayed and a 'Remove variation' link 
+        And a table with a row containing the list item 'Variation 1' and the '<Sub Code>' displayed and the 'variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link

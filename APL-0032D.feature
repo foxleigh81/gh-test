@@ -2,13 +2,13 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Description:
         Reference: APL-0032D
 
-    Background: Given the user has completed the PL-0032C steps
+    Background: Given the user has completed the GS-51 steps
 
     @APL-0032D
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected IA variation type is directed to the 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
         And they have entered a value from Data Table 'Data Table Z Only'
-        And they have selected Variation Type 'IA' on the MISSING VALUE page
+        And they have selected Variation Type 'IA' 
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -33,7 +33,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
         And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
         And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
         And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
-        And a table with a row with the list item Other Information' and the 'other information text' displayed 
+        And a table with a row with the list item 'Other Information' and the 'other information text' displayed 
         And a section header 'Contact Details' with a 'Change' link
         And a table with a row with the list item 'Contact name' and the 'entered contact name' displayed 
         And a table with a row with the list item 'Purchase order number' and the 'entered purchase order number' displayed 
