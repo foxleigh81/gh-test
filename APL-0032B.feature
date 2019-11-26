@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, Uploads dossier
     Description:
         Reference: APL-0032B
+        Jira: GS-50
 
-    Background: Given the user has completed the PL-0032A steps
+    Background: Given the user has completed the GS-49 steps
 
     @APL-0032B
     Scenario: User is directed to the 'Upload Dossier' page
