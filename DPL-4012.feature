@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only or IA + IB and a second variation code from Data Table IA or IA + IB Only enters Implementation Date 
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters Implementation Date 
     Description:
         Reference: DPL-4012
 

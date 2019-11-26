@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA describes proposed changes
+Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB describes the proposed changes
     Description:
-        Reference: DPL-4009
+        Reference: DPL-4021
 
-    Background: Given the user has completed the PL-4008 steps
+    Background: Given the user has completed the PL-4015 steps
 
-    @DPL-4009
-    Scenario: User who has entered a valid code from Data Table IA Only is directed to 'Describe Changes' page 
+    @DPL-4021
+    Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB is directed to 'Describe Changes' page 
         Given the user has been directed to the 'Describe changes' page
         When page 'Describe changes' loads
         Then a page header 'Describe the proposed change'
@@ -13,7 +13,7 @@ Feature: User who has entered a valid code from Data Table IA describes proposed
         And the user can see the 'Outline the proposed situation' text area
         And they will see a 'Continue' option
 
-    @DPL-4009-1
+    @DPL-4021-1
     Scenario: User Enters proposed changes
         Given the user can see the 'Outline the present situation' text area
         And the user can see the 'Outline the proposed situation' text area
@@ -22,7 +22,7 @@ Feature: User who has entered a valid code from Data Table IA describes proposed
         When the user has selected 'Continue'
         Then they will be directed to the 'Application Summary' page
 
-    @DPL-4009-2
+    @DPL-4021-2
     Scenario: User does not enter proposed changes text
         Given the user has not entered 'Present text' into the 'Outline the present situation' text area
         And the user has not entered 'Proposed text' into the 'Outline the proposed situation' text area
