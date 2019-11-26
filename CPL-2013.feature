@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IB Only enters Implementation Date 
+Feature: User who has entered a valid code from Data Table IA + IB Only enters Implementation Date 
     Description:
         Reference: CPL-2013
 
     Background: Given the user has completed the PL-2007 steps
 
     @CPL-2013
-    Scenario: Use who has entered a valid code from Data Table IB Only is directed to 'Enter Implementation Date' page 
+    Scenario: Use who has entered a valid code from Data Table IA + IB Only is directed to 'Enter Implementation Date' page 
         Given the user has been directed to the 'Implementation Date' page
         When page 'Implementation Date' loads
         Then a page header 'Enter the implementation date'
