@@ -1,9 +1,8 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, changes the variation
     Description:
         Reference: APL-0032E
-        Jira: GS-53
 
-    Background: Given the user has completed the GS-52 steps
+    Background: Given the user has completed the PL-0032D steps
 
     @APL-0032E
     Scenario Outline: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, is directed to 'Confirm Change Variation' page 

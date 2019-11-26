@@ -1,10 +1,10 @@
-Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type submits the application
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only submits the application
     Description:
-        Reference: APL-0020F
+        Reference: DPL-4019
 
-    Background: Given the user has completed the GS-49 steps
+    Background: Given the user has completed the PL-4018 steps
 
-    @APL-0020F
+    @DPL-4019
     Scenario: User is directed to the 'Declaration' page
         Given the user has been directed to the 'Declaration' page
         When page 'Declaration' loads
@@ -16,7 +16,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And they will see Text '! If any information provided in this application is later found to be false or incorrect, the Secretary of State may suspend or revoke the authorisation'
         And they will see a 'Agree and submit application' option
 
-    @APL-0020F-1
+    @DPL-4019-1
     Scenario: User selects the 'Agree and submit application' option
         Given the user has been directed to the 'Declaration' page
         And they can see a 'Agree and submit application' option

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type describes the proposed changes
     Description:
         Reference: APL-0020
-        Jira: GS-31
+        Jira: GS-43
 
-    Background: Given the user has completed the GS-30 steps
+    Background: Given the user has completed the GS-40 steps
 
     @APL-0020
     Scenario: User directed to 'Describe Changes' page 

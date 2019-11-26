@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table II Only checks, and is able to change answers
     Description:
         Reference: APL-0015D
-        Jira: GS-26
+        Jira: GS-33
 
     Background: Given the user has completed the GS-25 steps
 

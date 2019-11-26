@@ -1,11 +1,10 @@
-Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type confirms supporting documents
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only confirms supporting documents
     Description:
-        Reference: APL-0020A
-        Jira: GS-44
+        Reference: DPL-4015
 
-    Background: Given the user has completed the GS-43 steps
+    Background: Given the user has completed the PL-4014B steps
 
-    @APL-0020A
+    @DPL-4015
     Scenario: User directed to 'Supporting Documents' page 
         Given the user has been directed to the 'Supporting Documents' page
         When page 'Supporting Documents' loads
@@ -26,14 +25,14 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And they will see Text 'Provide any further information we may need to know about your application'
         And they will see a 'Continue' option
 
-    @APL-0020A-1
+    @DPL-4015-1
     Scenario: User selects all check boxes
         Given the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
         When they select 'Continue'
         Then they will be directed to the 'Upload Dossier' page
 
-    @APL-0020A-2
+    @DPL-4015-2
     Scenario: User does not select all check boxes, and enters reason for omission
         Given the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
@@ -41,7 +40,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         When they select 'Continue'
         Then they will be directed to the 'Upload Dossier' page
 
-    @APL-0020A-3
+    @DPL-4015-3
     Scenario: User does not select all check boxes, and does not enter reason for omission
         Given the user has been directed to the 'Supporting Documents' page
         And they have not selected at least 4 checkbox options
