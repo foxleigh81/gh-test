@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only or IA + IB and a second variation code from Data Table IA Only or IA + IB confirms supporting documents
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IBconfirms supporting documents
     Description:
         Reference: DPL-4015
 
