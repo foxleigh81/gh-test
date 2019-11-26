@@ -17,7 +17,7 @@ Feature: User selects procedure option
         And they will see a 'Continue' option
 
     @BPL-1003-1
-    Scenario: User selects 'Single change to one product'
+    Scenario: User selects 'Single change to several products'
         Given the user has been directed to the 'Procedure Option Type Single' page
         And the user has selected 'One change to several products'
         When they select 'Continue'
