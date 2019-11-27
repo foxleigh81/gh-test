@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Description:
         Reference: APL-0041E
 
-    Background: Given the user has completed the PL-0041D steps
+    Background: Given the user has completed the GS-68 steps
 
     @APL-0041E
     Scenario Outline: User who has entered a valid code from Data Table Z Only, and has selected II variation type, is directed to 'Confirm Change Variation' page 

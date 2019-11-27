@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, checks and is able to change answers
     Description:
         Reference: APL-0041D
+        Jira: GS-68
 
-    Background: Given the user has completed the PL-0041C steps
+    Background: Given the user has completed the GS-67 steps
 
     @APL-0041D
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected II variation type is directed to the 'Check your answers' page 
