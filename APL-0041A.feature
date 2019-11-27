@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, confirms supporting documents
     Description:
         Reference: APL-0041A
+        Jira: GS-65
 
-    Background: Given the user has completed the PL-0041 steps
+    Background: Given the user has completed the GS-64 steps
 
     @APL-0041A
     Scenario: User directed to 'Supporting Documents' page 

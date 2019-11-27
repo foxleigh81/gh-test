@@ -1,13 +1,14 @@
 Feature: User who has entered a valid code from Data Table II Only checks, and is able to change answers
     Description:
         Reference: APL-0015D
+        Jira: GS-26
 
     Background: Given the user has completed the GS-25 steps
 
     @APL-0015D
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Check your answers' page test this
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a variation code from Data Table 'Data Table II Only'
+        And they have entered a variation code from Data Table 'II Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link

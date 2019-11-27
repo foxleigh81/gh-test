@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Description:
         Reference: APL-0041C
 
-    Background: Given the user has completed the PL-0041B steps
+    Background: Given the user has completed the GS-66 steps
 
     @APL-0041C
     Scenario: User is directed to the 'Application Contact Information' page
