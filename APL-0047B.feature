@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special submits the application
     Description:
         Reference: APL-0047B
+        Jira: GS-84
 
-    Background: Given the user has completed the PL-0047 steps
+    Background: Given the user has completed the GS-82 steps
 
     @APL-0047B
     Scenario: User is directed to the 'Declaration' page

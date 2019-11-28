@@ -20,6 +20,7 @@ Feature: User who has entered a valid code from Data Table IA + IB views the App
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
+        And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
         

@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, changes the variation
     Description:
         Reference: APL-0041E
+        Jira: GS-69
 
     Background: Given the user has completed the GS-68 steps
 

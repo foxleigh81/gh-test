@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, submits the application
     Description:
         Reference: APL-0041F
+        Jira: GS-70
 
     Background: Given the user has completed the GS-68 steps
 

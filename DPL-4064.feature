@@ -39,7 +39,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
         And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
         And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
-        And a table with a row with the list item Other Information' and the 'other information text' displayed 
+        And a table with a row with the list item 'Other Information' and the 'other information text' displayed 
         And a table with a row with the list item 'Contact Details' and the 'Contact name' displayed 
         And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
         And a section header 'entered purchase order number' with a 'Change' link

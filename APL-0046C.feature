@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special enters application contact information
     Description:
         Reference: APL-0046C
+        Jira: GS-81
 
-    Background: Given the user has completed the PL-0046B steps
+    Background: Given the user has completed the GS-80 steps
 
     @APL-0046C
     Scenario: User is directed to the 'Application Contact Information' page

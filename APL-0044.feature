@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' describes the proposed changes
     Description:
         Reference: APL-0044
+        Jira: GS-71
 
     Background: Given the user has completed the GS-6 steps
 

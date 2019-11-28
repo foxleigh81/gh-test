@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special  changes the variation
     Description:
         Reference: APL-0047A
+        Jira: GS-83
 
-    Background: Given the user has completed the PL-0047 steps
+    Background: Given the user has completed the GS-82 steps
 
     @APL-0047A
     Scenario Outline: User who has entered a valid code from Data Table Z Special  is directed to 'Confirm Change Variation' page 

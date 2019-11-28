@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special confirms supporting documents
     Description:
         Reference: APL-0046A
+        Jira: GS-79
 
-    Background: Given the user has completed the PL-0046 steps
+    Background: Given the user has completed the GS-78 steps
 
     @APL-0046A
     Scenario: User directed to 'Supporting Documents' page 

@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' checks, and is able to change answers
     Description:
         Reference: APL-0045
+        Jira: GS-75
 
-    Background: Given the user has completed the PL-0044C steps
+    Background: Given the user has completed the GS-74 steps
 
     @APL-0045
     Scenario Outline: User who has entered a valid code from Data table No Variations is directed to the 'Check your answers' page

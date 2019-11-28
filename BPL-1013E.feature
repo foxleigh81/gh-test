@@ -1,11 +1,10 @@
 Feature: User who has entered a valid code from Data Table IB Only changes the variation
     Description:
-        Reference: BPL-0013E
-        Jira: GS-20
+        Reference: BPL-1013E
 
-    Background: Given the user has completed the GS-19 steps
+    Background: Given the user has completed the PL-1013D steps
 
-    @BPL-0013E
+    @BPL-1013E
     Scenario Outline: User who has entered a valid code from Data Table IB Only is directed to 'Confirm Change Variation' page 
         Given the user has been directed to the 'Confirm Change Variation' page
         When page 'Confirm Change Variation' loads
@@ -93,21 +92,21 @@ Feature: User who has entered a valid code from Data Table IB Only changes the v
         | C.II.6(b) Mock-ups | Description Needed | Describe Changes |
         | C.II.7(b) | Which has been assessed by the relevant national competent authority/EMA for another product of the same MAH(*) | Describe Changes |
 
-    @BPL-0013E-1
+    @BPL-1013E-1
     Scenario: User selects 'Yes' option
         Given the user has been directed to the 'Confirm Change Variation' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
-    @BPL-0013E-2
+    @BPL-1013E-2
     Scenario: User selects 'No' option
         Given the user has been directed to the 'Confirm Change Variation' page
         And the user has selected 'No'
         When they select 'Continue'
         Then they will be directed to the 'Check Your Answers' page
 
-    @BPL-0013E-3
+    @BPL-1013E-3
     Scenario: User does not select an option
         Given the user has been directed to the 'Confirm Change Variation' page
         And they have not selected any 'Radio Button'
