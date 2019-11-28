@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IB variation type, Uploads dossier
     Description:
         Reference: BPL-1023B
+        Jira: GS-124
 
-    Background: Given the user has completed the PL-1023A steps
+    Background: Given the user has completed the GS-123 steps
 
     @BPL-1023B
     Scenario: User is directed to the 'Upload Dossier' page

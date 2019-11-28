@@ -1,8 +1,9 @@
 Feature: User selects procedure type 
     Description:
         Reference: BPL-1001
+        Jira: GS-86
 
-    Background: Given the user has completed the PL-1000 steps
+    Background: Given the user has completed the GS-85 steps
 
     @BPL-1001
     Scenario: User directed to Procedure Type page 

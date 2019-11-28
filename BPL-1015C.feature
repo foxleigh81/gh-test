@@ -1,8 +1,9 @@
 Feature: UUser who has entered a valid code from Data Table II Only enters application contact information
     Description:
         Reference: BPL-1015C
+        Jira: GS-109
 
-    Background: Given the user has completed the PL-1015B steps
+    Background: Given the user has completed the GS-108 steps
 
     @BPL-1015C
     Scenario: User is directed to the 'Application Contact Information' page

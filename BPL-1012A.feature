@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only Uploads dossier
     Description:
         Reference: BPL-1012A
+        Jira: GS-94
 
-    Background: Given the user has completed the PL-1012 steps
+    Background: Given the user has completed the GS-93 steps
 
     @BPL-1012A
     Scenario: User is directed to the 'Upload Dossier' page

@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only confirms supporting documents
     Description:
         Reference: BPL-1012
+        Jira: GS-93
 
-    Background: Given the user has completed the PL-1011 steps
+    Background: Given the user has completed the GS-92 steps
 
     @BPL-1012
     Scenario: User directed to 'Supporting Documents' page 

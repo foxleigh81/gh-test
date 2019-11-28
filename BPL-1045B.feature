@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' submits the application
     Description:
         Reference: BPL-1045B
+        Jira: GS-161
 
-    Background: Given the user has completed the PL-1045 steps
+    Background: Given the user has completed the GS-159 steps
 
     @BPL-1045B
     Scenario: User is directed to the 'Declaration' page

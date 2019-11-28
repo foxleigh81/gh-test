@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, changes the variation
     Description:
         Reference: BPL-1020E
+        Jira: GS-120
 
-    Background: Given the user has completed the PL-1020D steps
+    Background: Given the user has completed the GS-119 steps
 
     @BPL-1020E
     Scenario Outline: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, is directed to 'Confirm Change Variation' page 
@@ -11,8 +12,8 @@ Feature: User who has entered a valid code from Data Table IA + IB, and has sele
         Then they will see a 'Back' link
         And a 'Sign out' link
         And a sub header 'Vary a marketing variation'
-        And a page header 'Are you sure you want to change variation: variation: variation:'
-        And they will see the 'Variation <Sub Code>' displayed 
+        And a page header 'Are you sure you want to change variation:'
+        And they will see the '<Sub Code>' displayed 
         And they will see a radio button option for 'Yes'
         And they will see a radio button option for 'No'
         And they will see a 'Continue' option

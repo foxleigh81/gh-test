@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, describes the proposed changes
     Description:
         Reference: BPL-1032
+        Jira: GS-132
 
-    Background: Given the user has completed the PL-1030 steps
+    Background: Given the user has completed the GS-131 steps
 
     @BPL-1032
     Scenario: User directed to 'Describe Changes' page 

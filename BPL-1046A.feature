@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Special confirms su
     Description:
         Reference: BPL-1046A
 
-    Background: Given the user has completed the PL-1046 steps
+    Background: Given the user has completed the GS-162 steps
 
     @BPL-1046A
     Scenario: User directed to 'Supporting Documents' page 

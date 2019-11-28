@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' enters application contact information
     Description:
         Reference: BPL-1044C
+        Jira: GS-158
 
-    Background: Given the user has completed the PL-1044B steps
+    Background: Given the user has completed the GS-157 steps
 
     @BPL-1044C
     Scenario: User is directed to the 'Application Contact Information' page

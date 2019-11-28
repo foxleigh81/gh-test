@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Special describes the proposed changes
     Description:
         Reference: APL-0046
+        Jira: GS-78
 
     Background: Given the user has completed the GS-6 steps
 

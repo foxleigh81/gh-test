@@ -7,7 +7,7 @@ Feature: User who has entered a valid code from Data Table Z Only checks, and is
     @CPL-2015F
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a value from Data Table 'Data Table Z Only'
+        And they have entered a value from Data Table 'Z Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link

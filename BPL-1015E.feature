@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only changes the variation
     Description:
         Reference: BPL-1015E
+        Jira: GS-111
 
-    Background: Given the user has completed the PL-1015D steps
+    Background: Given the user has completed the GS-110 steps
 
     @BPL-1015E
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Confirm Change Variation' page 
@@ -11,8 +12,8 @@ Feature: User who has entered a valid code from Data Table II Only changes the v
         Then they will see a 'Back' link
         And a 'Sign out' link
         And a sub header 'Vary a marketing variation'
-        And a page header 'Are you sure you want to change variation: variation: variation:'
-        And they will see the 'Variation <Sub Code>' displayed 
+        And a page header 'Are you sure you want to change variation:'
+        And they will see the '<Sub Code>' displayed 
         And they will see a radio button option for 'Yes'
         And they will see a radio button option for 'No'
         And they will see a 'Continue' option

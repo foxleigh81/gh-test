@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, submits the application
     Description:
         Reference: BPL-1041F
+        Jira: GS-154
 
-    Background: Given the user has completed the PL-1041D steps
+    Background: Given the user has completed the GS-152 steps
 
     @BPL-1041F
     Scenario: User is directed to the 'Declaration' page

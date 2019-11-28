@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB selects the variation type
     Description:
         Reference: BPL-1018
+        Jira: GS-113
 
-    Background: Given the user has completed the PL-1007 steps
+    Background: Given the user has completed the GS-90 steps
 
     @BPL-1018
     Scenario: User who has entered a valid code from Data Table IA + IB is directed to the 'Variation Type Page 2' page 

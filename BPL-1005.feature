@@ -1,8 +1,9 @@
 Feature: User selects products to be varied
     Description:
         Reference: BPL-1005
+        Jira: GS-88
 
-    Background: Given the user has completed the PL-1003 steps
+    Background: Given the user has completed the GS-87 steps
 
     @BPL-1005
     @TestData::KetaminePlus

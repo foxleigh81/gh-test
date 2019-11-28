@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only submits the application
     Description:
         Reference: BPL-1012E
+        Jira: GS-98
 
-    Background: Given the user has completed the PL-1012C steps
+    Background: Given the user has completed the GS-96 steps
 
     @BPL-1012E
     Scenario: User is directed to the 'Declaration' page

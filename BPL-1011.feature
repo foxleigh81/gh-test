@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only describes proposed changes
     Description:
         Reference: BPL-1011
+        Jira: GS-92
 
-    Background: Given the user has completed the PL-1009 steps
+    Background: Given the user has completed the GS-91 steps
 
     @BPL-1011
     Scenario: User directed to 'Describe Changes' page 

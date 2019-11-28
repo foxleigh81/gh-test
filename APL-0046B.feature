@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special Uploads dossier
     Description:
         Reference: APL-0046B
+        Jira: GS-80
 
-    Background: Given the user has completed the PL-0046A steps
+    Background: Given the user has completed the GS-79 steps
 
     @APL-0046B
     Scenario: User is directed to the 'Upload Dossier' page

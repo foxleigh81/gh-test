@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, Uploads dossier
     Description:
         Reference: BPL-1032B
+        Jira: GS-134
 
-    Background: Given the user has completed the PL-1032A steps
+    Background: Given the user has completed the GS-133 steps
 
     @BPL-1032B
     Scenario: User is directed to the 'Upload Dossier' page

@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' confirms supporting documents
     Description:
         Reference: BPL-1044A
+        Jira: GS-156
 
-    Background: Given the user has completed the PL-1044 steps
+    Background: Given the user has completed the GS-155 steps
 
     @BPL-1044A
     Scenario: User directed to 'Supporting Documents' page 

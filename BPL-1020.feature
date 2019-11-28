@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, describes the proposed changes
     Description:
         Reference: BPL-1020
+        Jira: GS-115
 
-    Background: Given the user has completed the PL-1019 steps
+    Background: Given the user has completed the GS-114 steps
 
     @BPL-1020
     Scenario: User directed to 'Describe Changes' page 

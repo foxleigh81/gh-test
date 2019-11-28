@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, answers the Article 5 question
     Description:
         Reference: APL-0039
+        Jira: GS-63
 
-    Background: Given the user has completed the PL-0026 steps
+    Background: Given the user has completed the GS-45 steps
 
     @APL-0039
     Scenario: User who has entered a valid code from Data Table Z Only and has selected variation type II is directed to the 'Article 5' page 

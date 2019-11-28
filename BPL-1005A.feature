@@ -1,8 +1,9 @@
 Feature: User enters products which do not appear in the list on the Select product 2 page
     Description:
         Reference: BPL-1005A
+        Jira: GS-89
 
-    Background: Given the user has completed the PL-1005 steps
+    Background: Given the user has completed the GS-88 steps
 
     @BPL-1005A
     Scenario: User is directed to the Enter Products 2 page

@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only describes proposed changes
     Description:
         Reference: BPL-1013
+        Jira: GS-99
 
-    Background: Given the user has completed the PL-1007 steps
+    Background: Given the user has completed the GS-90 steps
 
     @BPL-1013
     Scenario: Use who has entered a valid code from Data Table IB Only is directed to the 'Describe Changes' page 

@@ -1,13 +1,13 @@
-Feature: User who has entered a valid code from Data Table IB Only checks, and is able to change answers
+Feature: User who has entered a valid code from Data Table IA + IB Only checks, and is able to change answers
     Description:
         Reference: CPL-2014D
 
     Background: Given the user has completed the PL-2014C steps
 
     @CPL-2014D
-    Scenario Outline: User who has entered a valid code from Data Table IB Only is directed to 'Check your answers' page 
+    Scenario Outline: User who has entered a valid code from Data Table IA + IB Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a value from Data Table 'Data Table IB Only'
+        And they have entered a value from Data Table 'IA + IB'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -17,106 +17,154 @@ Feature: User who has entered a valid code from Data Table IB Only checks, and i
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed and a change link
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed and a change link
         And a table with a row with the list item 'Products' and the 'selected products' displayed and a change link
-        And a section header 'Add another product' with an MISSING VALUE link
-        And a section header 'Add another product'
-        And a table header 'Variation Details'
-        And a table with a row with the list item 'Variation 1' and the 'Code' displayed 
-        And a table with a row with the list item '<Sub Code>' and the 'Description' displayed and a change link
-        And a table with a row with the list item 'Variation description' and the 'Variation Type' displayed and a change link
-        And a table with a row with the list item 'selected variation type' and the 'Implementation Date' displayed and a change link
-        And a table with a row with the list item 'entered implementation Date' and the 'Present' displayed and a change link
-        And a table with a row with the list item 'present situation text' and the Proposed' displayed and a change link
-        And a section header 'proposed change text' with a 'Change' link
-        And a table with a row with the list item 'Supporting Documents' and the 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' displayed 
-        And a table with a row with the list item 'selection status' and the 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' displayed 
-        And a table with a row with the list item 'selection status' and the 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' displayed 
-        And a table with a row with the list item 'selection status' and the 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' displayed 
-        And a table with a row with the list item 'selection status' and the 'Omitted Documents' displayed 
-        And a table with a row with the list item 'omitted documents text' and the Other Information' displayed 
-        And a section header 'other information text' with a 'Change' link
-        And a table with a row with the list item 'Contact Details' and the 'Contact name' displayed 
-        And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
-        And a table with a row with the list item 'entered purchase order number' and the 'Contact number' displayed 
-        And a table with a row with the list item 'entered contact number' and the 'Contact email address' displayed 
-        And a table with a row with the list item 'entered contact email address' and the 'Invoice email address' displayed 
-        And a table with a row with the list item 'entered invoice email address' and the 'Further comments' displayed 
+        And a section header 'Add another product' with an 'Add another product' link
+        And a section header 'Variation Details'
+        And a table header 'Variation 1'
+        And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 
+        And a table with a row with the list item 'Description' and the 'Variation description' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
+        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
+        And a section header 'Supporting Documents' with a 'Change' link
+        And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the 'selection status' displayed 
+        And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
+        And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
+        And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
+        And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
+        And a table with a row with the list item 'Other Information' and the 'other information text' displayed 
+        And a section header 'Contact Details' with a 'Change' link
+        And a table with a row with the list item 'Contact name' and the 'entered contact name' displayed 
+        And a table with a row with the list item 'Purchase order number' and the 'entered purchase order number' displayed 
+        And a table with a row with the list item 'Contact number' and the 'entered contact number' displayed 
+        And a table with a row with the list item 'Contact email address' and the 'entered contact email address' displayed 
+        And a table with a row with the list item 'Invoice email address' and the 'entered invoice email address' displayed 
+        And a table with a row with the list item 'Further comments' and the 'further comments text'  displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
         
     Examples: 
         | Sub Code | Description | Page |
-        | A.2(b) | Change in the (invented) name of the medicinal product | Describe Changes |
-        | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes |
-        | B.I.a.1(k) | New storage site of Master Cell Bank and/or Working Cell Banks | Describe Changes |
-        | B.I.a.2(e) | Minor change to the restricted part of an Active Substance Master File | Describe Changes |
-        | B.I.a.3(d) | More than 10-fold increase compared to the originally approved batch size | Describe Changes |
-        | B.I.a.3(e) | The scale for a biological/immunological active substance is increased / decreased without process change (e.g. duplication of line) | Describe Changes |
-        | B.I.a.4(f) | Addition or replacement of an inprocess test as a result of a safety or quality issue | Describe Changes |
-        | B.I.b.1(h) | Addition or replacement (excluding biological or immunological substance) of a specification parameter with its corresponding test method as a result of a safety or quality issue | Describe Changes |
-        | B.I.b.1(i) | Where there is no monograph in the European Pharmacopoeia or the national pharmacopoeia of a Member State for the active substance, a change in specification from in-house to a non-official Pharmacopoeia or a Pharmacopoeia of a third country | Describe Changes |
-        | B.I.b.2(e) | Other changes to a test procedure (including replacement or addition) for the active substance or a starting material/intermediate | Describe Changes |
-        | B.I.c.1(c) | Liquid active substances (non sterile) | Describe Changes |
-        | B.I.c.2(d) | Addition or replacement of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.I.d.1(a).4 | Extension or introduction of a retest period/storage period supported by real time data | Describe Changes |
-        | B.I.d.1(b).3 | Change in storage conditions of the active substance | Describe Changes |
-        | B.I.e.4(b) | Minor changes to an approved change management protocol that do not change the strategy defined in the protocol | Describe Changes |
-        | B.I.e.5(b) | The implementation of the change requires further supportive data | Describe Changes |
-        | B.I.e.5(c) | The implementation of a change for a biological/immunological medicinal product | Describe Changes |
-        | B.II.a.1(b) | Changes in scoring/break lines intended to divide into equal doses | Describe Changes |
-        | B.II.a.2(b) | Gastroresistant, modified or prolonged release pharmaceutical forms and scored tablets intended to be divided into equal doses | Describe Changes |
-        | B.II.a.3(b).6 | Replacement of a single excipient with a comparable excipient with the same functional characteristics and at a similar level | Describe Changes |
-        | B.II.a.6 | Deletion of the solvent / diluent container from the pack | Describe Changes |
-        | B.II.b.1(e) | Site where any manufacturing operation(s) take place, except batch release, batch control, primary and secondary packaging, for nonsterile medicinal products. | Describe Changes |
-        | B.II.b.1(f) | Site where any manufacturing operation(s) take place, except batch release, batch control, and secondary packaging, for sterile medicinal products (including those that are aseptically manufactured) excluding biological/ immunological medicinal products | Describe Changes |
-        | B.II.b.3(f) | Minor change in the manufacturing process of an aqueous oral suspension | Describe Changes |
-        | B.II.b.4(e) | More than 10-fold increase compared to the originally approved batch size for immediate release (oral) pharmaceutical forms | Describe Changes |
-        | B.II.b.4(f) | The scale for a biological/immunological medicinal product is increased / decreased without process change (e.g. duplication of line) | Describe Changes |
-        | B.II.b.5(f) | Addition or replacement of an inprocess test as a result of a safety or quality issue | Describe Changes |
-        | B.II.c.1(f) | Addition or replacement (excluding biological or immunological product) of a specification parameter with its corresponding test method, as a result of a safety or quality issue | Describe Changes |
-        | B.II.c.1(g) | Where there is no monograph in the European Pharmacopoeia or the national pharmacopoeia of a Member State for the excipient, a change in specification from in-house to a non-official Pharmacopoeia or a Pharmacopoeia of a third country | Describe Changes |
-        | B.II.c.2(d) | Other changes to a test procedure (including replacement or addition) | Describe Changes |
-        | B.II.c.3(a).2 | For excipients or reagents used in the manufacture of a biological / immunological active substance or in a biological / immunological medicinal product | Describe Changes |
-        | B.II.d.1(g) | Addition or replacement (excluding biological or immunological product) of a specification parameter with its corresponding test method as a result of a safety or quality issue | Describe Changes |
-        | B.II.d.2(d) | Other changes to a test procedure (including replacement or addition) | Describe Changes |
-        | B.II.e.1(a).2 | Semisolid and nonsterile liquid pharmaceutical forms | Describe Changes |
-        | B.II.e.1(b).1 | Solid, semisolid and nonsterile liquid pharmaceutical forms | Describe Changes |
-        | B.II.e.2(d) | Addition or replacement of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.II.e.4(c) | Sterile medicinal products | Describe Changes |
-        | B.II.e.5(a).2 | Change outside the range of the currently approved pack sizes | Describe Changes |
-        | B.II.e.5(d) | Change in the fill weight/fill volume of nonparenteral multi-dose (or single-dose, partial use) products | Describe Changes |
-        | B.II.e.6(b) | Change that does not affect the product information | Describe Changes |
-        | B.II.f.1(b).1 | As packaged for sale (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).2 | After first opening (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).3 | After dilution or reconstitution (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).5 | Extension of the shelf-life of a biological/immunological medicinal product in accordance with an approved stability protocol | Describe Changes |
-        | B.II.f.1(d) | Change in storage conditions of the finished product or the diluted/reconstituted product | Describe Changes |
-        | B.II.g.4(b) | Minor changes to an approved change management protocol that do not change the strategy defined in the protocol | Describe Changes |
-        | B.II.g.5(b) | The implementation of the change requires further supportive data | Describe Changes |
-        | B.II.g.5(c) | Implementation of a change for a biological/immunological medicinal product | Describe Changes |
-        | B.II.h.1(b).2 | without modification of risk assessment | Describe Changes |
-        | B.III.1(a).5 | New certificate for a non-sterile active substance that is to be used in a sterile medicinal product, where water is used in the last steps of the synthesis and the material is not claimed to be endotoxin free | Describe Changes |
-        | B.IV.1(a).2 | Device without CE marking (for veterinary products only) | Describe Changes |
-        | B.IV.2(e) | Addition of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.V.a.1(b) | First time inclusion of a new Plasma Master File not affecting the properties of the finished product | Describe Changes |
-        | B.V.a.1(c) | Inclusion of an updated/amended Plasma Master File when changes affect the properties of the finished product | Describe Changes |
-        | B.V.a.2(b) | Inclusion of an updated/amended Vaccine Antigen Master File, when changes affect the properties of the finished product | Describe Changes |
-        | C.I.1(b) | The medicinal product is not covered by the defined scope of the procedure but the change(s) implements the outcome of the procedure and no new additional data is required to be submitted by the MAH | Describe Changes |
-        | C.I.2(a) | Implementation of change(s) for which no new additional data are submitted by the MAH | Describe Changes |
-        | C.I.6(b) | Deletion of a therapeutic indication | Describe Changes |
-        | C.I.7(a) | Deletion of a pharmaceutical form | Describe Changes |
-        | C.I.7(b) | Deletion of a strength | Describe Changes |
-        | C.I(z).2 | Addition or change to safety warnings | Describe Changes |
-        | C.I(z).3 | Approval of mock-ups | Describe Changes |
-        | C.I(z).4 | Changes to SPC and/or product literature for MAPIs | Describe Changes |
-        | C.I(z).5 | Joint-Labelling Variation | Describe Changes |
-        | C.I(z).6 | Normal corrections or simple text layout changes to SPC and/or product literature | Describe Changes |
-        | C.I(z).7 | Resubmission of previously refused Type II variations | Describe Changes |
-        | C.I(z).8 | Simple changes to dosage instructions | Describe Changes |
-        | C.I(z).9 | Submission following formal advice from the VMD | Describe Changes |
-        | C.II.2(b) | Deletion not resulting from a safety issue | Describe Changes |
-        | C.II.6(b) | Other changes | Describe Changes |
-        | C.II.6(b) Mock-ups | Description Needed | Describe Changes |
-        | C.II.7(b) | Which has been assessed by the relevant national competent authority/EMA for another product of the same MAH(*) | Describe Changes |
+        | A.3 | Change in name of the active substance or of an excipient | Variation Type Page 2 |
+        | A.4 | Change in the name and/or address of a manufacturer (including where relevant quality control testing sites); or an ASMF holder; or a supplier of the active substance, starting material, reagent or intermediate used in the manufacture of the active substance (where specified in the technical dossier) where no Ph. Eur. Certificate of Suitability is part of the approved dossier; or a manufacturer of a novel excipient (where specified in the technical dossier). | Variation Type Page 2 |
+        | A.5(a) | The activities for which the manufacturer/importer is responsible include batch release | Variation Type Page 2 |
+        | A.5(b) | The activities for which the manufacturer/importer is responsible do not include batch release | Variation Type Page 2 |
+        | A.6 | Change in ATC Code / ATC Vet Code | Variation Type Page 2 |
+        | A.7 | Deletion of a manufacturing sites (for an active substance, intermediate or finished product, packaging site, manufacturer responsible for batch release, site where batch control takes place, or supplier of a starting material, reagent or excipient (when mentioned in the dossier). Where notice has been given by the authorities of the intention to perform an inspection, the deletion of the relevant site shall be notified immediately. | Variation Type Page 2 |
+        | B.I.a.1(a) | The proposed manufacturer is part of the same pharmaceutical group as the currently approved manufacturer. | Variation Type Page 2 |
+        | B.I.a.1(f) | Changes to quality control testing arrangements for the active substance-replacement or addition of a site where batch control/testing takes place | Variation Type Page 2 |
+        | B.I.a.1(i) | Introduction of a new site of micronisation | Variation Type Page 2 |
+        | B.I.a.2(a) | Minor change in the manufacturing process of the active substance | Variation Type Page 2 |
+        | B.I.a.3(a) | Up to 10-fold increase compared to the originally approved batch size | Variation Type Page 2 |
+        | B.I.a.3(b) | Downscaling down to 10-fold | Variation Type Page 2 |
+        | B.I.a.4(a) | Tightening of inprocess limits | Variation Type Page 2 |
+        | B.I.a.4(b) | Addition of a new inprocess test and limits | Variation Type Page 2 |
+        | B.I.a.4(c) | Deletion of a nonsignificant inprocess test | Variation Type Page 2 |
+        | B.I.b.1(a) | Tightening of specification limits for medicinal products subject to Official Control Authority Batch Release | Variation Type Page 2 |
+        | B.I.b.1(b) | Tightening of specification limits | Variation Type Page 2 |
+        | B.I.b.1(c) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.I.b.1(d) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.I.b.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.I.b.2(b) | Deletion of a test procedure for the active substance or a starting material/reagent/ intermediate, if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.I.b.2(c) | Other changes to a test procedure (including replacement or addition) for a reagent, which does not have a significant effect on the overall quality of the active substance | Variation Type Page 2 |
+        | B.I.c.1(a) | Qualitative and/or quantitative composition | Variation Type Page 2 |
+        | B.I.c.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.I.c.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.I.c.2(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.I.c.3(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.I.c.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.I.c.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.I.d.1(a).1 | Reduction | Variation Type Page 2 |
+        | B.I.d.1(b).1 | Change to more restrictive storage conditions of the active substance | Variation Type Page 2 |
+        | B.I.d.1(c) | Change to an approved stability protocol | Variation Type Page 2 |
+        | B.I.e.3 | Deletion of an approved change management protocol related to the active substance | Variation Type Page 2 |
+        | B.I.e.5(a) | The implementation of the change requires no further supportive data | Variation Type Page 2 |
+        | B.II.a.1(a) | Changes in imprints, bossing or other markings | Variation Type Page 2 |
+        | B.II.a.2(a) | Immediate release tablets, capsules, suppositories and pessaries | Variation Type Page 2 |
+        | B.II.a.3(a).1 | Addition, deletion or replacement | Variation Type Page 2 |
+        | B.II.a.3(a).2 | Increase or reduction | Variation Type Page 2 |
+        | B.II.a.3(b).1 | Any minor adjustment of the quantitative composition of the finished product with respect to excipients | Variation Type Page 2 |
+        | B.II.a.4(a) | Solid oral pharmaceutical forms | Variation Type Page 2 |
+        | B.II.b.1(a) | Secondary packaging site | Variation Type Page 2 |
+        | B.II.b.1(b) | Primary packaging site | Variation Type Page 2 |
+        | B.II.b.2(a) | Replacement or addition of a site where batch control/testing takes place | Variation Type Page 2 |
+        | B.II.b.2(c).1 | Not including batch control/testing | Variation Type Page 2 |
+        | B.II.b.2(c).2 | Including batch control/testing | Variation Type Page 2 |
+        | B.II.b.3(a) | Minor change in the manufacturing process | Variation Type Page 2 |
+        | B.II.b.4(a) | Up to 10-fold compared to the originally approved batch size | Variation Type Page 2 |
+        | B.II.b.4(b) | Downscaling down to 10-fold | Variation Type Page 2 |
+        | B.II.b.5(a) | Tightening of inprocess limits | Variation Type Page 2 |
+        | B.II.b.5(b) | Addition of a new test(s) and limits | Variation Type Page 2 |
+        | B.II.b.5(c) | Deletion of a nonsignificant inprocess test | Variation Type Page 2 |
+        | B.II.c.1(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.c.1(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.c.1(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.II.c.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.c.2(b) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.II.c.3(a).1 | For excipients or reagents not used in the manufacture of a biological / immunological active substance or in a biological / immunological medicinal product | Variation Type Page 2 |
+        | B.II.c.4(a) | Minor change in synthesis or recovery of a non-pharmacopoeial excipient or a novel excipient | Variation Type Page 2 |
+        | B.II.d.1(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.d.1(b) | Tightening of specification limits for medicinal products subject to Official Control Authority Batch Release | Variation Type Page 2 |
+        | B.II.d.1(c) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.d.1(d) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter such as odour and taste or identification test for a colouring or flavouring material) | Variation Type Page 2 |
+        | B.II.d.1(h) | Update of the dossier to comply with the provisions of an updated general monograph of the Ph. Eur for the finished product* | Variation Type Page 2 |
+        | B.II.d.1(i) | Ph. Eur. 2.9.40 Uniformity of dosage units is introduced to replace the currently registered method, either Ph. Eur. 2.9.5 (Uniformity of mass). or Ph. Eur. 2.9.6 (Uniformity of content) | Variation Type Page 2 |
+        | B.II.d.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.d.2(b) | Deletion of a test procedure if an alternative method is already authorised | Variation Type Page 2 |
+        | B.II.d.2(e) | Update of the test procedure to comply with the updated general monograph in the Ph.Eur. | Variation Type Page 2 |
+        | B.II.d.2(f) | To reflect compliance with the Ph.EUR. and remove reference to the outdated internal test method and test method number* | Variation Type Page 2 |
+        | B.II.e.1(a).1 | Solid pharmaceutical forms | Variation Type Page 2 |
+        | B.II.e.1(b).3 | Deletion of an immediate packaging container that does not lead to the complete deletion of a strength or pharmaceutical form | Variation Type Page 2 |
+        | B.II.e.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.e.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.e.2(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.II.e.3(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.e.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.II.e.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.II.e.4(a) | Nonsterile medicinal products | Variation Type Page 2 |
+        | B.II.e.5(a).1 | Change within the range of the currently approved pack sizes | Variation Type Page 2 |
+        | B.II.e.5(b) | Deletion of a pack size(s) | Variation Type Page 2 |
+        | B.II.e.6(a) | Change that affects the product information | Variation Type Page 2 |
+        | B.II.e.6(b) | Change that does not affect the product information | Variation Type Page 2 |
+        | B.II.e.7(a) | Deletion of a supplier | Variation Type Page 2 |
+        | B.II.e.7(b) | Replacement or addition of a supplier | Variation Type Page 2 |
+        | B.II.f.1(a).1 | As packaged for sale | Variation Type Page 2 |
+        | B.II.f.1(a).2 | After first opening | Variation Type Page 2 |
+        | B.II.f.1(a).3 | After dilution or reconstitution | Variation Type Page 2 |
+        | B.II.f.1(e) | Change to an approved stability protocol | Variation Type Page 2 |
+        | B.II.g.3 | Deletion of an approved change management protocol related to the finish product | Variation Type Page 2 |
+        | B.II.g.5(a) | The implementation of the change requires no further supportive data | Variation Type Page 2 |
+        | B.III.1(a).1 | New certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(a).2 | Updated certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(a).3 | New certificate from a new manufacturer (replacement or addition) | Variation Type Page 2 |
+        | B.III.1(a).4 | Deletion of certificates (in case multiple certificates exist per material) | Variation Type Page 2 |
+        | B.III.1(b).1 | New certificate for an active substance from a new or an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).2 | New certificate for a starting material/reagent/intermediate/or excipient from a new or an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).3 | Updated certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).4 | Deletion of certificates (in case multiple certificates exist per material) | Variation Type Page 2 |
+        | B.III.2(a).1 | Active substance | Variation Type Page 2 |
+        | B.III.2(a).2 | Excipient/active substance starting material | Variation Type Page 2 |
+        | B.III.2(b) | Change to comply with an update of the relevant monograph of the Ph. Eur. or national pharmacopoeia of a Member State | Variation Type Page 2 |
+        | B.III.2(c) | Change in specifications from a national pharmacopoeia of a Member State to the Ph. Eur. | Variation Type Page 2 |
+        | B.IV.1(a).1 | Device with CE marking | Variation Type Page 2 |
+        | B.IV.1(b) | Deletion of a device | Variation Type Page 2 |
+        | B.IV.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.IV.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.IV.2(f) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.IV.3(a) | Minor change to an approved test procedure | Variation Type Page 2 |
+        | B.IV.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.IV.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.V.a.1(d) | Inclusion of an updated/amended Plasma Master File when changes do not affect the properties of the finished produc | Variation Type Page 2 |
+        | B.V.a.2(c) | Inclusion of an updated/amended Vaccine Antigen Master File, when changes do not affect the properties of the finished product | Variation Type Page 2 |
+        | B.V.b.1(a) | The change implements the outcome of the referral | Variation Type Page 2 |
+        | C.I.1(a) | The medicinal product is covered by the defined scope of the procedure | Variation Type Page 2 |
+        | C.I.9(a) | Change in the QPPV and/or QPPV contact details and/or back-up procedure | Variation Type Page 2 |
+        | C.I.9(b) | Change(s) in the safety database and/or major contractual arrangements for the fulfilment of pharmacovigilance obligations, and/or change of the site undergoing pharmacovigilance activities. | Variation Type Page 2 |
+        | C.I.9(c) | Other change(s) to the DDPS that does not impact on the operation of the pharmacovigilance system (e.g. change of the major storage/archiving location, administrative changes | Variation Type Page 2 |
+        | C.I.9(d) | Change(s) to a DDPS following the assessment of the same DDPS in relation to another medicinal product of the same MAH | Variation Type Page 2 |
+        | C.I.11(a) | Implementation of wording agreed by the competent authority | Variation Type Page 2 |
+        | C.I.12 | Inclusion or deletion of black symbol and explanatory statements for medicinal products in the list of medicinal prodcuts that are subject to additional monitoring | Variation Type Page 2 |
+        | C.II.8 | Change in the frequency and/or date of submission of periodic safety update reports (PSUR) | Variation Type Page 2 |
 
     @CPL-2014D-1
     Scenario: User selects change link for Product
@@ -141,78 +189,126 @@ Feature: User who has entered a valid code from Data Table IB Only checks, and i
         
     Examples: 
         | Sub Code | Description | Page |
-        | A.2(b) | Change in the (invented) name of the medicinal product | Describe Changes |
-        | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes |
-        | B.I.a.1(k) | New storage site of Master Cell Bank and/or Working Cell Banks | Describe Changes |
-        | B.I.a.2(e) | Minor change to the restricted part of an Active Substance Master File | Describe Changes |
-        | B.I.a.3(d) | More than 10-fold increase compared to the originally approved batch size | Describe Changes |
-        | B.I.a.3(e) | The scale for a biological/immunological active substance is increased / decreased without process change (e.g. duplication of line) | Describe Changes |
-        | B.I.a.4(f) | Addition or replacement of an inprocess test as a result of a safety or quality issue | Describe Changes |
-        | B.I.b.1(h) | Addition or replacement (excluding biological or immunological substance) of a specification parameter with its corresponding test method as a result of a safety or quality issue | Describe Changes |
-        | B.I.b.1(i) | Where there is no monograph in the European Pharmacopoeia or the national pharmacopoeia of a Member State for the active substance, a change in specification from in-house to a non-official Pharmacopoeia or a Pharmacopoeia of a third country | Describe Changes |
-        | B.I.b.2(e) | Other changes to a test procedure (including replacement or addition) for the active substance or a starting material/intermediate | Describe Changes |
-        | B.I.c.1(c) | Liquid active substances (non sterile) | Describe Changes |
-        | B.I.c.2(d) | Addition or replacement of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.I.d.1(a).4 | Extension or introduction of a retest period/storage period supported by real time data | Describe Changes |
-        | B.I.d.1(b).3 | Change in storage conditions of the active substance | Describe Changes |
-        | B.I.e.4(b) | Minor changes to an approved change management protocol that do not change the strategy defined in the protocol | Describe Changes |
-        | B.I.e.5(b) | The implementation of the change requires further supportive data | Describe Changes |
-        | B.I.e.5(c) | The implementation of a change for a biological/immunological medicinal product | Describe Changes |
-        | B.II.a.1(b) | Changes in scoring/break lines intended to divide into equal doses | Describe Changes |
-        | B.II.a.2(b) | Gastroresistant, modified or prolonged release pharmaceutical forms and scored tablets intended to be divided into equal doses | Describe Changes |
-        | B.II.a.3(b).6 | Replacement of a single excipient with a comparable excipient with the same functional characteristics and at a similar level | Describe Changes |
-        | B.II.a.6 | Deletion of the solvent / diluent container from the pack | Describe Changes |
-        | B.II.b.1(e) | Site where any manufacturing operation(s) take place, except batch release, batch control, primary and secondary packaging, for nonsterile medicinal products. | Describe Changes |
-        | B.II.b.1(f) | Site where any manufacturing operation(s) take place, except batch release, batch control, and secondary packaging, for sterile medicinal products (including those that are aseptically manufactured) excluding biological/ immunological medicinal products | Describe Changes |
-        | B.II.b.3(f) | Minor change in the manufacturing process of an aqueous oral suspension | Describe Changes |
-        | B.II.b.4(e) | More than 10-fold increase compared to the originally approved batch size for immediate release (oral) pharmaceutical forms | Describe Changes |
-        | B.II.b.4(f) | The scale for a biological/immunological medicinal product is increased / decreased without process change (e.g. duplication of line) | Describe Changes |
-        | B.II.b.5(f) | Addition or replacement of an inprocess test as a result of a safety or quality issue | Describe Changes |
-        | B.II.c.1(f) | Addition or replacement (excluding biological or immunological product) of a specification parameter with its corresponding test method, as a result of a safety or quality issue | Describe Changes |
-        | B.II.c.1(g) | Where there is no monograph in the European Pharmacopoeia or the national pharmacopoeia of a Member State for the excipient, a change in specification from in-house to a non-official Pharmacopoeia or a Pharmacopoeia of a third country | Describe Changes |
-        | B.II.c.2(d) | Other changes to a test procedure (including replacement or addition) | Describe Changes |
-        | B.II.c.3(a).2 | For excipients or reagents used in the manufacture of a biological / immunological active substance or in a biological / immunological medicinal product | Describe Changes |
-        | B.II.d.1(g) | Addition or replacement (excluding biological or immunological product) of a specification parameter with its corresponding test method as a result of a safety or quality issue | Describe Changes |
-        | B.II.d.2(d) | Other changes to a test procedure (including replacement or addition) | Describe Changes |
-        | B.II.e.1(a).2 | Semisolid and nonsterile liquid pharmaceutical forms | Describe Changes |
-        | B.II.e.1(b).1 | Solid, semisolid and nonsterile liquid pharmaceutical forms | Describe Changes |
-        | B.II.e.2(d) | Addition or replacement of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.II.e.4(c) | Sterile medicinal products | Describe Changes |
-        | B.II.e.5(a).2 | Change outside the range of the currently approved pack sizes | Describe Changes |
-        | B.II.e.5(d) | Change in the fill weight/fill volume of nonparenteral multi-dose (or single-dose, partial use) products | Describe Changes |
-        | B.II.e.6(b) | Change that does not affect the product information | Describe Changes |
-        | B.II.f.1(b).1 | As packaged for sale (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).2 | After first opening (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).3 | After dilution or reconstitution (supported by real time data) | Describe Changes |
-        | B.II.f.1(b).5 | Extension of the shelf-life of a biological/immunological medicinal product in accordance with an approved stability protocol | Describe Changes |
-        | B.II.f.1(d) | Change in storage conditions of the finished product or the diluted/reconstituted product | Describe Changes |
-        | B.II.g.4(b) | Minor changes to an approved change management protocol that do not change the strategy defined in the protocol | Describe Changes |
-        | B.II.g.5(b) | The implementation of the change requires further supportive data | Describe Changes |
-        | B.II.g.5(c) | Implementation of a change for a biological/immunological medicinal product | Describe Changes |
-        | B.II.h.1(b).2 | without modification of risk assessment | Describe Changes |
-        | B.III.1(a).5 | New certificate for a non-sterile active substance that is to be used in a sterile medicinal product, where water is used in the last steps of the synthesis and the material is not claimed to be endotoxin free | Describe Changes |
-        | B.IV.1(a).2 | Device without CE marking (for veterinary products only) | Describe Changes |
-        | B.IV.2(e) | Addition of a specification parameter as a result of a safety or quality issue | Describe Changes |
-        | B.V.a.1(b) | First time inclusion of a new Plasma Master File not affecting the properties of the finished product | Describe Changes |
-        | B.V.a.1(c) | Inclusion of an updated/amended Plasma Master File when changes affect the properties of the finished product | Describe Changes |
-        | B.V.a.2(b) | Inclusion of an updated/amended Vaccine Antigen Master File, when changes affect the properties of the finished product | Describe Changes |
-        | C.I.1(b) | The medicinal product is not covered by the defined scope of the procedure but the change(s) implements the outcome of the procedure and no new additional data is required to be submitted by the MAH | Describe Changes |
-        | C.I.2(a) | Implementation of change(s) for which no new additional data are submitted by the MAH | Describe Changes |
-        | C.I.6(b) | Deletion of a therapeutic indication | Describe Changes |
-        | C.I.7(a) | Deletion of a pharmaceutical form | Describe Changes |
-        | C.I.7(b) | Deletion of a strength | Describe Changes |
-        | C.I(z).2 | Addition or change to safety warnings | Describe Changes |
-        | C.I(z).3 | Approval of mock-ups | Describe Changes |
-        | C.I(z).4 | Changes to SPC and/or product literature for MAPIs | Describe Changes |
-        | C.I(z).5 | Joint-Labelling Variation | Describe Changes |
-        | C.I(z).6 | Normal corrections or simple text layout changes to SPC and/or product literature | Describe Changes |
-        | C.I(z).7 | Resubmission of previously refused Type II variations | Describe Changes |
-        | C.I(z).8 | Simple changes to dosage instructions | Describe Changes |
-        | C.I(z).9 | Submission following formal advice from the VMD | Describe Changes |
-        | C.II.2(b) | Deletion not resulting from a safety issue | Describe Changes |
-        | C.II.6(b) | Other changes | Describe Changes |
-        | C.II.6(b) Mock-ups | Description Needed | Describe Changes |
-        | C.II.7(b) | Which has been assessed by the relevant national competent authority/EMA for another product of the same MAH(*) | Describe Changes |
+        | A.3 | Change in name of the active substance or of an excipient | Variation Type Page 2 |
+        | A.4 | Change in the name and/or address of a manufacturer (including where relevant quality control testing sites); or an ASMF holder; or a supplier of the active substance, starting material, reagent or intermediate used in the manufacture of the active substance (where specified in the technical dossier) where no Ph. Eur. Certificate of Suitability is part of the approved dossier; or a manufacturer of a novel excipient (where specified in the technical dossier). | Variation Type Page 2 |
+        | A.5(a) | The activities for which the manufacturer/importer is responsible include batch release | Variation Type Page 2 |
+        | A.5(b) | The activities for which the manufacturer/importer is responsible do not include batch release | Variation Type Page 2 |
+        | A.6 | Change in ATC Code / ATC Vet Code | Variation Type Page 2 |
+        | A.7 | Deletion of a manufacturing sites (for an active substance, intermediate or finished product, packaging site, manufacturer responsible for batch release, site where batch control takes place, or supplier of a starting material, reagent or excipient (when mentioned in the dossier). Where notice has been given by the authorities of the intention to perform an inspection, the deletion of the relevant site shall be notified immediately. | Variation Type Page 2 |
+        | B.I.a.1(a) | The proposed manufacturer is part of the same pharmaceutical group as the currently approved manufacturer. | Variation Type Page 2 |
+        | B.I.a.1(f) | Changes to quality control testing arrangements for the active substance-replacement or addition of a site where batch control/testing takes place | Variation Type Page 2 |
+        | B.I.a.1(i) | Introduction of a new site of micronisation | Variation Type Page 2 |
+        | B.I.a.2(a) | Minor change in the manufacturing process of the active substance | Variation Type Page 2 |
+        | B.I.a.3(a) | Up to 10-fold increase compared to the originally approved batch size | Variation Type Page 2 |
+        | B.I.a.3(b) | Downscaling down to 10-fold | Variation Type Page 2 |
+        | B.I.a.4(a) | Tightening of inprocess limits | Variation Type Page 2 |
+        | B.I.a.4(b) | Addition of a new inprocess test and limits | Variation Type Page 2 |
+        | B.I.a.4(c) | Deletion of a nonsignificant inprocess test | Variation Type Page 2 |
+        | B.I.b.1(a) | Tightening of specification limits for medicinal products subject to Official Control Authority Batch Release | Variation Type Page 2 |
+        | B.I.b.1(b) | Tightening of specification limits | Variation Type Page 2 |
+        | B.I.b.1(c) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.I.b.1(d) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.I.b.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.I.b.2(b) | Deletion of a test procedure for the active substance or a starting material/reagent/ intermediate, if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.I.b.2(c) | Other changes to a test procedure (including replacement or addition) for a reagent, which does not have a significant effect on the overall quality of the active substance | Variation Type Page 2 |
+        | B.I.c.1(a) | Qualitative and/or quantitative composition | Variation Type Page 2 |
+        | B.I.c.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.I.c.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.I.c.2(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.I.c.3(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.I.c.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.I.c.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.I.d.1(a).1 | Reduction | Variation Type Page 2 |
+        | B.I.d.1(b).1 | Change to more restrictive storage conditions of the active substance | Variation Type Page 2 |
+        | B.I.d.1(c) | Change to an approved stability protocol | Variation Type Page 2 |
+        | B.I.e.3 | Deletion of an approved change management protocol related to the active substance | Variation Type Page 2 |
+        | B.I.e.5(a) | The implementation of the change requires no further supportive data | Variation Type Page 2 |
+        | B.II.a.1(a) | Changes in imprints, bossing or other markings | Variation Type Page 2 |
+        | B.II.a.2(a) | Immediate release tablets, capsules, suppositories and pessaries | Variation Type Page 2 |
+        | B.II.a.3(a).1 | Addition, deletion or replacement | Variation Type Page 2 |
+        | B.II.a.3(a).2 | Increase or reduction | Variation Type Page 2 |
+        | B.II.a.3(b).1 | Any minor adjustment of the quantitative composition of the finished product with respect to excipients | Variation Type Page 2 |
+        | B.II.a.4(a) | Solid oral pharmaceutical forms | Variation Type Page 2 |
+        | B.II.b.1(a) | Secondary packaging site | Variation Type Page 2 |
+        | B.II.b.1(b) | Primary packaging site | Variation Type Page 2 |
+        | B.II.b.2(a) | Replacement or addition of a site where batch control/testing takes place | Variation Type Page 2 |
+        | B.II.b.2(c).1 | Not including batch control/testing | Variation Type Page 2 |
+        | B.II.b.2(c).2 | Including batch control/testing | Variation Type Page 2 |
+        | B.II.b.3(a) | Minor change in the manufacturing process | Variation Type Page 2 |
+        | B.II.b.4(a) | Up to 10-fold compared to the originally approved batch size | Variation Type Page 2 |
+        | B.II.b.4(b) | Downscaling down to 10-fold | Variation Type Page 2 |
+        | B.II.b.5(a) | Tightening of inprocess limits | Variation Type Page 2 |
+        | B.II.b.5(b) | Addition of a new test(s) and limits | Variation Type Page 2 |
+        | B.II.b.5(c) | Deletion of a nonsignificant inprocess test | Variation Type Page 2 |
+        | B.II.c.1(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.c.1(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.c.1(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.II.c.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.c.2(b) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.II.c.3(a).1 | For excipients or reagents not used in the manufacture of a biological / immunological active substance or in a biological / immunological medicinal product | Variation Type Page 2 |
+        | B.II.c.4(a) | Minor change in synthesis or recovery of a non-pharmacopoeial excipient or a novel excipient | Variation Type Page 2 |
+        | B.II.d.1(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.d.1(b) | Tightening of specification limits for medicinal products subject to Official Control Authority Batch Release | Variation Type Page 2 |
+        | B.II.d.1(c) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.d.1(d) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter such as odour and taste or identification test for a colouring or flavouring material) | Variation Type Page 2 |
+        | B.II.d.1(h) | Update of the dossier to comply with the provisions of an updated general monograph of the Ph. Eur for the finished product* | Variation Type Page 2 |
+        | B.II.d.1(i) | Ph. Eur. 2.9.40 Uniformity of dosage units is introduced to replace the currently registered method, either Ph. Eur. 2.9.5 (Uniformity of mass). or Ph. Eur. 2.9.6 (Uniformity of content) | Variation Type Page 2 |
+        | B.II.d.2(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.d.2(b) | Deletion of a test procedure if an alternative method is already authorised | Variation Type Page 2 |
+        | B.II.d.2(e) | Update of the test procedure to comply with the updated general monograph in the Ph.Eur. | Variation Type Page 2 |
+        | B.II.d.2(f) | To reflect compliance with the Ph.EUR. and remove reference to the outdated internal test method and test method number* | Variation Type Page 2 |
+        | B.II.e.1(a).1 | Solid pharmaceutical forms | Variation Type Page 2 |
+        | B.II.e.1(b).3 | Deletion of an immediate packaging container that does not lead to the complete deletion of a strength or pharmaceutical form | Variation Type Page 2 |
+        | B.II.e.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.II.e.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.II.e.2(c) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.II.e.3(a) | Minor changes to an approved test procedure | Variation Type Page 2 |
+        | B.II.e.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.II.e.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.II.e.4(a) | Nonsterile medicinal products | Variation Type Page 2 |
+        | B.II.e.5(a).1 | Change within the range of the currently approved pack sizes | Variation Type Page 2 |
+        | B.II.e.5(b) | Deletion of a pack size(s) | Variation Type Page 2 |
+        | B.II.e.6(a) | Change that affects the product information | Variation Type Page 2 |
+        | B.II.e.6(b) | Change that does not affect the product information | Variation Type Page 2 |
+        | B.II.e.7(a) | Deletion of a supplier | Variation Type Page 2 |
+        | B.II.e.7(b) | Replacement or addition of a supplier | Variation Type Page 2 |
+        | B.II.f.1(a).1 | As packaged for sale | Variation Type Page 2 |
+        | B.II.f.1(a).2 | After first opening | Variation Type Page 2 |
+        | B.II.f.1(a).3 | After dilution or reconstitution | Variation Type Page 2 |
+        | B.II.f.1(e) | Change to an approved stability protocol | Variation Type Page 2 |
+        | B.II.g.3 | Deletion of an approved change management protocol related to the finish product | Variation Type Page 2 |
+        | B.II.g.5(a) | The implementation of the change requires no further supportive data | Variation Type Page 2 |
+        | B.III.1(a).1 | New certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(a).2 | Updated certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(a).3 | New certificate from a new manufacturer (replacement or addition) | Variation Type Page 2 |
+        | B.III.1(a).4 | Deletion of certificates (in case multiple certificates exist per material) | Variation Type Page 2 |
+        | B.III.1(b).1 | New certificate for an active substance from a new or an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).2 | New certificate for a starting material/reagent/intermediate/or excipient from a new or an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).3 | Updated certificate from an already approved manufacturer | Variation Type Page 2 |
+        | B.III.1(b).4 | Deletion of certificates (in case multiple certificates exist per material) | Variation Type Page 2 |
+        | B.III.2(a).1 | Active substance | Variation Type Page 2 |
+        | B.III.2(a).2 | Excipient/active substance starting material | Variation Type Page 2 |
+        | B.III.2(b) | Change to comply with an update of the relevant monograph of the Ph. Eur. or national pharmacopoeia of a Member State | Variation Type Page 2 |
+        | B.III.2(c) | Change in specifications from a national pharmacopoeia of a Member State to the Ph. Eur. | Variation Type Page 2 |
+        | B.IV.1(a).1 | Device with CE marking | Variation Type Page 2 |
+        | B.IV.1(b) | Deletion of a device | Variation Type Page 2 |
+        | B.IV.2(a) | Tightening of specification limits | Variation Type Page 2 |
+        | B.IV.2(b) | Addition of a new specification parameter to the specification with its corresponding test method | Variation Type Page 2 |
+        | B.IV.2(f) | Deletion of a nonsignificant specification parameter (e.g. deletion of an obsolete parameter) | Variation Type Page 2 |
+        | B.IV.3(a) | Minor change to an approved test procedure | Variation Type Page 2 |
+        | B.IV.3(b) | Other changes to a test procedure (including replacement or addition) | Variation Type Page 2 |
+        | B.IV.3(c) | Deletion of a test procedure if an alternative test procedure is already authorised | Variation Type Page 2 |
+        | B.V.a.1(d) | Inclusion of an updated/amended Plasma Master File when changes do not affect the properties of the finished produc | Variation Type Page 2 |
+        | B.V.a.2(c) | Inclusion of an updated/amended Vaccine Antigen Master File, when changes do not affect the properties of the finished product | Variation Type Page 2 |
+        | B.V.b.1(a) | The change implements the outcome of the referral | Variation Type Page 2 |
+        | C.I.1(a) | The medicinal product is covered by the defined scope of the procedure | Variation Type Page 2 |
+        | C.I.9(a) | Change in the QPPV and/or QPPV contact details and/or back-up procedure | Variation Type Page 2 |
+        | C.I.9(b) | Change(s) in the safety database and/or major contractual arrangements for the fulfilment of pharmacovigilance obligations, and/or change of the site undergoing pharmacovigilance activities. | Variation Type Page 2 |
+        | C.I.9(c) | Other change(s) to the DDPS that does not impact on the operation of the pharmacovigilance system (e.g. change of the major storage/archiving location, administrative changes | Variation Type Page 2 |
+        | C.I.9(d) | Change(s) to a DDPS following the assessment of the same DDPS in relation to another medicinal product of the same MAH | Variation Type Page 2 |
+        | C.I.11(a) | Implementation of wording agreed by the competent authority | Variation Type Page 2 |
+        | C.I.12 | Inclusion or deletion of black symbol and explanatory statements for medicinal products in the list of medicinal prodcuts that are subject to additional monitoring | Variation Type Page 2 |
+        | C.II.8 | Change in the frequency and/or date of submission of periodic safety update reports (PSUR) | Variation Type Page 2 |
 
     @CPL-2014D-4
     Scenario: User selects the 'Save and exit' link

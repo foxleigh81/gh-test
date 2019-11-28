@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, enters application contact information
     Description:
         Reference: APL-0041C
+        Jira: GS-67
 
-    Background: Given the user has completed the PL-0041B steps
+    Background: Given the user has completed the GS-66 steps
 
     @APL-0041C
     Scenario: User is directed to the 'Application Contact Information' page
