@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only removes a variation
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only removes a variation
     Description:
         Reference: EPL-9014A
 

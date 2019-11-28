@@ -1,4 +1,4 @@
-Feature: User selects products to be varied
+Feature: User selects product to be varied
     Description:
         Reference: EPL-9005
 
@@ -22,15 +22,21 @@ Feature: User selects products to be varied
 
     @EPL-9005-1
     Scenario: User selects 'Products To Be Varied'
-        Given the user has been directed to the 'Product 2' page
+        Given the user has been directed to the 'Select Product 2'' page
         And they have selected at least 2 checkbox options
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
     @EPL-9005-2
     Scenario: User does not select a product
-        Given the user has been directed to the 'Product 2' page
+        Given the user has been directed to the 'Select Product 2'' page
         And they have not selected at least 2 checkbox options
         When they select 'Continue'
         Then they will see an error message containing 'You must select at least two products'
         And they will not be able to continue
+
+    @EPL-9005-3
+    Scenario: User selects 'Product not listed' link
+        Given they can see a 'Product not listed' link
+        When the user has selected the link 'Product not listed'
+        Then they will be directed to the 'Enter Products 2' page

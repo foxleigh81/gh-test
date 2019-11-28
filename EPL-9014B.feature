@@ -1,13 +1,13 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is prompted to add another variation
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only is prompted to add another variation
     Description:
         Reference: EPL-9014B
 
     Background: Given the user has completed the PL-9014 steps
 
     @EPL-9014B
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA  Only is directed to the Add Another Variation page
-        Given the user has been directed to the 'Add Another Variation' page
-        When page 'Add Another Variation' loads
+    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to the Add Another Variation page
+        Given the user has been directed to the 'Add Another Variation Code' page
+        When page 'Add Another Variation Code' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
         And a sub header 'Vary a marketing authorisation'
@@ -18,21 +18,21 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
 
     @EPL-9014B-1
     Scenario: User selects 'Yes'
-        Given the user has been directed to the 'Add Another Variation' page
+        Given the user has been directed to the 'Add Another Variation Code' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
     @EPL-9014B-2
     Scenario: User selects 'No'
-        Given the user has been directed to the 'Add Another Variation' page
+        Given the user has been directed to the 'Add Another Variation Code' page
         And the user has selected 'No'
         When they select 'Continue'
         Then they will be directed to the 'Supporting Documents' page
 
     @EPL-9014B-3
     Scenario: User does not select an option
-        Given the user has been directed to the  'Add Another Variation' page
+        Given the user has been directed to the  'Add Another Variation Code' page
         And they have not selected any 'Radio Button'
         When they select 'Continue'
         Then they will see an error message containing 'Select an option'

@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only adds another variation
+Feature: User who has entered a valid code from Data Table IA Only  adds another variation
     Description:
         Reference: EPL-9011
 
     Background: Given the user has completed the PL-9010 steps
 
     @EPL-9011
-    Scenario: User who has entered a valid code from Data Table IA Only directed to Enter Second Variation Code page
+    Scenario: User who has entered a valid code from Data Table IA Only is directed to Enter Second Variation Code page
         Given the user has been directed to the 'Enter Second Variation Code' page
         When page 'Enter Second Variation Code' loads
         Then they will see a 'Back' link

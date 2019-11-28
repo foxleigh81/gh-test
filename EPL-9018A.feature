@@ -1,10 +1,10 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only removes a variation
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only removes a variation
     Description:
-        Reference: EPL-9025A
+        Reference: EPL-9018A
 
-    Background: Given the user has completed the PL-9025 steps
+    Background: Given the user has completed the PL-9018 steps
 
-    @EPL-9025A
+    @EPL-9018A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
@@ -21,7 +21,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         | Sub Code | Description | Page |
         | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
 
-    @EPL-9025A-1
+    @EPL-9018A-1
     Scenario Outline: User who has selected Remove variation 2 is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
@@ -38,21 +38,21 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         | Sub Code | Description | Page |
         | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
 
-    @EPL-9025A-2
+    @EPL-9018A-2
     Scenario: User selects 'Yes'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
-    @EPL-9025A-3
+    @EPL-9018A-3
     Scenario: User selects 'No'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'No'
         When they select 'Continue'
-        Then they will be directed to the 'Application Summary' page
+        Then they will be directed to the 'Check your answers' page
 
-    @EPL-9025A-4
+    @EPL-9018A-4
     Scenario: User does not select an option
         Given the user has been directed to the 'Confirm Remove Variation' page
         And they have not selected any 'Radio Button'

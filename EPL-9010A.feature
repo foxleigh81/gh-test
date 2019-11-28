@@ -5,7 +5,7 @@ Feature: User who has entered a valid code from Data Table IA Only removes the v
     Background: Given the user has completed the PL-9010 steps
 
     @EPL-9010A
-    Scenario Outline: User is directed to the Confirm Remove Variation page
+    Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
         Then they will see a 'Back' link

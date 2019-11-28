@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only enters Implementation Date 
+Feature: User who has entered a valid code from Data Table IA Only enters the implementation date
     Description:
         Reference: EPL-9008
 

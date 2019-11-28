@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only views the application summary page
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only views the application summary page
     Description:
         Reference: EPL-9014
 
     Background: Given the user has completed the PL-9013 steps
 
     @EPL-9014
-    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only is directed to the Application Summary page
+    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to the Application Summary page
         Given the user has been directed to the 'Application Summary' page
         And they have entered a first variation code from Data Table '<Sub Code A>'
         And they have entered a second variation code from Data Table '<Sub Code B>'
@@ -55,7 +55,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         Given the user has been directed to the 'Application Summary' page
         And they can see a 'Change' link for 'Product 1'
         When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
+        Then they will be directed to the 'Select Product 2' page
 
     @EPL-9014-5
     Scenario: User selects change link for implementation date

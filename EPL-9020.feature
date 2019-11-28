@@ -1,31 +1,33 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table Z Onlydescribes the proposed changes
+Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB enters Implementation Date 
     Description:
         Reference: EPL-9020
 
-    Background: Given the user has completed the PL-9018 steps
+    Background: Given the user has completed the PL-9011 steps
 
     @EPL-9020
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table Data Table Z Only is directed to 'Describe Changes' page 
-        Given the user has been directed to the 'Describe changes' page
-        When page 'Describe changes' loads
-        Then a page header 'Describe the proposed change'
-        And the user can see the 'Outline the present situation' text area
-        And the user can see the 'Outline the proposed situation' text area
+    Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB is directed to 'Enter Implementation Date' page 
+        Given the user has been directed to the 'Implementation Date' page
+        When page 'Implementation Date' loads
+        Then a page header 'Enter the implementation date'
+        And the user will see the 'Date' text input box
+        And the user will see the 'Month' text input box
+        And the user will see the 'Year' text input box
+        And the user will see the 'Additional comments' text area
         And they will see a 'Continue' option
 
     @EPL-9020-1
-    Scenario: User Enters proposed changes
-        Given the user can see the 'Outline the present situation' text area
-        And the user can see the 'Outline the proposed situation' text area
-        And the user has entered 'Present text' into the 'Outline the present situation' text area
-        And the user has entered 'Proposed text' into the 'Outline the proposed situation' text area
-        When the user has selected 'Continue'
-        Then they will be directed to the 'Application Summary' page
+    Scenario: User enters an implementation date
+        Given the user has been directed to the 'Implementation Date' page
+        And they can see the 'Date' text input box
+        And they have entered a valid 'Date'
+        When they select 'Continue'
+        Then they will be directed to the 'Describe Changes' page
 
     @EPL-9020-2
-    Scenario: User does not enter proposed changes text
-        Given the user has not entered 'Present text' into the 'Outline the present situation' text area
-        And the user has not entered 'Proposed text' into the 'Outline the proposed situation' text area
+    Scenario: User does not enter a valid implementation date
+        Given the user has been directed to the 'Implementation Date' page
+        And they can see the 'Date' text input box
+        And they have not entered a valid 'Date'
         When the user has selected 'Continue'
-        Then they will see an error message containing 'Describe changes to continue'
+        Then they will see an error message containing 'Enter implementation date'
         And they will not be able to continue

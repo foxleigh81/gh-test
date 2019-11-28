@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Special Uploads dos
     Description:
         Reference: BPL-1046B
 
-    Background: Given the user has completed the PL-1046A steps
+    Background: Given the user has completed the GS-163 steps
 
     @BPL-1046B
     Scenario: User is directed to the 'Upload Dossier' page

@@ -7,8 +7,8 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
     @DPL-4095
     Scenario Outline: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a first variation code from Data Table 'IA Only'
-        And they have entered a second variation code from Data Table 'Z Only'
+        And they have entered a first variation code from Data Table 'Z Only'
+        And they have entered a second variation code from Data Table 'IA Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -24,6 +24,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
+        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
         And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
         And a table header 'Variation 2'
@@ -31,30 +32,30 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
+        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
         And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
-        And a table with a row with the list item 'Supporting Documents' and the 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' displayed and a change link
-        And a section header 'selection status' with an 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' link
+        And a section header 'Supporting Documents' with an 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' link
         And a section header 'selection status' with a 'Change' link
+        And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
         And a table with a row with the list item 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' and the 'selection status' displayed 
         And a table with a row with the list item 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' and the 'selection status' displayed 
         And a table with a row with the list item 'Omitted Documents' and the 'omitted documents text' displayed 
         And a table with a row with the list item 'Other Information' and the 'other information text' displayed 
         And a table with a row with the list item 'Contact Details' and the 'Contact name' displayed 
-        And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
-        And a section header 'entered purchase order number' with a 'Change' link
+        And a section header 'entered contact name' with a 'Change' link
+        And a table with a row with the list item 'Purchase order number' and the 'entered purchase order number' displayed 
         And a table with a row with the list item 'Contact number' and the 'entered contact number' displayed 
         And a table with a row with the list item 'Contact email address' and the 'entered contact email address' displayed 
         And a table with a row with the list item 'Invoice email address' and the 'entered invoice email address' displayed 
         And a table with a row with the list item 'Further comments' and the 'further comments text' displayed 
-        And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed 
         And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
         
     Examples: 
         | Sub Code A | Sub Code B |
-        | C.II.6(a) | A(z) |
+        | A(z) | A(z) |
 
     @DPL-4095-1
     Scenario: User selects change link for Product

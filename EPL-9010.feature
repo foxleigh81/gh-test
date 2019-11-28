@@ -45,7 +45,7 @@ Feature: User who has entered a valid code from Data Table IA Only views the App
         Given the user has been directed to the 'Application Summary' page
         And they can see a 'Change' link for 'Product 1'
         When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
+        Then they will be directed to the 'Select Product 2' page
 
     @EPL-9010-4
     Scenario: User selects change link for implementation date

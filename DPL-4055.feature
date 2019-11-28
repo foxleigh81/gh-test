@@ -7,7 +7,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
     @DPL-4055
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a first variation code from Data Table 'IA Only'
+        And they have entered a first variation code from Data Table 'IA + IB'
         And they have entered a second variation code from Data Table 'IA + IB'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link

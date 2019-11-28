@@ -20,6 +20,6 @@ Feature: User selects procedure option
     @EPL-9003-1
     Scenario: User selects 'Several changes to several unrelated products'
         Given the user has been directed to the 'Procedure Option Type IA' page
-        And the user has selected 'Several changes to several unrelated products'
+        And the user has selected 'Several changes to one product'
         When they select 'Continue'
-        Then they will be directed to the 'Select Product 2' page
+        Then they will be directed to the 'Select Product 1' page

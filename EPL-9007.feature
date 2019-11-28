@@ -15,7 +15,7 @@ Feature: User enters a variation code
         And a sub header 'Enter variation code or name'
         And a sub header 'Select a common variation'
         And the user can see a text input box
-        And they will see 'Choose from the full list of variations' radio button option(s)
+        And they will see 5 radio button option(s)
         And they will see a 'Continue' option
 
     @EPL-9007-1

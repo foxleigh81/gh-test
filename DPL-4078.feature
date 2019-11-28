@@ -7,7 +7,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
     @DPL-4078
     Scenario Outline: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a first variation code from Data Table 'IA Only'
+        And they have entered a first variation code from Data Table 'Z Only'
         And they have entered a second variation code from Data Table 'IA Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
@@ -24,6 +24,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
+        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
         And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
         And a table header 'Variation 2'
@@ -53,7 +54,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         
     Examples: 
         | Sub Code A | Sub Code B |
-        | C.II.6(a) | C.II.6(a) |
+        | A(z) | C.II.6(a) |
 
     @DPL-4078-1
     Scenario: User selects change link for Product

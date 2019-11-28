@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Special confirms supporting documents
     Description:
         Reference: BPL-1046A
+        Jira: GS-163
 
     Background: Given the user has completed the GS-162 steps
 

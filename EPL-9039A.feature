@@ -1,28 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB removes a variation
+Feature: User who has entered a valid code from Data Table IA + IB removes the variation
     Description:
-        Reference: EPL-9017A
+        Reference: EPL-9039A
 
-    Background: Given the user has completed the PL-9017 steps
+    Background: Given the user has completed the PL-9039 steps
 
-    @EPL-9017A
-    Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page
-        Given the user has been directed to the 'Confirm Remove Variation' page
-        When page 'Confirm Remove Variation' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Are you sure you want to remove variation:'
-        And they will see the '<Sub Code>' displayed 
-        And they will see a radio button option for 'Yes'
-        And they will see a radio button option for 'No'
-        And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
-
-    @EPL-9017A-1
-    Scenario Outline: User who has selected Remove variation 2 is directed to the Confirm Remove Variation page
+    @EPL-9039A
+    Scenario Outline: User who has entered a valid code from Data Table IA + IB is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
         Then they will see a 'Back' link
@@ -157,21 +140,21 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         | C.I.12 | Inclusion or deletion of black symbol and explanatory statements for medicinal products in the list of medicinal prodcuts that are subject to additional monitoring | Variation Type Page 2 |
         | C.II.8 | Change in the frequency and/or date of submission of periodic safety update reports (PSUR) | Variation Type Page 2 |
 
-    @EPL-9017A-2
+    @EPL-9039A-1
     Scenario: User selects 'Yes'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
-    @EPL-9017A-3
+    @EPL-9039A-2
     Scenario: User selects 'No'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'No'
         When they select 'Continue'
         Then they will be directed to the 'Application Summary' page
 
-    @EPL-9017A-4
+    @EPL-9039A-3
     Scenario: User does not select an option
         Given the user has been directed to the 'Confirm Remove Variation' page
         And they have not selected any 'Radio Button'

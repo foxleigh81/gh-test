@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only describes proposed changes
+Feature: User who has entered a valid code from Data Table IA describes proposed changes
     Description:
         Reference: EPL-9009
 
     Background: Given the user has completed the PL-9008 steps
 
     @EPL-9009
-    Scenario: User who has entered a valid code from Data Table IA Only directed to 'Describe Changes' page 
+    Scenario: User who has entered a valid code from Data Table IA Only is directed to 'Describe Changes' page 
         Given the user has been directed to the 'Describe changes' page
         When page 'Describe changes' loads
         Then a page header 'Describe the proposed change'
