@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only or IA + IB and a second variation code from Data Table IA Only or IA + IB submits the application
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only submits the application
     Description:
         Reference: DPL-4019
 

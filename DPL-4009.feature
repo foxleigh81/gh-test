@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA or IA + IB describes proposed changes
+Feature: User who has entered a valid code from Data Table IA describes proposed changes
     Description:
         Reference: DPL-4009
 
     Background: Given the user has completed the PL-4008 steps
 
     @DPL-4009
-    Scenario: User who has entered a valid code from Data Table IA Only or IA + IB is directed to 'Describe Changes' page 
+    Scenario: User who has entered a valid code from Data Table IA Only is directed to 'Describe Changes' page 
         Given the user has been directed to the 'Describe changes' page
         When page 'Describe changes' loads
         Then a page header 'Describe the proposed change'
