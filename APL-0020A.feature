@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type confirms supporting documents
     Description:
         Reference: APL-0020A
+        Jira: GS-44
 
-    Background: Given the user has completed the PL-0020 steps
+    Background: Given the user has completed the GS-43 steps
 
     @APL-0020A
     Scenario: User directed to 'Supporting Documents' page 

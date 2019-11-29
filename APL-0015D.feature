@@ -1,13 +1,14 @@
 Feature: User who has entered a valid code from Data Table II Only checks, and is able to change answers
     Description:
         Reference: APL-0015D
+        Jira: GS-33
 
     Background: Given the user has completed the GS-25 steps
 
     @APL-0015D
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Check your answers' page test this
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a variation code from Data Table 'Data Table II Only'
+        And they have entered a variation code from Data Table 'II Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -22,8 +23,8 @@ Feature: User who has entered a valid code from Data Table II Only checks, and i
         And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 
         And a table with a row with the list item 'Description' and the 'Variation description' displayed and a change link
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
-        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
+        And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a section header 'Supporting Documents' with a 'Change' link
         And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the 'selection status' displayed 
         And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
