@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IB Only enters application contact information
+Feature: User who has entered a valid code from Data Table IA + IB Only enters application contact information
     Description:
         Reference: CPL-2014C
 
