@@ -24,8 +24,8 @@ Feature: User who has entered a valid code from Data Table Z Special checks, and
         And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
-        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
+        And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a section header 'Supporting Documents' with a 'Change' link
         And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the 'selection status' displayed 
         And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 

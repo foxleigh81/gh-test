@@ -25,16 +25,16 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
-        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
+        And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a table header 'Variation 2'
         And a table with a row with the list item 'Code' and the '<Sub Code B>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present situation text' displayed and a change link
-        And a table with a row with the list item Proposed' and the 'proposed change text' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
+        And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a section header 'Supporting Documents' with an 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' link
         And a section header 'selection status' with a 'Change' link
         And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
