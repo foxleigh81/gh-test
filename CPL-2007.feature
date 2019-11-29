@@ -22,13 +22,14 @@ Feature: User enters a variation code
     @CPL-2007-1
     Scenario Outline: User enters a valid code from Data Table IA Only
         Given the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
+        And they have entered a valid '<Sub Code>' from '<Group>'
         When they select 'Continue'
         Then they will be directed to the 'Implementation Date' page
         
     Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
+        | Sub Code | Description | Group |
+        | testcode | A | IA Only |
+        | test2code | B | IB Only |
 
     @CPL-2007-2
     Scenario Outline: User enters a valid code from Data Table IA + IB
