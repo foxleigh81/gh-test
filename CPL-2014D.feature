@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only checks, and is able to change answers
     Description:
         Reference: CPL-2014D
+        Jira: GS-189
 
-    Background: Given the user has completed the PL-2014C steps
+    Background: Given the user has completed the GS-188 steps
 
     @CPL-2014D
     Scenario Outline: User who has entered a valid code from Data Table IA + IB Only is directed to 'Check your answers' page 

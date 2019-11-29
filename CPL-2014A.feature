@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only confirms supporting documents
     Description:
         Reference: CPL-2014A
+        Jira: GS-186
 
-    Background: Given the user has completed the PL-2014 steps
+    Background: Given the user has completed the GS-185 steps
 
     @CPL-2014A
     Scenario: User directed to 'Supporting Documents' page 

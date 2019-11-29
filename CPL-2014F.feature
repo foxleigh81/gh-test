@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only submits the application
     Description:
         Reference: CPL-2014F
+        Jira: GS-191
 
-    Background: Given the user has completed the PL-2014D steps
+    Background: Given the user has completed the GS-189 steps
 
     @CPL-2014F
     Scenario: User is directed to the 'Declaration' page

@@ -1,8 +1,9 @@
 Feature: User enters a variation code
     Description:
         Reference: CPL-2007
+        Jira: GS-174
 
-    Background: Given the user has completed the PL-2005 steps
+    Background: Given the user has completed the GS-172 steps
 
     @CPL-2007
     Scenario: User directed to Enter Variation Code

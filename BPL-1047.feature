@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special checks, and is able to change answers
     Description:
         Reference: BPL-1047
+        Jira: GS-166
 
-    Background: Given the user has completed the PL-1046C steps
+    Background: Given the user has completed the GS-165 steps
 
     @BPL-1047
     Scenario Outline: User who has entered a valid code from Data table Z Special is directed to the 'Check your answers' page

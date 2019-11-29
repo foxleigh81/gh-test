@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only describes prop
     Description:
         Reference: CPL-2015B
 
-    Background: Given the user has completed the PL-2013 steps
+    Background: Given the user has completed the GS-184 steps
 
     @CPL-2015B
     Scenario: Use who has entered a valid code from Data Table Z Only is directed to the 'Describe Changes' page 

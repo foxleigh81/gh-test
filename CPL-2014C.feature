@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only enters application contact information
     Description:
         Reference: CPL-2014C
+        Jira: GS-188
 
-    Background: Given the user has completed the PL-2014B steps
+    Background: Given the user has completed the GS-187 steps
 
     @CPL-2014C
     Scenario: User is directed to the 'Application Contact Information' page

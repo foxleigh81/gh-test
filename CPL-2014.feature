@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only describes proposed changes
     Description:
         Reference: CPL-2014
+        Jira: GS-185
 
-    Background: Given the user has completed the PL-2013 steps
+    Background: Given the user has completed the GS-184 steps
 
     @CPL-2014
     Scenario: Use who has entered a valid code from Data Table IA + IB Only is directed to the 'Describe Changes' page 

@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Special Uploads dossier
     Description:
         Reference: BPL-1046B
+        Jira: GS-164
 
     Background: Given the user has completed the GS-163 steps
 

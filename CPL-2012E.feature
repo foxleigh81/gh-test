@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only submits the application
     Description:
         Reference: CPL-2012E
+        Jira: GS-183
 
-    Background: Given the user has completed the PL-2012C steps
+    Background: Given the user has completed the GS-181 steps
 
     @CPL-2012E
     Scenario: User is directed to the 'Declaration' page
