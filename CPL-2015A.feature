@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only answers the Ar
     Description:
         Reference: CPL-2015A
 
-    Background: Given the user has completed the PL-2015 steps
+    Background: Given the user has completed the GS-192 steps
 
     @CPL-2015A
     Scenario: User directed to 'Article 5' page 

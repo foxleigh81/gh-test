@@ -27,9 +27,8 @@ Feature: User enters a variation code
         Then they will be directed to the 'Implementation Date' page
         
     Examples: 
-        | Sub Code | Description | Group |
-        | testcode | A | IA Only |
-        | test2code | B | IB Only |
+        | Sub Code | Description | Page |
+        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
 
     @CPL-2007-2
     Scenario Outline: User enters a valid code from Data Table IA + IB
