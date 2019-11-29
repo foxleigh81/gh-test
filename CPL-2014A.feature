@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IB Only confirms supporting documents
+Feature: User who has entered a valid code from Data Table IA + IB Only confirms supporting documents
     Description:
         Reference: CPL-2014A
 
