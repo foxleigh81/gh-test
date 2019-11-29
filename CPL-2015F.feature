@@ -7,7 +7,7 @@ Feature: User who has entered a valid code from Data Table Z Only checks, and is
     @CPL-2015F
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a value from Data Table 'Data Table Z Only'
+        And they have entered a value from Data Table 'Z Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -26,7 +26,7 @@ Feature: User who has entered a valid code from Data Table Z Only checks, and is
         And a table with a row with the list item 'selected variation type' and the 'Implementation Date' displayed and a change link
         And a table with a row with the list item 'entered implementation Date' and the 'Article 5' displayed and a change link
         And a table with a row with the list item 'Article 5 answer' and the 'Present' displayed and a change link
-        And a table with a row with the list item 'present situation text' and the Proposed' displayed and a change link
+        And a table with a row with the list item 'present text' and the 'Proposed' displayed and a change link
         And a section header 'proposed change text' with a 'Change' link
         And a table with a row with the list item 'Supporting Documents' and the 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' displayed 
         And a table with a row with the list item 'selection status' and the 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' displayed 
