@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     Description:
         Reference: DPL-4019
 
-    Background: Given the user has completed the PL-4018 steps
+    Background: Given the user has completed the GS-218 steps
 
     @DPL-4019
     Scenario: User is directed to the 'Declaration' page

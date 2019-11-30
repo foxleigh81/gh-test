@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only checks, and is able to change answers
     Description:
         Reference: DPL-4018
+        Jira: GS-218
 
     Background: Given the user has completed the GS-217 steps
 
