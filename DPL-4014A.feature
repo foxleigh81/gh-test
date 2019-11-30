@@ -1,6 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only removes a variation
     Description:
         Reference: DPL-4014A
+        Jira: GS-213
 
     Background: Given the user has completed the GS-212 steps
 
