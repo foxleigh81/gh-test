@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     Description:
         Reference: DPL-4018
 
-    Background: Given the user has completed the PL-4017 steps
+    Background: Given the user has completed the GS-217 steps
 
     @DPL-4018
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
