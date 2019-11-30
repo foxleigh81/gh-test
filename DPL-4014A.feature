@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     Description:
         Reference: DPL-4014A
 
-    Background: Given the user has completed the PL-4014 steps
+    Background: Given the user has completed the GS-212 steps
 
     @DPL-4014A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page

@@ -1,8 +1,9 @@
 Feature: User selects product to be varied
     Description:
         Reference: DPL-4005
+        Jira: GS-203
 
-    Background: Given the user has completed the PL-4003 steps
+    Background: Given the user has completed the GS-202 steps
 
     @DPL-4005
     @TestData::KetaminePlus

@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB enters the im
     Description:
         Reference: DPL-4037
 
-    Background: Given the user has completed the PL-4007 steps
+    Background: Given the user has completed the GS-204 steps
 
     @DPL-4037
     Scenario: User who has entered a valid code from Data Table IA + IB is directed to 'Enter Implementation Date' page 

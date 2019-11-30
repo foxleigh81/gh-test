@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only describes the proposed changes
     Description:
         Reference: DPL-4013
+        Jira: GS-211
 
-    Background: Given the user has completed the PL-4012 steps
+    Background: Given the user has completed the GS-210 steps
 
     @DPL-4013
     Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA Only is directed to 'Describe Changes' page 

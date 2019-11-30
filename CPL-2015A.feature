@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only answers the Article 5 question
     Description:
         Reference: CPL-2015A
+        Jira: GS-192
 
-    Background: Given the user has completed the GS-192 steps
+    Background: Given the user has completed the GS-191 steps
 
     @CPL-2015A
     Scenario: User directed to 'Article 5' page 

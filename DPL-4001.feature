@@ -1,8 +1,9 @@
 Feature: User selects procedure type 
     Description:
         Reference: DPL-4001
+        Jira: GS-201
 
-    Background: Given the user has completed the PL-4000 steps
+    Background: Given the user has completed the GS-200 steps
 
     @DPL-4001
     Scenario: User directed to Procedure Type page 

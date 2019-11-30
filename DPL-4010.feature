@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only views the Application Summary page
     Description:
         Reference: DPL-4010
+        Jira: GS-207
 
-    Background: Given the user has completed the PL-4009 steps
+    Background: Given the user has completed the GS-206 steps
 
     @DPL-4010
     Scenario Outline: User who has entered a valid code from Data Table IA Only directed to the Application Summary page
@@ -63,7 +64,7 @@ Feature: User who has entered a valid code from Data Table IA Only views the App
 
     @DPL-4010-6
     Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
+        Given the user has been directed to the 'Application Summary' page
         And they can see a save and exit link
         When they select 'Save and exit link'
         Then they will be directed to the 'Incomplete applications' page

@@ -81,7 +81,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
 
     @DPL-4091-8
     Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
+        Given the user has been directed to the 'Application Summary' page
         And they can see a save and exit link
         When they select 'Save and exit link'
         Then they will be directed to the 'Incomplete applications' page

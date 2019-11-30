@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only confirms supporting documents
     Description:
         Reference: CPL-2015C
+        Jira: GS-194
 
-    Background: Given the user has completed the PL-2015B steps
+    Background: Given the user has completed the GS-193 steps
 
     @CPL-2015C
     Scenario: User directed to 'Supporting Documents' page 

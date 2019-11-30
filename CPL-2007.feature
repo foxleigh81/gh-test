@@ -22,7 +22,7 @@ Feature: User enters a variation code
     @CPL-2007-1
     Scenario Outline: User enters a valid code from Data Table IA Only
         Given the user can see a text input box
-        And they have entered a valid '<Sub Code>' from '<Group>'
+        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
         When they select 'Continue'
         Then they will be directed to the 'Implementation Date' page
         

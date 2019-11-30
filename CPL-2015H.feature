@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only submits the application
     Description:
         Reference: CPL-2015H
+        Jira: GS-199
 
-    Background: Given the user has completed the PL-2015F steps
+    Background: Given the user has completed the GS-197 steps
 
     @CPL-2015H
     Scenario: User is directed to the 'Declaration' page

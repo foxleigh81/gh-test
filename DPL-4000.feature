@@ -1,6 +1,7 @@
 Feature: User starts the MA Variation process
     Description:
         Reference: DPL-4000
+        Jira: GS-200
 
     @DPL-4000
     Scenario: MA Starts

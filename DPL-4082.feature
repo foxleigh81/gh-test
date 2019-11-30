@@ -65,15 +65,22 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         Then they will be directed to the 'Implementation Date' page
 
     @DPL-4082-6
+    Scenario: User selects change link for Article 5
+        Given the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Article 5'
+        When they select 'Article 5 change link'
+        Then they will be directed to the 'Article 5' page
+
+    @DPL-4082-7
     Scenario: User selects change link for Describe changes
         Given the user has been directed to the 'Application Summary' page
         And they can see a 'Change' link for 'Proposed changes'
         When they select 'Proposed changes change link'
         Then they will be directed to the 'Describe changes' page
 
-    @DPL-4082-7
+    @DPL-4082-8
     Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
+        Given the user has been directed to the 'Application Summary' page
         And they can see a save and exit link
         When they select 'Save and exit link'
         Then they will be directed to the 'Incomplete applications' page

@@ -33,7 +33,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
-        And a section header Add another variation' with an 'Add another variation' link
+        And a section header 'Add another variation' with an 'Add another variation' link
         And a section header 'Supporting Documents' with a 'Change' link
         And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the 'selection status' displayed 
         And a table with a row with the list item 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' and the 'selection status' displayed 
@@ -63,32 +63,39 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         Then they will be directed to the 'Select Product 1' page
 
     @DPL-4018-2
+    Scenario: User selects change link for implementation date
+        Given the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Implementation Date'
+        When they select 'Implementation Date change link'
+        Then they will be directed to the 'Implementation Date' page
+
+    @DPL-4018-3
     Scenario: User selects change link for Describe changes
         Given the user has been directed to the 'Check Your Answers' page
         And they can see a 'Change' link for 'Describe changes'
         When they select 'Describe changes change link'
         Then they will be directed to the 'Describe changes' page
 
-    @DPL-4018-3
+    @DPL-4018-4
     Scenario: User selects Remove variation link for Variation 1
         Given they can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
-    @DPL-4018-4
+    @DPL-4018-5
     Scenario: User selects Remove variation link for Variation 2
         Given they can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
-    @DPL-4018-5
+    @DPL-4018-6
     Scenario: User selects the 'Save and exit' link
         Given the user has been directed to the 'Check Your Answers' page
         And they can see a save and exit link
         When they select 'Save and exit link'
         Then they will be directed to the 'Incomplete applications' page
 
-    @DPL-4018-6
+    @DPL-4018-7
     Scenario: User selects 'Continue' option
         Given the user has been directed to the 'Check Your Answers' page
         When they select 'Continue'

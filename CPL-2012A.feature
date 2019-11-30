@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA Only Uploads dossier
     Description:
         Reference: CPL-2012A
-        Jira: GS-179
+        Jira: GS-178
 
     Background: Given the user has completed the GS-177 steps
 

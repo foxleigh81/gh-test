@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only describes proposed changes
     Description:
         Reference: CPL-2015B
+        Jira: GS-193
 
-    Background: Given the user has completed the GS-184 steps
+    Background: Given the user has completed the GS-183 steps
 
     @CPL-2015B
     Scenario: Use who has entered a valid code from Data Table Z Only is directed to the 'Describe Changes' page 

@@ -1,8 +1,9 @@
 Feature: User enters a variation code
     Description:
         Reference: DPL-4007
+        Jira: GS-204
 
-    Background: Given the user has completed the PL-4005 steps
+    Background: Given the user has completed the GS-203 steps
 
     @DPL-4007
     Scenario: User directed to Enter Variation Code

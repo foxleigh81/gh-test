@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only enters Implementation Date 
     Description:
         Reference: CPL-2015
-        Jira: GS-192
+        Jira: GS-191
 
     Background: Given the user has completed the GS-174 steps
 

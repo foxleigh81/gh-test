@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only enters Implementation Date 
     Description:
         Reference: CPL-2013
-        Jira: GS-184
+        Jira: GS-183
 
     Background: Given the user has completed the GS-174 steps
 
