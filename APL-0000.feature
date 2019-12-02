@@ -1,4 +1,4 @@
-Feature: User starts the MA Variation process TEST
+Feature: User starts the MA Variation process
     Description:
         Reference: APL-0000
         Jira: GS-1
