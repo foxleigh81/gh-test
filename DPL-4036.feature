@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
     Description:
         Reference: DPL-4036
 
-    Background: Given the user has completed the PL-4035A steps
+    Background: Given the user has completed the PL-4035 steps
 
     @DPL-4036
     Scenario: User is directed to the 'Declaration' page

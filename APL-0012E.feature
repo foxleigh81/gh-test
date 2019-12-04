@@ -1,25 +1,45 @@
-Feature: User who has entered a valid code from Data Table IA Only submits the application
+Feature: User who has entered a valid code from Data Table IA Only changes the variation
     Description:
         Reference: APL-0012E
         Jira: GS-14
 
-    Background: Given the user has completed the GS-12 steps
+    Background: Given the user has completed the GS-13 steps
 
     @APL-0012E
-    Scenario: User is directed to the 'Declaration' page
-        Given the user has been directed to the 'Declaration' page
-        When page 'Declaration' loads
+    Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to 'Confirm Change Variation' page 
+        Given the user has been directed to the 'Confirm Change Variation' page
+        When page 'Confirm Change Variation' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Declaration'
-        And they will see Text 'By submitting this application you confirm that the information you've provided is correct at the time of submission'
-        And they will see Text '! If any information provided in this application is later found to be false or incorrect, the Secretary of State may suspend or revoke the authorisation'
-        And they will see a 'Agree and submit application' option
+        And a sub header 'Vary a marketing variation'
+        And a page header 'Are you sure you want to change variation:'
+        And they will see the '<Sub Code>' displayed 
+        And they will see a radio button option for 'Yes'
+        And they will see a radio button option for 'No'
+        And they will see a 'Continue' option
+        
+    Examples: 
+        | Sub Code | Description | Page |
+        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
 
     @APL-0012E-1
-    Scenario: User selects the 'Agree and submit application' option
-        Given the user has been directed to the 'Declaration' page
-        And they can see a 'Agree and submit application' option
-        When they select 'Agree and submit application'
-        Then they will be directed to the 'Application Submitted'  page
+    Scenario: User selects 'Yes' option
+        Given the user has been directed to the 'Confirm Change Variation' page
+        And the user has selected 'Yes'
+        When they select 'Continue'
+        Then they will be directed to the 'Enter Variation Code' page
+
+    @APL-0012E-2
+    Scenario: User selects 'No' option
+        Given the user has been directed to the 'Confirm Change Variation' page
+        And the user has selected 'No'
+        When they select 'Continue'
+        Then they will be directed to the 'Check Your Answers' page
+
+    @APL-0012E-3
+    Scenario: User does not select an option
+        Given the user has been directed to the 'Confirm Change Variation' page
+        And they have not selected any 'Radio Button'
+        When they select 'Continue'
+        Then they will see an error message containing 'Select an option'
+        And they will not be able to continue

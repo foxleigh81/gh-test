@@ -14,7 +14,7 @@ Feature: User selects procedure option
         And a sub header 'Vary a marketing authorisation'
         And a page header 'Select procedure option'
         And they will see a radio button option for 'One change to one product'
-        And they will see a radio button option for 'One change to several products'
+        And they will see a radio button option for 'One change to several related products'
         And they will see a 'Continue' option
 
     @APL-0003-1

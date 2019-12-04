@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
     Description:
         Reference: DPL-4078
 
-    Background: Given the user has completed the PL-4077 steps
+    Background: Given the user has completed the PL-4077A steps
 
     @DPL-4078
     Scenario Outline: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
@@ -22,7 +22,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table header 'Variation 1'
         And a table with a row with the list item 'Code' and the '<Sub Code A>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
@@ -30,7 +30,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table header 'Variation 2'
         And a table with a row with the list item 'Code' and the '<Sub Code B>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
@@ -53,8 +53,8 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And they will see a 'Continue' option
         
     Examples: 
-        | Sub Code A | Sub Code B |
-        | A(z) | C.II.6(a) |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | A(z) | C.II.6(a) | | Z Only | IA Only |
 
     @DPL-4078-1
     Scenario: User selects change link for Product
@@ -86,13 +86,13 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
 
     @DPL-4078-5
     Scenario: User selects Remove variation link for Variation 1
-        Given they can see a 'Variation 1 Remove' link
+        Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
     @DPL-4078-6
     Scenario: User selects Remove variation link for Variation 2
-        Given they can see a 'Variation 2 Remove' link
+        Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 

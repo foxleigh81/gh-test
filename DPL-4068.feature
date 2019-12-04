@@ -32,14 +32,14 @@ Feature: User who has entered a valid code from Data Table Z Only describes prop
 
     @DPL-4068-3
     Scenario: User completes all mandatory fields
-        Given the user has been directed to the 'Application Contact Information' page
+        Given the user has been directed to the 'Application Contact Details' page
         And there is a non-empty string in all mandatory fields
         When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+        Then they will be directed to the 'Application Finance Details' page
 
     @DPL-4068-4
     Scenario: User does not complete all mandatory fields
-        Given the user has been directed to the 'Application Contact Information' page
+        Given the user has been directed to the 'Application Contact Details' page
         And one or more mandatory fields are empty
         When they select 'Continue'
         Then they will see an error message containing 'Complete all mandatory fields to continue'

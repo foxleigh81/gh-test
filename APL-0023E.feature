@@ -3,7 +3,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         Reference: APL-0023E
         Jira: GS-43
 
-    Background: Given the user has completed the GS-42 steps
+    Background: Given the user has completed the GS-43 steps
 
     @APL-0023E
     Scenario Outline: User who has entered a valid code from Data Table IA + IB, and has selected IB variation type, is directed to 'Confirm Change Variation' page 

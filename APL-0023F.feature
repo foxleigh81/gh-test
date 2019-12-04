@@ -3,7 +3,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         Reference: APL-0023F
         Jira: GS-44
 
-    Background: Given the user has completed the GS-42 steps
+    Background: Given the user has completed the GS-43 steps
 
     @APL-0023F
     Scenario: User is directed to the 'Declaration' page

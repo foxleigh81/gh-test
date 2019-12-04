@@ -23,7 +23,7 @@ Feature: User who has entered a valid code from Data Table II Only Uploads dossi
         Given the user has been directed to the 'Upload Dossier' page
         And the user has selected 'a file to upload'
         When they select 'Upload file and continue'
-        Then they will be directed to the 'Application Contact Information' page
+        Then they will be directed to the 'Application Contact Details' page
 
     @APL-0015B-2
     Scenario: User does not upload a file

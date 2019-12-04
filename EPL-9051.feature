@@ -18,12 +18,12 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
@@ -31,8 +31,8 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And they will see a save and exit link 
         
     Examples: 
-        | Sub Code A | Sub Code B |
-        | A.3 | A.3 |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | A.3 | A.3 | | IA + IB | IA + IB |
 
     @EPL-9051-1
     Scenario: User selects 'Continue'
@@ -42,13 +42,13 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
 
     @EPL-9051-2
     Scenario: User selects Remove variation link for Variation 1
-        Given they can see a 'Variation 1 Remove' link
+        Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
     @EPL-9051-3
     Scenario: User selects Remove variation link for Variation 2
-        Given they can see a 'Variation 2 Remove' link
+        Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 

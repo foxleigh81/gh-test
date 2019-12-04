@@ -22,7 +22,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         Given the user has been directed to the 'Upload Dossier' page
         And the user has selected 'a file to upload'
         When they select 'Upload file and continue'
-        Then they will be directed to the 'Application Contact Information' page
+        Then they will be directed to the 'Application Contact Details' page
 
     @EPL-9084-2
     Scenario: User does not upload a file

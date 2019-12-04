@@ -38,6 +38,6 @@ Feature: User selects products to be varied
 
     @BPL-1005-3
     Scenario: User selects 'Product not listed' link
-        Given they can see a 'Product not listed' link
+        Given the user can see a 'Product not listed' link
         When the user has selected the link 'Product not listed'
         Then they will be directed to the 'Enter Products 2' page

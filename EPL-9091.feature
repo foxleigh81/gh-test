@@ -18,23 +18,23 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
+        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
-        And a table with a row with the list item 'Variation 2' and the '<Sub Code B>' displayed and a change link
-        And a table with a row containing the list item 'variation description' and the 'Variation Type' displayed and the 'selected variation type' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed 
+        And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
+        And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Article 5' and the the Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
-        And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
         
     Examples: 
-        | Sub Code A | Sub Code B |
-        | A(z) | A(z) |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | A(z) | A(z) | | Z Only | Z Only |
 
     @EPL-9091-1
     Scenario: User selects 'Continue'
@@ -44,13 +44,13 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
 
     @EPL-9091-2
     Scenario: User selects Remove variation link for Variation 1
-        Given they can see a 'Variation 1 Remove' link
+        Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
     @EPL-9091-3
     Scenario: User selects Remove variation link for Variation 2
-        Given they can see a 'Variation 2 Remove' link
+        Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 

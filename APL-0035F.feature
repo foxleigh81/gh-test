@@ -3,7 +3,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
         Reference: APL-0035F
         Jira: GS-62
 
-    Background: Given the user has completed the GS-60 steps
+    Background: Given the user has completed the GS-61 steps
 
     @APL-0035F
     Scenario: User is directed to the 'Declaration' page

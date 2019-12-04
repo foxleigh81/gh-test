@@ -46,7 +46,7 @@ Feature: User enters a product which does not appear in the list on the Select p
 
     @APL-0005A-4
     Scenario: User removes a product
-        Given they can see a 'Remove' link
+        Given the user can see a 'Remove' link
         When they select 'Remove'
         Then they will be directed back to the 'Enter Product 1' page
         And the 'product' will no longer appear in the table

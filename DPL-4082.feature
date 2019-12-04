@@ -18,19 +18,19 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
         
     Examples: 
-        | Sub Code A | Sub Code B |
-        | A(z) | A.3 |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | A(z) | A.3 | | Z Only | IA + IB |
 
     @DPL-4082-1
     Scenario: User selects 'Continue'
@@ -40,13 +40,13 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
 
     @DPL-4082-2
     Scenario: User selects Remove variation link for Variation 1
-        Given they can see a 'Variation 1 Remove' link
+        Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
     @DPL-4082-3
     Scenario: User selects Remove variation link for Variation 2
-        Given they can see a 'Variation 2 Remove' link
+        Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 

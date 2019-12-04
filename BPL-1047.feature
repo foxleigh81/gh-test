@@ -3,7 +3,7 @@ Feature: User who has entered a valid code from Data Table Z Special checks, and
         Reference: BPL-1047
         Jira: GS-166
 
-    Background: Given the user has completed the GS-165 steps
+    Background: Given the user has completed the PL-1046D steps
 
     @BPL-1047
     Scenario Outline: User who has entered a valid code from Data table Z Special is directed to the 'Check your answers' page
@@ -23,7 +23,7 @@ Feature: User who has entered a valid code from Data Table Z Special checks, and
         And a table header 'Variation 1'
         And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'N/a' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a section header 'Supporting Documents' with a 'Change' link

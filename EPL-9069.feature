@@ -17,7 +17,7 @@ Feature: User who has entered a valid code from Data Table Z Only views the Appl
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
+        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Article 5' and the 'Article 5 answer' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link

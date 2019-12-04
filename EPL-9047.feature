@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
     Description:
         Reference: EPL-9047
 
-    Background: Given the user has completed the PL-9046 steps
+    Background: Given the user has completed the PL-9046A steps
 
     @EPL-9047
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
@@ -23,14 +23,14 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And a table header 'Variation 1'
         And a table with a row with the list item 'Code' and the '<Sub Code A>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a table header 'Variation 2'
         And a table with a row with the list item 'Code' and the '<Sub Code B>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
@@ -53,8 +53,8 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And they will see a 'Continue' option
         
     Examples: 
-        | Sub Code A | Sub Code B |
-        | A.3 | C.II.6(a) |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | A.3 | C.II.6(a) | | IA + IB | IA Only |
 
     @EPL-9047-1
     Scenario: User selects change link for Product
@@ -79,13 +79,13 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
 
     @EPL-9047-4
     Scenario: User selects Remove variation link for Variation 1
-        Given they can see a 'Variation 1 Remove' link
+        Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
     @EPL-9047-5
     Scenario: User selects Remove variation link for Variation 2
-        Given they can see a 'Variation 2 Remove' link
+        Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 

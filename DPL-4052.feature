@@ -12,7 +12,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And a 'Sign out' link
         And a sub header 'Vary a marketing authorisation'
         And a page header 'Supporting Documents'
-        And they will see Text 'You need to supply the following documents as part of the application. Indicate all those documents that are included in your dossier.'
+        And they will see Text 'You need to supply all relevant documents as part of the application. Indicate all those documents that are included in your dossier.'
         And they will see Text ' ! If you do not provide all these documents, we may reject your application.'
         And the user will see a check box for 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage'
         And the user will see a check box for 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application'
