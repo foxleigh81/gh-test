@@ -1,9 +1,9 @@
 Feature: User selects products to be varied
     Description:
         Reference: CPL-2005
-        Jira: GS-172
+        Jira: GS-186
 
-    Background: Given the user has completed the GS-171 steps
+    Background: Given the user has completed the GS-185 steps
 
     @CPL-2005
     @TestData::KetaminePlus

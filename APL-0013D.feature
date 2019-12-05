@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only enters application finance information
     Description:
         Reference: APL-0013D
-        Jira: GS-19
+        Jira: GS-20
 
-    Background: Given the user has completed the GS-18 steps
+    Background: Given the user has completed the GS-19 steps
 
     @APL-0013D
     Scenario: User is directed to the 'Application Finance Details' page

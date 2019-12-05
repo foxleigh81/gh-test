@@ -53,7 +53,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         
     Examples: 
         | Sub Code A | Sub Code B | Group A | Group B |
-        | A.3 | A.3 | | IA + IB | IA + IB |
+        | A.3 | A.3 | IA + IB | IA + IB |
 
     @DPL-4055-1
     Scenario: User selects change link for Product

@@ -54,7 +54,7 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         
     Examples: 
         | Sub Code A | Sub Code B | Group A | Group B |
-        | A(z) | C.II.6(a) | | Z Only | IA Only |
+        | A(z) | C.II.6(a) | Z Only | IA Only |
 
     @DPL-4078-1
     Scenario: User selects change link for Product

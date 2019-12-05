@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only Uploads dossier
     Description:
         Reference: CPL-2015D
-        Jira: GS-195
+        Jira: GS-209
 
-    Background: Given the user has completed the GS-194 steps
+    Background: Given the user has completed the GS-208 steps
 
     @CPL-2015D
     Scenario: User is directed to the 'Upload Dossier' page

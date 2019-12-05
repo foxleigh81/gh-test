@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only enters application finance information
     Description:
         Reference: CPL-2014D
-        Jira: GS-188
+        Jira: GS-202
 
-    Background: Given the user has completed the GS-187 steps
+    Background: Given the user has completed the GS-201 steps
 
     @CPL-2014D
     Scenario: User is directed to the 'Application Finance Details' page

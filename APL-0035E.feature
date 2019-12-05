@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, checks and is able to change answers
     Description:
         Reference: APL-0035E
-        Jira: GS-61
+        Jira: GS-66
 
-    Background: Given the user has completed the GS-60 steps
+    Background: Given the user has completed the GS-65 steps
 
     @APL-0035E
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected IB variation type is directed to the 'Check your answers' page 

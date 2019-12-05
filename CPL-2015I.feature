@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only submits the ap
     Description:
         Reference: CPL-2015I
 
-    Background: Given the user has completed the GS-198 steps
+    Background: Given the user has completed the GS-212 steps
 
     @CPL-2015I
     Scenario: User is directed to the 'Declaration' page

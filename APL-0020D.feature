@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation  type enters application finance information
     Description:
         Reference: APL-0020D
-        Jira: GS-35
+        Jira: GS-38
 
-    Background: Given the user has completed the GS-34 steps
+    Background: Given the user has completed the GS-37 steps
 
     @APL-0020D
     Scenario: User is directed to the 'Application Finance Details' page

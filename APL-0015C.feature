@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only enters application contact information
     Description:
         Reference: APL-0015C
-        Jira: GS-25
+        Jira: GS-27
 
-    Background: Given the user has completed the GS-24 steps
+    Background: Given the user has completed the GS-26 steps
 
     @APL-0015C
     Scenario: User is directed to the 'Application Contact Details' page

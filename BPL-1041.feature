@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, describes the proposed changes
     Description:
         Reference: BPL-1041
-        Jira: GS-148
+        Jira: GS-162
 
-    Background: Given the user has completed the GS-147 steps
+    Background: Given the user has completed the GS-161 steps
 
     @BPL-1041
     Scenario: User directed to 'Describe Changes' page 

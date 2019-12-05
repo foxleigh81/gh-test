@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, enters application finance information
     Description:
         Reference: BPL-1035D
-        Jira: GS-144
+        Jira: GS-158
 
     Background: Given the user has completed the PL-01035C steps
 

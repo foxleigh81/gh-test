@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only enters application contact information
     Description:
         Reference: APL-0013C
-        Jira: GS-18
+        Jira: GS-19
 
-    Background: Given the user has completed the GS-17 steps
+    Background: Given the user has completed the GS-18 steps
 
     @APL-0013C
     Scenario: User is directed to the 'Application Contact Details' page

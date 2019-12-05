@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table  'No Variations' ente
     Description:
         Reference: BPL-1044D
 
-    Background: Given the user has completed the GS-158 steps
+    Background: Given the user has completed the GS-172 steps
 
     @BPL-1044D
     Scenario: User is directed to the 'Application Finance Details' page

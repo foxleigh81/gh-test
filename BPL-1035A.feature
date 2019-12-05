@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, confirms supporting documents
     Description:
         Reference: BPL-1035A
-        Jira: GS-141
+        Jira: GS-155
 
-    Background: Given the user has completed the GS-140 steps
+    Background: Given the user has completed the GS-154 steps
 
     @BPL-1035A
     Scenario: User directed to 'Supporting Documents' page 

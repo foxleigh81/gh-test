@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only Uploads dossier
     Description:
         Reference: CPL-2012A
-        Jira: GS-178
+        Jira: GS-192
 
-    Background: Given the user has completed the GS-177 steps
+    Background: Given the user has completed the GS-191 steps
 
     @CPL-2012A
     Scenario: User is directed to the 'Upload Dossier' page

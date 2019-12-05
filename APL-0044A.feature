@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' confirms supporting documents
     Description:
         Reference: APL-0044A
-        Jira: GS-72
+        Jira: GS-78
 
-    Background: Given the user has completed the GS-71 steps
+    Background: Given the user has completed the GS-77 steps
 
     @APL-0044A
     Scenario: User directed to 'Supporting Documents' page 

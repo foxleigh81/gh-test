@@ -55,7 +55,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         
     Examples: 
         | Sub Code A | Sub Code B | Group A | Group B |
-        | C.II.6(a) | A(z) | | IA Only | Z Only |
+        | C.II.6(a) | A(z) | IA Only | Z Only |
 
     @EPL-9035-1
     Scenario: User selects change link for Product

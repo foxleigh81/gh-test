@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation enters application contact information
     Description:
         Reference: APL-0020C
-        Jira: GS-34
+        Jira: GS-37
 
-    Background: Given the user has completed the GS-33 steps
+    Background: Given the user has completed the GS-36 steps
 
     @APL-0020C
     Scenario: User is directed to the 'Application Contact Details' page

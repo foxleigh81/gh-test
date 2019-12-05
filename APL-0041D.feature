@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type enters application finance information
     Description:
         Reference: APL-0041D
-        Jira: GS-68
+        Jira: GS-73
 
-    Background: Given the user has completed the GS-67 steps
+    Background: Given the user has completed the GS-72 steps
 
     @APL-0041D
     Scenario: User is directed to the 'Application Finance Details' page

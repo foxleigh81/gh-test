@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, enters the implementation date
     Description:
         Reference: BPL-1019
-        Jira: GS-114
+        Jira: GS-125
 
-    Background: Given the user has completed the GS-113 steps
+    Background: Given the user has completed the GS-124 steps
 
     @BPL-1019
     Scenario: User who has entered a valid code from Data Table IA + IB and has selected IA is directed to the 'Enter Implementation Date' page 

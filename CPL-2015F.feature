@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only enters application finance information
     Description:
         Reference: CPL-2015F
-        Jira: GS-197
+        Jira: GS-211
 
-    Background: Given the user has completed the GS-196 steps
+    Background: Given the user has completed the GS-210 steps
 
     @CPL-2015F
     Scenario: User is directed to the 'Application Finance Details' page

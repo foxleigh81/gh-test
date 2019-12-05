@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type enters the implementation date
     Description:
         Reference: APL-0019
-        Jira: GS-30
+        Jira: GS-33
 
-    Background: Given the user has completed the GS-29 steps
+    Background: Given the user has completed the GS-32 steps
 
     @APL-0019
     Scenario: User who has entered a valid code from Data Table IA + IB and has selected IA is directed to the 'Enter Implementation Date' page 

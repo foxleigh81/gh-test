@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only Uploads dossier
     Description:
         Reference: APL-0015B
-        Jira: GS-24
+        Jira: GS-26
 
-    Background: Given the user has completed the GS-23 steps
+    Background: Given the user has completed the GS-25 steps
 
     @APL-0015B
     Scenario: User is directed to the 'Upload Dossier' page

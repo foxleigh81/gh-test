@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only changes the variation
     Description:
         Reference: BPL-1012E
-        Jira: GS-98
+        Jira: GS-106
 
-    Background: Given the user has completed the GS-97 steps
+    Background: Given the user has completed the GS-105 steps
 
     @BPL-1012E
     Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to 'Confirm Change Variation' page 

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type enters application contact information
     Description:
         Reference: BPL-1032C
-        Jira: GS-135
+        Jira: GS-148
 
-    Background: Given the user has completed the GS-134 steps
+    Background: Given the user has completed the GS-147 steps
 
     @BPL-1032C
     Scenario: User is directed to the 'Application Contact Details' page

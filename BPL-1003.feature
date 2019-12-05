@@ -1,9 +1,9 @@
 Feature: User selects procedure option 
     Description:
         Reference: BPL-1003
-        Jira: GS-87
+        Jira: GS-95
 
-    Background: Given the user has completed the GS-86 steps
+    Background: Given the user has completed the GS-94 steps
 
     @BPL-1003
     Scenario: User directed to Procedure Option Type Single page

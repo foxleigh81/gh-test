@@ -1,7 +1,7 @@
 Feature: User starts the MA Variation process
     Description:
         Reference: CPL-2000
-        Jira: GS-169
+        Jira: GS-183
 
     @CPL-2000
     Scenario: MA Starts

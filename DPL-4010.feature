@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only views the Application Summary page
     Description:
         Reference: DPL-4010
-        Jira: GS-207
+        Jira: GS-221
 
-    Background: Given the user has completed the GS-206 steps
+    Background: Given the user has completed the GS-220 steps
 
     @DPL-4010
     Scenario Outline: User who has entered a valid code from Data Table IA Only directed to the Application Summary page

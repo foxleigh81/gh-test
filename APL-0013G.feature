@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only wants to submit an application
     Description:
         Reference: APL-0013G
+        Jira: GS-23
 
-    Background: Given the user has completed the GS-20 steps
+    Background: Given the user has completed the GS-21 steps
 
     @APL-0013G
     Scenario: User is directed to the 'Declaration' page

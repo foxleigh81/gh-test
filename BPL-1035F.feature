@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, changes the variation
     Description:
         Reference: BPL-1035F
-        Jira: GS-146
+        Jira: GS-160
 
-    Background: Given the user has completed the GS-145 steps
+    Background: Given the user has completed the GS-159 steps
 
     @BPL-1035F
     Scenario Outline: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, is directed to 'Confirm Change Variation' page 

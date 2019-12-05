@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only, and has selec
     Description:
         Reference: BPL-1035G
 
-    Background: Given the user has completed the GS-145 steps
+    Background: Given the user has completed the GS-159 steps
 
     @BPL-1035G
     Scenario: User is directed to the 'Declaration' page

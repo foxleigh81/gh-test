@@ -1,9 +1,8 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only submits the application
     Description:
         Reference: DPL-4019
-        Jira: GS-220
 
-    Background: Given the user has completed the GS-218 steps
+    Background: Given the user has completed the PL-4018 steps
 
     @DPL-4019
     Scenario: User is directed to the 'Declaration' page

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only changes the variation
     Description:
         Reference: CPL-2015H
-        Jira: GS-199
+        Jira: GS-213
 
-    Background: Given the user has completed the GS-198 steps
+    Background: Given the user has completed the GS-212 steps
 
     @CPL-2015H
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Confirm Change Variation' page 

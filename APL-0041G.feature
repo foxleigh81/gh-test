@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, submits the application
     Description:
         Reference: APL-0041G
+        Jira: GS-76
 
-    Background: Given the user has completed the GS-69 steps
+    Background: Given the user has completed the GS-74 steps
 
     @APL-0041G
     Scenario: User is directed to the 'Declaration' page

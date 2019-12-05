@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only changes the variation
     Description:
         Reference: APL-0013F
-        Jira: GS-21
+        Jira: GS-22
 
-    Background: Given the user has completed the GS-20 steps
+    Background: Given the user has completed the GS-21 steps
 
     @APL-0013F
     Scenario Outline: User who has entered a valid code from Data Table IB Only is directed to 'Confirm Change Variation' page 

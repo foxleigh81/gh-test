@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IB variation type, describes the proposed changes
     Description:
         Reference: BPL-1023
-        Jira: GS-122
+        Jira: GS-134
 
-    Background: Given the user has completed the GS-113 steps
+    Background: Given the user has completed the GS-124 steps
 
     @BPL-1023
     Scenario: User who has entered a valid code from Data Table IA + IB and has selected IB is directed to the 'Describe Changes' page 

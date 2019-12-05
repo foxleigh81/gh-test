@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only enters the implementation date
     Description:
         Reference: DPL-4008
-        Jira: GS-205
+        Jira: GS-219
 
-    Background: Given the user has completed the GS-204 steps
+    Background: Given the user has completed the GS-218 steps
 
     @DPL-4008
     Scenario: User who has entered a valid code from Data Table IA Only is directed to 'Enter Implementation Date' page 

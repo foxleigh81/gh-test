@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special enters application finance information
     Description:
         Reference: APL-0046D
+        Jira: GS-89
 
-    Background: Given the user has completed the GS-81 steps
+    Background: Given the user has completed the GS-88 steps
 
     @APL-0046D
     Scenario: User is directed to the 'Application Finance Details' page

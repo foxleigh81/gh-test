@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, submits the application
     Description:
         Reference: BPL-1032G
+        Jira: GS-222
 
-    Background: Given the user has completed the GS-137 steps
+    Background: Given the user has completed the GS-150 steps
 
     @BPL-1032G
     Scenario: User is directed to the 'Declaration' page

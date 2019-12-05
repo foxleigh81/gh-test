@@ -1,7 +1,7 @@
 Feature: User starts the MA Variation process
     Description:
         Reference: BPL-1000
-        Jira: GS-85
+        Jira: GS-93
 
     @BPL-1000
     Scenario: MA Starts

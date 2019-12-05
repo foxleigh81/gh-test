@@ -2,7 +2,7 @@ Feature: User enters a product which does not appear in the list on the Select p
     Description:
         Reference: DPL-4005A
 
-    Background: Given the user has completed the GS-203 steps
+    Background: Given the user has completed the GS-217 steps
 
     @DPL-4005A
     Scenario: User is directed to the Enter Product 1 page

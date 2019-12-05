@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, confirms supporting documents
     Description:
         Reference: BPL-1041A
-        Jira: GS-149
+        Jira: GS-163
 
-    Background: Given the user has completed the GS-148 steps
+    Background: Given the user has completed the GS-162 steps
 
     @BPL-1041A
     Scenario: User directed to 'Supporting Documents' page 

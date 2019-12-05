@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, checks and is able to change answers
     Description:
         Reference: BPL-1032E
-        Jira: GS-137
+        Jira: GS-150
 
-    Background: Given the user has completed the GS-136 steps
+    Background: Given the user has completed the GS-149 steps
 
     @BPL-1032E
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected IA variation type is directed to the 'Check your answers' page 

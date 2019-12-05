@@ -1,7 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only checks, and is able to change answers
     Description:
         Reference: DPL-4018
-        Jira: GS-218
 
     Background: Given the user has completed the PL-4017A steps
 
@@ -54,7 +53,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         
     Examples: 
         | Sub Code A | Sub Code B | Group A | Group B |
-        | C.II.6(a) | C.II.6(a) | | IA Only | IA Only |
+        | C.II.6(a) | C.II.6(a) | IA Only | IA Only |
 
     @DPL-4018-1
     Scenario: User selects change link for Product

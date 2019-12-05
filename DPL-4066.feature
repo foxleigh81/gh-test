@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Only enters Impleme
     Description:
         Reference: DPL-4066
 
-    Background: Given the user has completed the GS-204 steps
+    Background: Given the user has completed the GS-218 steps
 
     @DPL-4066
     Scenario: Use who has entered a valid code from Data Table Z Only is directed to 'Enter Implementation Date' page 

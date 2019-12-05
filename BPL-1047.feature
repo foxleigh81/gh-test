@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Special checks, and is able to change answers
     Description:
         Reference: BPL-1047
-        Jira: GS-166
+        Jira: GS-180
 
     Background: Given the user has completed the PL-1046D steps
 

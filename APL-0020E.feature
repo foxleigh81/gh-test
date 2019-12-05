@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type checks and is able to change answers
     Description:
         Reference: APL-0020E
-        Jira: GS-36
+        Jira: GS-39
 
-    Background: Given the user has completed the GS-35 steps
+    Background: Given the user has completed the GS-38 steps
 
     @APL-0020E
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and has selected IA variation type is directed to 'Check your answers' page 

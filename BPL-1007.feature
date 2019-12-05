@@ -1,9 +1,9 @@
 Feature: User enters a variation code
     Description:
         Reference: BPL-1007
-        Jira: GS-90
+        Jira: GS-98
 
-    Background: Given the user has completed the GS-88 steps
+    Background: Given the user has completed the GS-96 steps
 
     @BPL-1007
     Scenario: User directed to Enter Variation Code

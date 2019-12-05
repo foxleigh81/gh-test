@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table Z Only selects the variation Type
     Description:
         Reference: APL-0026
-        Jira: GS-45
+        Jira: GS-49
 
     Background: Given the user has completed the GS-6 steps
 

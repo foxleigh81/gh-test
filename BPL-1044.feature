@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' describes the proposed changes
     Description:
         Reference: BPL-1044
-        Jira: GS-155
+        Jira: GS-169
 
-    Background: Given the user has completed the GS-90 steps
+    Background: Given the user has completed the GS-98 steps
 
     @BPL-1044
     Scenario: User who has entered a valid code from Data table No Variations is directed to the 'Describe Changes' page

@@ -1,9 +1,9 @@
 Feature: User enters products which do not appear in the list on the Select product 2 page
     Description:
         Reference: CPL-2005A
-        Jira: GS-173
+        Jira: GS-187
 
-    Background: Given the user has completed the GS-172 steps
+    Background: Given the user has completed the GS-186 steps
 
     @CPL-2005A
     Scenario: User is directed to the Enter Products 2 page

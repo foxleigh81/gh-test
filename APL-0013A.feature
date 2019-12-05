@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only confirms supporting documents
     Description:
         Reference: APL-0013A
-        Jira: GS-16
+        Jira: GS-17
 
-    Background: Given the user has completed the GS-15 steps
+    Background: Given the user has completed the GS-16 steps
 
     @APL-0013A
     Scenario: User directed to 'Supporting Documents' page 

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special describes the proposed changes
     Description:
         Reference: BPL-1046
-        Jira: GS-162
+        Jira: GS-176
 
-    Background: Given the user has completed the GS-90 steps
+    Background: Given the user has completed the GS-98 steps
 
     @BPL-1046
     Scenario: User who has entered a valid code from Data table Z Special is directed to the 'Describe Changes' page

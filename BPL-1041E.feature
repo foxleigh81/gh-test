@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, checks and is able to change answers
     Description:
         Reference: BPL-1041E
-        Jira: GS-153
+        Jira: GS-167
 
-    Background: Given the user has completed the GS-152 steps
+    Background: Given the user has completed the GS-166 steps
 
     @BPL-1041E
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected II variation type is directed to the 'Check your answers' page 

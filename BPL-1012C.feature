@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only enters application finance information
     Description:
         Reference: BPL-1012C
-        Jira: GS-96
+        Jira: GS-104
 
-    Background: Given the user has completed the GS-95 steps
+    Background: Given the user has completed the GS-103 steps
 
     @BPL-1012C
     Scenario: User is directed to the 'Application Finance Details' page

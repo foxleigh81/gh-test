@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table  'No Variations' enters application finance information
     Description:
         Reference: APL-0044D
+        Jira: GS-81
 
-    Background: Given the user has completed the GS-74 steps
+    Background: Given the user has completed the GS-80 steps
 
     @APL-0044D
     Scenario: User is directed to the 'Application Finance Details' page

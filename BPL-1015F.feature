@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only changes the variation
     Description:
         Reference: BPL-1015F
-        Jira: GS-112
+        Jira: GS-122
 
-    Background: Given the user has completed the GS-111 steps
+    Background: Given the user has completed the GS-121 steps
 
     @BPL-1015F
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Confirm Change Variation' page 

@@ -1,9 +1,8 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only confirms supporting documents
     Description:
         Reference: DPL-4015
-        Jira: GS-215
 
-    Background: Given the user has completed the GS-214 steps
+    Background: Given the user has completed the PL-4014B steps
 
     @DPL-4015
     Scenario: User directed to 'Supporting Documents' page 

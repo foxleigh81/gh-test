@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, checks and is able to change answers
     Description:
         Reference: APL-0032E
-        Jira: GS-53
+        Jira: GS-57
 
-    Background: Given the user has completed the GS-52 steps
+    Background: Given the user has completed the GS-56 steps
 
     @APL-0032E
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected IA variation type is directed to the 'Check your answers' page 

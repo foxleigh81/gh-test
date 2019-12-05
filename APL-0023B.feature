@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation type Uploads dossier
     Description:
         Reference: APL-0023B
-        Jira: GS-40
+        Jira: GS-44
 
-    Background: Given the user has completed the GS-39 steps
+    Background: Given the user has completed the GS-43 steps
 
     @APL-0023B
     Scenario: User is directed to the 'Upload Dossier' page

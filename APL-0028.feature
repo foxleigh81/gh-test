@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only and has selected IA variation type enters the implementation date
     Description:
         Reference: APL-0028
-        Jira: GS-46
+        Jira: GS-50
 
-    Background: Given the user has completed the GS-45 steps
+    Background: Given the user has completed the GS-49 steps
 
     @APL-0028
     Scenario: User who has entered a valid code from Data Table Z Only and has selected variation type IA is directed to the 'Enter Implementation Date' page 

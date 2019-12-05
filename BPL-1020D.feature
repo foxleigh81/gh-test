@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation  type enters application finance information
     Description:
         Reference: BPL-1020D
-        Jira: GS-119
+        Jira: GS-130
 
-    Background: Given the user has completed the GS-118 steps
+    Background: Given the user has completed the GS-129 steps
 
     @BPL-1020D
     Scenario: User is directed to the 'Application Finance Details' page

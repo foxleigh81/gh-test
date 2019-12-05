@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' checks, and is able to change answers
     Description:
         Reference: BPL-1045
-        Jira: GS-159
+        Jira: GS-173
 
     Background: Given the user has completed the PL-1044D steps
 

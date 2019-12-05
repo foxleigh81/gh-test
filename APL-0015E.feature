@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only checks, and is able to change answers
     Description:
         Reference: APL-0015E
-        Jira: GS-27
+        Jira: GS-29
 
-    Background: Given the user has completed the GS-26 steps
+    Background: Given the user has completed the GS-28 steps
 
     @APL-0015E
     Scenario Outline: User who has entered a valid code from Data Table II Only is directed to 'Check your answers' page test this

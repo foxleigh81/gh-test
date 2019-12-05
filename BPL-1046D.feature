@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table Z Special enters appl
     Description:
         Reference: BPL-1046D
 
-    Background: Given the user has completed the GS-165 steps
+    Background: Given the user has completed the GS-179 steps
 
     @BPL-1046D
     Scenario: User is directed to the 'Application Finance Details' page

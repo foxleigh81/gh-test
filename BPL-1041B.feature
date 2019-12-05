@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, Uploads dossier
     Description:
         Reference: BPL-1041B
-        Jira: GS-150
+        Jira: GS-164
 
-    Background: Given the user has completed the GS-149 steps
+    Background: Given the user has completed the GS-163 steps
 
     @BPL-1041B
     Scenario: User is directed to the 'Upload Dossier' page

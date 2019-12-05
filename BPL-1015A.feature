@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only confirms supporting documents
     Description:
         Reference: BPL-1015A
-        Jira: GS-107
+        Jira: GS-117
 
-    Background: Given the user has completed the GS-106 steps
+    Background: Given the user has completed the GS-116 steps
 
     @BPL-1015A
     Scenario: User directed to 'Supporting Documents' page 

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' changes the variation
     Description:
         Reference: BPL-1045A
-        Jira: GS-160
+        Jira: GS-174
 
-    Background: Given the user has completed the GS-159 steps
+    Background: Given the user has completed the GS-173 steps
 
     @BPL-1045A
     Scenario Outline: User who has entered a valid code from Data Table 'No Variations' is directed to 'Confirm Change Variation' page 

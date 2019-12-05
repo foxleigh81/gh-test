@@ -1,9 +1,8 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB enters Implementation Date 
     Description:
         Reference: DPL-4020
-        Jira: GS-221
 
-    Background: Given the user has completed the GS-209 steps
+    Background: Given the user has completed the PL-4011 steps
 
     @DPL-4020
     Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB is directed to 'Enter Implementation Date' page 

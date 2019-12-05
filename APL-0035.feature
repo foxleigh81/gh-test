@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IB variation type, describes the proposed changes
     Description:
         Reference: APL-0035
-        Jira: GS-56
+        Jira: GS-61
 
-    Background: Given the user has completed the GS-55 steps
+    Background: Given the user has completed the GS-60 steps
 
     @APL-0035
     Scenario: User directed to 'Describe Changes' page 

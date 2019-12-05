@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only enters application contact information
     Description:
         Reference: BPL-1013C
-        Jira: GS-102
+        Jira: GS-111
 
-    Background: Given the user has completed the GS-101 steps
+    Background: Given the user has completed the GS-110 steps
 
     @BPL-1013C
     Scenario: User is directed to the 'Application Contact Details' page

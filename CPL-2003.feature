@@ -1,9 +1,9 @@
 Feature: User selects procedure option 
     Description:
         Reference: CPL-2003
-        Jira: GS-171
+        Jira: GS-185
 
-    Background: Given the user has completed the GS-170 steps
+    Background: Given the user has completed the GS-184 steps
 
     @CPL-2003
     Scenario: User directed to 'Procedure Option Type IA' page

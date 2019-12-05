@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special submits the application
     Description:
         Reference: BPL-1047B
-        Jira: GS-168
+        Jira: GS-182
 
-    Background: Given the user has completed the GS-167 steps
+    Background: Given the user has completed the GS-181 steps
 
     @BPL-1047B
     Scenario: User is directed to the 'Declaration' page

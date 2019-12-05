@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IB Only Uploads dossier
     Description:
         Reference: BPL-1013B
-        Jira: GS-101
+        Jira: GS-110
 
-    Background: Given the user has completed the GS-100 steps
+    Background: Given the user has completed the GS-109 steps
 
     @BPL-1013B
     Scenario: User is directed to the 'Upload Dossier' page

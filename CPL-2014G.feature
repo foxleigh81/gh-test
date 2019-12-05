@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB Only submits 
     Description:
         Reference: CPL-2014G
 
-    Background: Given the user has completed the GS-189 steps
+    Background: Given the user has completed the GS-203 steps
 
     @CPL-2014G
     Scenario: User is directed to the 'Declaration' page

@@ -1,9 +1,9 @@
 Feature: User selects procedure option 
     Description:
         Reference: DPL-4003
-        Jira: GS-202
+        Jira: GS-216
 
-    Background: Given the user has completed the GS-201 steps
+    Background: Given the user has completed the GS-215 steps
 
     @DPL-4003
     Scenario: User directed to 'Procedure Option Type IA' page

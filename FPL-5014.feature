@@ -30,7 +30,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         
     Examples: 
         | Sub Code A | Sub Code B | Group A | Group B |
-        | C.II.6(a) | C.II.6(a) | | IA Only | IA Only |
+        | C.II.6(a) | C.II.6(a) | IA Only | IA Only |
 
     @FPL-5014-1
     Scenario: User selects 'Continue'

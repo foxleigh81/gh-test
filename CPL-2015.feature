@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only enters Implementation Date 
     Description:
         Reference: CPL-2015
-        Jira: GS-191
+        Jira: GS-205
 
-    Background: Given the user has completed the GS-174 steps
+    Background: Given the user has completed the GS-188 steps
 
     @CPL-2015
     Scenario: Use who has entered a valid code from Data Table Z Only is directed to 'Enter Implementation Date' page 

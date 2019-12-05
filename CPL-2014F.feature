@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only changes the variation
     Description:
         Reference: CPL-2014F
-        Jira: GS-190
+        Jira: GS-204
 
-    Background: Given the user has completed the GS-189 steps
+    Background: Given the user has completed the GS-203 steps
 
     @CPL-2014F
     Scenario Outline: User who has entered a valid code from Data Table IA + IB Only is directed to 'Confirm Change Variation' page 

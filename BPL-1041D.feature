@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type enters application finance information
     Description:
         Reference: BPL-1041D
-        Jira: GS-152
+        Jira: GS-166
 
-    Background: Given the user has completed the GS-151 steps
+    Background: Given the user has completed the GS-165 steps
 
     @BPL-1041D
     Scenario: User is directed to the 'Application Finance Details' page

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IB variation type, confirms supporting documents
     Description:
         Reference: BPL-1023A
-        Jira: GS-123
+        Jira: GS-135
 
-    Background: Given the user has completed the GS-122 steps
+    Background: Given the user has completed the GS-134 steps
 
     @BPL-1023A
     Scenario: User directed to 'Supporting Documents' page 

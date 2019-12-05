@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, changes the variation
     Description:
         Reference: BPL-1020F
-        Jira: GS-121
+        Jira: GS-132
 
-    Background: Given the user has completed the GS-120 steps
+    Background: Given the user has completed the GS-131 steps
 
     @BPL-1020F
     Scenario Outline: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, is directed to 'Confirm Change Variation' page 

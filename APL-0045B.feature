@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' submits the application
     Description:
         Reference: APL-0045B
-        Jira: GS-77
+        Jira: GS-84
 
-    Background: Given the user has completed the GS-75 steps
+    Background: Given the user has completed the GS-82 steps
 
     @APL-0045B
     Scenario: User is directed to the 'Declaration' page

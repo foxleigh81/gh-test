@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation enters application contact information
     Description:
         Reference: BPL-1023C
-        Jira: GS-125
+        Jira: GS-137
 
-    Background: Given the user has completed the GS-124 steps
+    Background: Given the user has completed the GS-136 steps
 
     @BPL-1023C
     Scenario: User is directed to the 'Application Contact Details' page

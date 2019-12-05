@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB, and has selected IA variation type, submits the application
     Description:
         Reference: BPL-1020G
+        Jira: GS-133
 
-    Background: Given the user has completed the GS-120 steps
+    Background: Given the user has completed the GS-131 steps
 
     @BPL-1020G
     Scenario: User is directed to the 'Declaration' page

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, changes the variation
     Description:
         Reference: APL-0041F
-        Jira: GS-70
+        Jira: GS-75
 
-    Background: Given the user has completed the GS-69 steps
+    Background: Given the user has completed the GS-74 steps
 
     @APL-0041F
     Scenario Outline: User who has entered a valid code from Data Table Z Only, and has selected II variation type, is directed to 'Confirm Change Variation' page 

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only enters application contact information
     Description:
         Reference: CPL-2015E
-        Jira: GS-196
+        Jira: GS-210
 
-    Background: Given the user has completed the GS-195 steps
+    Background: Given the user has completed the GS-209 steps
 
     @CPL-2015E
     Scenario: User is directed to the 'Application Contact Details' page

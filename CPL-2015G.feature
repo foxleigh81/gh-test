@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only checks, and is able to change answers
     Description:
         Reference: CPL-2015G
-        Jira: GS-198
+        Jira: GS-212
 
-    Background: Given the user has completed the GS-197 steps
+    Background: Given the user has completed the GS-211 steps
 
     @CPL-2015G
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Check your answers' page 

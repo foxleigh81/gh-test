@@ -2,7 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only submits the a
     Description:
         Reference: CPL-2012F
 
-    Background: Given the user has completed the GS-181 steps
+    Background: Given the user has completed the GS-195 steps
 
     @CPL-2012F
     Scenario: User is directed to the 'Declaration' page

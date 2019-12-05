@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only enters application finance information
     Description:
         Reference: BPL-1015D
-        Jira: GS-110
+        Jira: GS-120
 
-    Background: Given the user has completed the GS-109 steps
+    Background: Given the user has completed the GS-119 steps
 
     @BPL-1015D
     Scenario: User is directed to the 'Application Finance Details' page

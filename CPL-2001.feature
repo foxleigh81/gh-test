@@ -1,9 +1,9 @@
 Feature: User selects procedure type 
     Description:
         Reference: CPL-2001
-        Jira: GS-170
+        Jira: GS-184
 
-    Background: Given the user has completed the GS-169 steps
+    Background: Given the user has completed the GS-183 steps
 
     @CPL-2001
     Scenario: User directed to Procedure Type page 

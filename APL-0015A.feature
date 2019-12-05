@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only confirms supporting documents
     Description:
         Reference: APL-0015A
-        Jira: GS-23
+        Jira: GS-25
 
-    Background: Given the user has completed the GS-22 steps
+    Background: Given the user has completed the GS-24 steps
 
     @APL-0015A
     Scenario: User directed to 'Supporting Documents' page 

@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Special  changes the variation
     Description:
         Reference: BPL-1047A
-        Jira: GS-167
+        Jira: GS-181
 
-    Background: Given the user has completed the GS-166 steps
+    Background: Given the user has completed the GS-180 steps
 
     @BPL-1047A
     Scenario Outline: User who has entered a valid code from Data Table Z Special  is directed to 'Confirm Change Variation' page 

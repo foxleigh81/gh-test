@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, submits the application
     Description:
         Reference: APL-0032G
+        Jira: GS-59
 
-    Background: Given the user has completed the GS-53 steps
+    Background: Given the user has completed the GS-57 steps
 
     @APL-0032G
     Scenario: User is directed to the 'Declaration' page

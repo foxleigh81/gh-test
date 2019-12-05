@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table II Only enters application finance information
     Description:
         Reference: APL-0015D
-        Jira: GS-26
+        Jira: GS-28
 
-    Background: Given the user has completed the GS-25 steps
+    Background: Given the user has completed the GS-27 steps
 
     @APL-0015D
     Scenario: User is directed to the 'Application Finance Details' page

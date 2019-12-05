@@ -1,7 +1,7 @@
 Feature: User who has entered a valid code from Data Table II Only describes proposed changes
     Description:
         Reference: APL-0015
-        Jira: GS-22
+        Jira: GS-24
 
     Background: Given the user has completed the GS-6 steps
 

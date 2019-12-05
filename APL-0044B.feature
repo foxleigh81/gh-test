@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' Uploads dossier
     Description:
         Reference: APL-0044B
-        Jira: GS-73
+        Jira: GS-79
 
-    Background: Given the user has completed the GS-72 steps
+    Background: Given the user has completed the GS-78 steps
 
     @APL-0044B
     Scenario: User is directed to the 'Upload Dossier' page

@@ -1,9 +1,8 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only Uploads dossier
     Description:
         Reference: DPL-4016
-        Jira: GS-216
 
-    Background: Given the user has completed the GS-215 steps
+    Background: Given the user has completed the PL-4015 steps
 
     @DPL-4016
     Scenario: User is directed to the 'Upload Dossier' page

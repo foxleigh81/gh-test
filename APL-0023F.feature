@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation type submits the application
     Description:
         Reference: APL-0023F
-        Jira: GS-44
+        Jira: GS-48
 
-    Background: Given the user has completed the GS-43 steps
+    Background: Given the user has completed the GS-47 steps
 
     @APL-0023F
     Scenario: User is directed to the 'Declaration' page

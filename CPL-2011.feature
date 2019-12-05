@@ -1,9 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only describes proposed changes
     Description:
         Reference: CPL-2011
-        Jira: GS-176
+        Jira: GS-190
 
-    Background: Given the user has completed the GS-175 steps
+    Background: Given the user has completed the GS-189 steps
 
     @CPL-2011
     Scenario: User directed to 'Describe Changes' page 
