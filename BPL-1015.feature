@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table II Only describes proposed changes
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1015
         Jira: GS-116
 

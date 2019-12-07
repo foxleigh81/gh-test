@@ -1,14 +1,16 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special views the application summary page
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5021
+        Jira: GS-531
 
-    Background: Given the user has completed the PL-5013 steps
+    Background: Given the user has completed the GS-532 steps
 
     @FPL-5021
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is directed to the Application Summary page
         Given the user has been directed to the 'Application Summary' page
-        And they have entered a first variation code from Data Table '<First Code Group>'
-        And they have entered a second variation code from Data Table '<Group>'
+        And they have entered a first variation code from Data Table '<Group A>'
+        And they have entered a second variation code from Data Table '<Group B>'
         When page 'Application Summary' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -17,27 +19,44 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And a table with a row with the list item 'Products' and the 'selected product' displayed and a change link
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
-        And a table with a row containing the list item 'Variation 1' and the '<First Code>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the '<First Code Group>' displayed 
+        And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Variation Type' and the '<Var Type A>' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
-        And a table with a row containing the list item 'Variation 2' and the '<Group>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the '<Var Type>' displayed 
+        And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
         
     Examples: 
-        | First Code | First Code Group | Sub Code | Description | Page | Group | Var Type |
-        | C.II.6(a) | IA Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | C.II.6(a) | IA Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | C.II.6(a) | IA Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | C.II.6(a) | IA Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
-        | B.I.a.1(h) | IB Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | B.I.a.1(h) | IB Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | B.I.a.1(h) | IB Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | B.I.a.1(h) | IB Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
+        | Sub Code A | Group A | Var Type A | Sub Code B | Group B | Var Type B |
+        | C.II.6(a) | IA Only | IA | C.II.6(a) | IA Only | IA |
+        | C.II.6(a) | IA Only | IA | B.I.a.1(h) | IB Only | IB |
+        | C.II.6(a) | IA Only | IA | B.I.a.1(b) | II Only | II |
+        | C.II.6(a) | IA Only | IA | 1(a) | No Variations | N/a |
+        | C.II.6(a) | IA Only | IA | A(z).1 | Z Special | N/a |
+        | B.I.a.1(h) | IB Only | IB | C.II.6(a) | IA Only | IA |
+        | B.I.a.1(h) | IB Only | IB | B.I.a.1(h) | IB Only | IB |
+        | B.I.a.1(h) | IB Only | IB | B.I.a.1(b) | II Only | II |
+        | B.I.a.1(h) | IB Only | IB | 1(a) | No Variations | N/a |
+        | B.I.a.1(h) | IB Only | IB | A(z).1 | Z Special | N/a |
+        | B.I.a.1(b) | II Only | II | C.II.6(a) | IA Only | IA |
+        | B.I.a.1(b) | II Only | II | B.I.a.1(h) | IB Only | IB |
+        | B.I.a.1(b) | II Only | II | B.I.a.1(b) | II Only | II |
+        | B.I.a.1(b) | II Only | II | 1(a) | No Variations | N/a |
+        | B.I.a.1(b) | II Only | II | A(z).1 | Z Special | N/a |
+        | 1(a) | No Variations | N/a | C.II.6(a) | IA Only | IA |
+        | 1(a) | No Variations | N/a | B.I.a.1(h) | IB Only | IB |
+        | 1(a) | No Variations | N/a | B.I.a.1(b) | II Only | II |
+        | 1(a) | No Variations | N/a | 1(a) | No Variations | N/a |
+        | 1(a) | No Variations | N/a | A(z).1 | Z Special | N/a |
+        | A(z).1 | Z Special | N/a | C.II.6(a) | IA Only | IA |
+        | A(z).1 | Z Special | N/a | B.I.a.1(h) | IB Only | IB |
+        | A(z).1 | Z Special | N/a | B.I.a.1(b) | II Only | II |
+        | A(z).1 | Z Special | N/a | 1(a) | No Variations | N/a |
+        | A(z).1 | Z Special | N/a | A(z).1 | Z Special | N/a |
 
     @FPL-5021-1
     Scenario: User selects 'Continue'

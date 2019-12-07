@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table  'No Variations' enters application finance information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1044D
+        Jira: GS-175
 
-    Background: Given the user has completed the GS-172 steps
+    Background: Given the user has completed the GS-174 steps
 
     @BPL-1044D
     Scenario: User is directed to the 'Application Finance Details' page

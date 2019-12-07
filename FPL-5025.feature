@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special checks, and is able to change answers
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5025
 
     Background: Given the user has completed the PL-5024A steps
@@ -52,8 +53,11 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see a 'Continue' option
         
     Examples: 
-        | Sub Code A | Sub Code B | Group A | Group B |
-        | C.II.6(a) | B.I.a.1(h) | IA Only | Combo IB/II/NoVar/ZSpecial |
+        | Sub Code | Group | Var Type |
+        | B.I.a.1(h) | IB Only | IB |
+        | B.I.a.1(b) | II Only | II |
+        | 1(a) | No Variations | N/a |
+        | A(z).1 | Z Special | N/a |
 
     @FPL-5025-1
     Scenario: User selects change link for Product

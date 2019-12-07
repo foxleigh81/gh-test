@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special checks, and is able to change answers
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1047
-        Jira: GS-180
+        Jira: GS-184
 
-    Background: Given the user has completed the PL-1046D steps
+    Background: Given the user has completed the GS-183 steps
 
     @BPL-1047
     Scenario Outline: User who has entered a valid code from Data table Z Special is directed to the 'Check your answers' page

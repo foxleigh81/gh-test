@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' changes the variation
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1045A
-        Jira: GS-174
+        Jira: GS-177
 
-    Background: Given the user has completed the GS-173 steps
+    Background: Given the user has completed the GS-176 steps
 
     @BPL-1045A
     Scenario Outline: User who has entered a valid code from Data Table 'No Variations' is directed to 'Confirm Change Variation' page 

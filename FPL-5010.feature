@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only views the Application Summary page
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5010
+        Jira: GS-514
 
-    Background: Given the user has completed the PL-5009 steps
+    Background: Given the user has completed the GS-513 steps
 
     @FPL-5010
     Scenario Outline: User who has entered a valid code from Data Table IA Only directed to the Application Summary page

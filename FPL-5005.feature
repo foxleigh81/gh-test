@@ -1,8 +1,10 @@
 Feature: User selects product to be varied
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5005
+        Jira: GS-509
 
-    Background: Given the user has completed the PL-5003 steps
+    Background: Given the user has completed the GS-508 steps
 
     @FPL-5005
     @TestData::KetaminePlus

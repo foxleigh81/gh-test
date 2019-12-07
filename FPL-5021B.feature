@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is prompted to add another variation
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5021B
 
-    Background: Given the user has completed the PL-5014 steps
+    Background: Given the user has completed the GS-518 steps
 
     @FPL-5021B
     Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is directed to the Add Another Variation page

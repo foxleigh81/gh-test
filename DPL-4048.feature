@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only submits the application
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4048
+        Jira: GS-305
 
-    Background: Given the user has completed the PL-4047 steps
+    Background: Given the user has completed the GS-303 steps
 
     @DPL-4048
     Scenario: User is directed to the 'Declaration' page

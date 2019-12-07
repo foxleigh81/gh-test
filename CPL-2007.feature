@@ -1,9 +1,10 @@
 Feature: User enters a variation code
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2007
-        Jira: GS-188
+        Jira: GS-192
 
-    Background: Given the user has completed the GS-186 steps
+    Background: Given the user has completed the GS-190 steps
 
     @CPL-2007
     Scenario: User directed to Enter Variation Code

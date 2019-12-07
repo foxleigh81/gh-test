@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only views the Application Summary page
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4010
-        Jira: GS-221
+        Jira: GS-249
 
-    Background: Given the user has completed the GS-220 steps
+    Background: Given the user has completed the GS-248 steps
 
     @DPL-4010
     Scenario Outline: User who has entered a valid code from Data Table IA Only directed to the Application Summary page

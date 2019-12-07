@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only confirms supporting documents
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9044
+        Jira: GS-432
 
-    Background: Given the user has completed the PL-9043B steps
+    Background: Given the user has completed the GS-431 steps
 
     @EPL-9044
     Scenario: User directed to 'Supporting Documents' page 

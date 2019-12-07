@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only enters application finance information
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9077A
+        Jira: GS-478
 
-    Background: Given the user has completed the PL-9077 steps
+    Background: Given the user has completed the GS-477 steps
 
     @EPL-9077A
     Scenario: User is directed to the 'Application Finance Details' page

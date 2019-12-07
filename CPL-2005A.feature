@@ -1,9 +1,10 @@
 Feature: User enters products which do not appear in the list on the Select product 2 page
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2005A
-        Jira: GS-187
+        Jira: GS-191
 
-    Background: Given the user has completed the GS-186 steps
+    Background: Given the user has completed the GS-190 steps
 
     @CPL-2005A
     Scenario: User is directed to the Enter Products 2 page

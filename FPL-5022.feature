@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special confirms supporting documents
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5022
 
-    Background: Given the user has completed the PL-5014B steps
+    Background: Given the user has completed the GS-520 steps
 
     @FPL-5022
     Scenario: User directed to 'Supporting Documents' page 

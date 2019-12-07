@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only  and a second variation  code from Data Table IA Only describes the proposed changes
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9072
+        Jira: GS-471
 
-    Background: Given the user has completed the PL-9071 steps
+    Background: Given the user has completed the GS-470 steps
 
     @EPL-9072
     Scenario: User who has entered a valid code from Data Table Z Only and a second variation  code from Data Table IA Only is directed to 'Describe Changes' page 

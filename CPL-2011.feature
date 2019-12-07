@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only describes proposed changes
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2011
-        Jira: GS-190
+        Jira: GS-194
 
-    Background: Given the user has completed the GS-189 steps
+    Background: Given the user has completed the GS-193 steps
 
     @CPL-2011
     Scenario: User directed to 'Describe Changes' page 

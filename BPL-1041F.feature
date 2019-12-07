@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, changes the variation
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041F
-        Jira: GS-168
+        Jira: GS-169
 
-    Background: Given the user has completed the GS-167 steps
+    Background: Given the user has completed the GS-168 steps
 
     @BPL-1041F
     Scenario Outline: User who has entered a valid code from Data Table Z Only, and has selected II variation type, is directed to 'Confirm Change Variation' page 

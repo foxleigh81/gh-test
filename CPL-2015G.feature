@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only checks, and is able to change answers
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015G
-        Jira: GS-212
+        Jira: GS-218
 
-    Background: Given the user has completed the GS-211 steps
+    Background: Given the user has completed the GS-217 steps
 
     @CPL-2015G
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Check your answers' page 

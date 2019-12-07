@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only enters application finance information
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015F
-        Jira: GS-211
+        Jira: GS-217
 
-    Background: Given the user has completed the GS-210 steps
+    Background: Given the user has completed the GS-216 steps
 
     @CPL-2015F
     Scenario: User is directed to the 'Application Finance Details' page

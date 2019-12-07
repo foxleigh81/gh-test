@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special describes the proposed changes
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5020
+        Jira: GS-527
 
-    Background: Given the user has completed the PL-5011 steps
+    Background: Given the user has completed the GS-516 steps
 
     @FPL-5020
     Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is directed to 'Describe Changes' page 

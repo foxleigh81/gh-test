@@ -1,7 +1,8 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, submits the application
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1032G
-        Jira: GS-222
+        Jira: GS-152
 
     Background: Given the user has completed the GS-150 steps
 

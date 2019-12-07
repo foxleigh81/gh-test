@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA + IB confirms supporting documents
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4052
+        Jira: GS-311
 
-    Background: Given the user has completed the PL-4051B steps
+    Background: Given the user has completed the GS-310 steps
 
     @DPL-4052
     Scenario: User directed to 'Supporting Documents' page 

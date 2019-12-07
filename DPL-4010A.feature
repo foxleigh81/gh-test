@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only removes the variation
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4010A
+        Jira: GS-250
 
-    Background: Given the user has completed the GS-221 steps
+    Background: Given the user has completed the GS-249 steps
 
     @DPL-4010A
     Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to the Confirm Remove Variation page

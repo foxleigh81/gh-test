@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, checks and is able to change answers
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0032E
         Jira: GS-57
 

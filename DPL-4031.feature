@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table Z Only views the application summary page
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4031
+        Jira: GS-279
 
-    Background: Given the user has completed the PL-4030 steps
+    Background: Given the user has completed the GS-278 steps
 
     @DPL-4031
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only is directed to the Application Summary page

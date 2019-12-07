@@ -1,9 +1,10 @@
 Feature: User enters a variation code
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4007
-        Jira: GS-218
+        Jira: GS-246
 
-    Background: Given the user has completed the GS-217 steps
+    Background: Given the user has completed the GS-244 steps
 
     @DPL-4007
     Scenario: User directed to Enter Variation Code

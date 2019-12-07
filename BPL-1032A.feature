@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, confirms supporting documents
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1032A
         Jira: GS-146
 

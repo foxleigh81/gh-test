@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special Uploads dossier
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1046B
-        Jira: GS-178
+        Jira: GS-181
 
-    Background: Given the user has completed the GS-177 steps
+    Background: Given the user has completed the GS-180 steps
 
     @BPL-1046B
     Scenario: User is directed to the 'Upload Dossier' page

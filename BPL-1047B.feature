@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special submits the application
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1047B
-        Jira: GS-182
+        Jira: GS-186
 
-    Background: Given the user has completed the GS-181 steps
+    Background: Given the user has completed the GS-185 steps
 
     @BPL-1047B
     Scenario: User is directed to the 'Declaration' page

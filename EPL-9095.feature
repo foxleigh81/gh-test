@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only checks, and is able to change answers
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9095
+        Jira: GS-503
 
-    Background: Given the user has completed the PL-9094A steps
+    Background: Given the user has completed the GS-502 steps
 
     @EPL-9095
     Scenario Outline: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only is directed to 'Check your answers' page 

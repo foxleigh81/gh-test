@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, checks and is able to change answers
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041E
-        Jira: GS-167
+        Jira: GS-168
 
-    Background: Given the user has completed the GS-166 steps
+    Background: Given the user has completed the GS-167 steps
 
     @BPL-1041E
     Scenario Outline: User who has entered a valid code from Data Table Z Only and has selected II variation type is directed to the 'Check your answers' page 

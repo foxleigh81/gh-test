@@ -1,9 +1,10 @@
 Feature: User selects products to be varied
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2005
-        Jira: GS-186
+        Jira: GS-190
 
-    Background: Given the user has completed the GS-185 steps
+    Background: Given the user has completed the GS-189 steps
 
     @CPL-2005
     @TestData::KetaminePlus

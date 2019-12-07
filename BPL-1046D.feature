@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special enters application finance information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1046D
+        Jira: GS-183
 
-    Background: Given the user has completed the GS-179 steps
+    Background: Given the user has completed the GS-182 steps
 
     @BPL-1046D
     Scenario: User is directed to the 'Application Finance Details' page

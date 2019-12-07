@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table Z Only selects the variation Type
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0026
         Jira: GS-49
 

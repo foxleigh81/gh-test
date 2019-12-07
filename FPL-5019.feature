@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only submits the application
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5019
+        Jira: GS-526
 
-    Background: Given the user has completed the PL-5018 steps
+    Background: Given the user has completed the GS-525 steps
 
     @FPL-5019
     Scenario: User is directed to the 'Declaration' page

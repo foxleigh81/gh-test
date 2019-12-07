@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only submits the application
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9096
+        Jira: GS-505
 
-    Background: Given the user has completed the PL-9095 steps
+    Background: Given the user has completed the GS-503 steps
 
     @EPL-9096
     Scenario: User is directed to the 'Declaration' page

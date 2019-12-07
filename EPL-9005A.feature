@@ -1,8 +1,10 @@
 Feature: User enters products which do not appear in the list on the Select product 2 page
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9005A
+        Jira: GS-378
 
-    Background: Given the user has completed the PL-9005 steps
+    Background: Given the user has completed the GS-377 steps
 
     @EPL-9005A
     Scenario: User is directed to the Enter Products 2 page

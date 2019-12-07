@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only Uploads dossier
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9093
+        Jira: GS-500
 
-    Background: Given the user has completed the PL-9092 steps
+    Background: Given the user has completed the GS-499 steps
 
     @EPL-9093
     Scenario: User is directed to the 'Upload Dossier' page

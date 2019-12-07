@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only confirms supporting documents
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015C
-        Jira: GS-208
+        Jira: GS-214
 
-    Background: Given the user has completed the GS-207 steps
+    Background: Given the user has completed the GS-213 steps
 
     @CPL-2015C
     Scenario: User directed to 'Supporting Documents' page 

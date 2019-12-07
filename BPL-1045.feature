@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' checks, and is able to change answers
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1045
-        Jira: GS-173
+        Jira: GS-176
 
-    Background: Given the user has completed the PL-1044D steps
+    Background: Given the user has completed the GS-175 steps
 
     @BPL-1045
     Scenario Outline: User who has entered a valid code from Data table No Variations is directed to the 'Check your answers' page

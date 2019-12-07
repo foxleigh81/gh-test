@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is prompted to add another variation
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4074B
+        Jira: GS-341
 
-    Background: Given the user has completed the PL-4073 steps
+    Background: Given the user has completed the GS-337 steps
 
     @DPL-4074B
     Scenario: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is directed to the Add Another Variation page

@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  adds another variation
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4011
+        Jira: GS-251
 
-    Background: Given the user has completed the GS-221 steps
+    Background: Given the user has completed the GS-249 steps
 
     @DPL-4011
     Scenario: User who has entered a valid code from Data Table IA Only is directed to Enter Second Variation Code page

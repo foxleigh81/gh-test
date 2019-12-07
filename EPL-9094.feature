@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA + IB enters application contact information
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9094
+        Jira: GS-501
 
-    Background: Given the user has completed the PL-9093 steps
+    Background: Given the user has completed the GS-500 steps
 
     @EPL-9094
     Scenario: User is directed to the 'Application Contact Details' page

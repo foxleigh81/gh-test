@@ -1,8 +1,10 @@
 Feature: User enters a product which does not appear in the list on the Select product page
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5005A
+        Jira: GS-510
 
-    Background: Given the user has completed the PL-5005 steps
+    Background: Given the user has completed the GS-509 steps
 
     @FPL-5005A
     Scenario: User is directed to the Enter Product 1 page

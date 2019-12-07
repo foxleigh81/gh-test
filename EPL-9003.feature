@@ -1,8 +1,10 @@
 Feature: User selects procedure option 
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9003
+        Jira: GS-376
 
-    Background: Given the user has completed the PL-9001 steps
+    Background: Given the user has completed the GS-375 steps
 
     @EPL-9003
     Scenario: User directed to 'Procedure Option Type IA' page

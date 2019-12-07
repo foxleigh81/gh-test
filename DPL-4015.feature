@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only confirms supporting documents
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4015
+        Jira: GS-257
 
-    Background: Given the user has completed the PL-4014B steps
+    Background: Given the user has completed the GS-256 steps
 
     @DPL-4015
     Scenario: User directed to 'Supporting Documents' page 

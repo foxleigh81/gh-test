@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only  enters application contact information
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4046
+        Jira: GS-301
 
-    Background: Given the user has completed the PL-4045 steps
+    Background: Given the user has completed the GS-300 steps
 
     @DPL-4046
     Scenario: User is directed to the 'Application Contact Details' page

@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only removes a variation
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5018A
+        Jira: GS-530
 
-    Background: Given the user has completed the PL-5018 steps
+    Background: Given the user has completed the GS-525 steps
 
     @FPL-5018A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page

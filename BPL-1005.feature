@@ -1,5 +1,6 @@
 Feature: User selects products to be varied
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1005
         Jira: GS-96
 

@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB views the application summary page
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9022
+        Jira: GS-399
 
-    Background: Given the user has completed the PL-9021 steps
+    Background: Given the user has completed the GS-398 steps
 
     @EPL-9022
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB is directed to the Application Summary page

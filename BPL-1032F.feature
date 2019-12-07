@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, changes the variation
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1032F
         Jira: GS-151
 

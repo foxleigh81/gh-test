@@ -1,5 +1,6 @@
 Feature: User enters a variation code
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1007
         Jira: GS-98
 

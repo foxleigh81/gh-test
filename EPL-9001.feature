@@ -1,8 +1,10 @@
 Feature: User selects procedure type 
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9001
+        Jira: GS-375
 
-    Background: Given the user has completed the PL-9000 steps
+    Background: Given the user has completed the GS-374 steps
 
     @EPL-9001
     Scenario: User directed to Procedure Type page 

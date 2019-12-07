@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' Uploads dossier
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1044B
-        Jira: GS-171
+        Jira: GS-173
 
-    Background: Given the user has completed the GS-170 steps
+    Background: Given the user has completed the GS-172 steps
 
     @BPL-1044B
     Scenario: User is directed to the 'Upload Dossier' page

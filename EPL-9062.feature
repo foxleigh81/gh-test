@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table Z Only Uploads dossier
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9062
+        Jira: GS-458
 
-    Background: Given the user has completed the PL-9061 steps
+    Background: Given the user has completed the GS-457 steps
 
     @EPL-9062
     Scenario: User is directed to the 'Upload Dossier' page

@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IB variation  type enters application finance information
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0023D
         Jira: GS-46
 

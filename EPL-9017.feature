@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters application contact information
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9017
+        Jira: GS-392
 
-    Background: Given the user has completed the PL-9016 steps
+    Background: Given the user has completed the GS-391 steps
 
     @EPL-9017
     Scenario: User is directed to the 'Application Contact Details' page

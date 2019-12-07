@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB Only enters application contact information
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2014C
-        Jira: GS-201
+        Jira: GS-206
 
-    Background: Given the user has completed the GS-200 steps
+    Background: Given the user has completed the GS-205 steps
 
     @CPL-2014C
     Scenario: User is directed to the 'Application Contact Details' page

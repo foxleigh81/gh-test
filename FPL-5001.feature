@@ -1,8 +1,10 @@
 Feature: User selects procedure type 
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5001
+        Jira: GS-507
 
-    Background: Given the user has completed the PL-5000 steps
+    Background: Given the user has completed the GS-506 steps
 
     @FPL-5001
     Scenario: User directed to Procedure Type page 

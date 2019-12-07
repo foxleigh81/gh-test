@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only Uploads dossier
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5016
+        Jira: GS-522
 
-    Background: Given the user has completed the PL-5015 steps
+    Background: Given the user has completed the GS-521 steps
 
     @FPL-5016
     Scenario: User is directed to the 'Upload Dossier' page

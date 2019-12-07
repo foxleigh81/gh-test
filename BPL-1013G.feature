@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IB Only submits the application
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1013G
         Jira: GS-115
 

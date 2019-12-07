@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' confirms supporting documents
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1044A
-        Jira: GS-170
+        Jira: GS-172
 
-    Background: Given the user has completed the GS-169 steps
+    Background: Given the user has completed the GS-171 steps
 
     @BPL-1044A
     Scenario: User directed to 'Supporting Documents' page 

@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type checks and is able to change answers
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0020E
         Jira: GS-39
 
@@ -8,7 +9,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     @APL-0020E
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and has selected IA variation type is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a variation code from Data Table 'IA + IB'
+        And they have entered a value from Data Table 'IA + IB'
         And they have selected Variation Type 'IA' 
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
@@ -18,7 +19,8 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And a section header 'Product Details'
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed and a change link
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed and a change link
-        And a table with a row with the list item 'Products' and the 'selected product' displayed and a change link
+        And a table with a row with the list item 'Products' and the 'selected products' displayed and a change link
+        And a section header 'Add another product' with an 'Add another product' link
         And a section header 'Variation Details'
         And a table header 'Variation 1'
         And a table with a row with the list item 'Code' and the '<Sub Code>' displayed 

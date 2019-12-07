@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' submits the application
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1045B
-        Jira: GS-175
+        Jira: GS-178
 
-    Background: Given the user has completed the GS-173 steps
+    Background: Given the user has completed the GS-176 steps
 
     @BPL-1045B
     Scenario: User is directed to the 'Declaration' page

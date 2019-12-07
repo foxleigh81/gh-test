@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table Z Only removes a variation
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9031A
+        Jira: GS-413
 
-    Background: Given the user has completed the PL-9031 steps
+    Background: Given the user has completed the GS-412 steps
 
     @EPL-9031A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page

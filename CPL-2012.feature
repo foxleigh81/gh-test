@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only confirms supporting documents
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2012
-        Jira: GS-191
+        Jira: GS-195
 
-    Background: Given the user has completed the GS-190 steps
+    Background: Given the user has completed the GS-194 steps
 
     @CPL-2012
     Scenario: User directed to 'Supporting Documents' page 

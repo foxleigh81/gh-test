@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table Z Only removes a variation
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4064A
+        Jira: GS-329
 
-    Background: Given the user has completed the PL-4064 steps
+    Background: Given the user has completed the GS-328 steps
 
     @DPL-4064A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page

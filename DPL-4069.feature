@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only views the Application Summary page
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4069
+        Jira: GS-334
 
-    Background: Given the user has completed the PL-4068 steps
+    Background: Given the user has completed the GS-333 steps
 
     @DPL-4069
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to the Application Summary page

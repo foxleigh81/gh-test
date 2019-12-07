@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  adds another variation
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5011
+        Jira: GS-516
 
-    Background: Given the user has completed the PL-5010 steps
+    Background: Given the user has completed the GS-514 steps
 
     @FPL-5011
     Scenario: User who has entered a valid code from Data Table IA Only is directed to Enter Second Variation Code page
@@ -37,15 +39,11 @@ Feature: User who has entered a valid code from Data Table IA Only  adds another
         Then they will be directed to the 'Describe Changes' page
         
     Examples: 
-        | First Code | First Code Group | Sub Code | Description | Page | Group | Var Type |
-        | C.II.6(a) | IA Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | C.II.6(a) | IA Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | C.II.6(a) | IA Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | C.II.6(a) | IA Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
-        | B.I.a.1(h) | IB Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | B.I.a.1(h) | IB Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | B.I.a.1(h) | IB Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | B.I.a.1(h) | IB Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
+        | Sub Code | Group | Var Type |
+        | B.I.a.1(h) | IB Only | IB |
+        | B.I.a.1(b) | II Only | II |
+        | 1(a) | No Variations | N/a |
+        | A(z).1 | Z Special | N/a |
 
     @FPL-5011-3
     Scenario Outline: User enters a valid code from Data Table IA + IB

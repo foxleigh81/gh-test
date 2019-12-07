@@ -1,7 +1,8 @@
 Feature: User starts the MA Variation process
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4000
-        Jira: GS-214
+        Jira: GS-221
 
     @DPL-4000
     Scenario: MA Starts

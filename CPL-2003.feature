@@ -1,9 +1,10 @@
 Feature: User selects procedure option 
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2003
-        Jira: GS-185
+        Jira: GS-189
 
-    Background: Given the user has completed the GS-184 steps
+    Background: Given the user has completed the GS-188 steps
 
     @CPL-2003
     Scenario: User directed to 'Procedure Option Type IA' page

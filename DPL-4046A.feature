@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA Only  enters application finance information
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4046A
+        Jira: GS-302
 
-    Background: Given the user has completed the PL-4046 steps
+    Background: Given the user has completed the GS-301 steps
 
     @DPL-4046A
     Scenario: User is directed to the 'Application Finance Details' page

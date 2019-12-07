@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, describes the proposed changes
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041
-        Jira: GS-162
+        Jira: GS-163
 
-    Background: Given the user has completed the GS-161 steps
+    Background: Given the user has completed the GS-162 steps
 
     @BPL-1041
     Scenario: User directed to 'Describe Changes' page 

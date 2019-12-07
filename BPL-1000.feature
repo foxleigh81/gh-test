@@ -1,5 +1,6 @@
 Feature: User starts the MA Variation process
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1000
         Jira: GS-93
 

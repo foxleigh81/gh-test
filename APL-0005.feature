@@ -1,5 +1,6 @@
 Feature: User selects product to be varied
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0005
         Jira: GS-4
 

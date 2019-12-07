@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB describes proposed changes
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9038
+        Jira: GS-423
 
-    Background: Given the user has completed the PL-9037 steps
+    Background: Given the user has completed the GS-422 steps
 
     @EPL-9038
     Scenario: User who has entered a valid code from Data Table IA + IB is directed to 'Describe Changes' page 

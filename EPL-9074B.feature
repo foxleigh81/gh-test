@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is prompted to add another variation
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9074B
+        Jira: GS-474
 
-    Background: Given the user has completed the PL-9073 steps
+    Background: Given the user has completed the GS-472 steps
 
     @EPL-9074B
     Scenario: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table IA Only is directed to the Add Another Variation page

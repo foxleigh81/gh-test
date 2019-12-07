@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type enters application finance information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041D
-        Jira: GS-166
+        Jira: GS-167
 
-    Background: Given the user has completed the GS-165 steps
+    Background: Given the user has completed the GS-166 steps
 
     @BPL-1041D
     Scenario: User is directed to the 'Application Finance Details' page

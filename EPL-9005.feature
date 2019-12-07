@@ -1,8 +1,10 @@
 Feature: User selects product to be varied
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9005
+        Jira: GS-377
 
-    Background: Given the user has completed the PL-9003 steps
+    Background: Given the user has completed the GS-376 steps
 
     @EPL-9005
     @TestData::KetaminePlus

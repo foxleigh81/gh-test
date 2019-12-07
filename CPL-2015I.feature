@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only submits the application
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015I
+        Jira: GS-220
 
-    Background: Given the user has completed the GS-212 steps
+    Background: Given the user has completed the GS-218 steps
 
     @CPL-2015I
     Scenario: User is directed to the 'Declaration' page

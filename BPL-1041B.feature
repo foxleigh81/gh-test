@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, Uploads dossier
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041B
-        Jira: GS-164
+        Jira: GS-165
 
-    Background: Given the user has completed the GS-163 steps
+    Background: Given the user has completed the GS-164 steps
 
     @BPL-1041B
     Scenario: User is directed to the 'Upload Dossier' page

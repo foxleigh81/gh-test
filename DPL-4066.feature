@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only enters Implementation Date 
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4066
+        Jira: GS-331
 
-    Background: Given the user has completed the GS-218 steps
+    Background: Given the user has completed the GS-246 steps
 
     @DPL-4066
     Scenario: Use who has entered a valid code from Data Table Z Only is directed to 'Enter Implementation Date' page 

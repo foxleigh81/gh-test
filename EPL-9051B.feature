@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB and a second variation code from Data Table IA + IB is prompted to add another variation
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9051B
+        Jira: GS-445
 
-    Background: Given the user has completed the PL-9051 steps
+    Background: Given the user has completed the GS-441 steps
 
     @EPL-9051B
     Scenario: User who has entered a valid code from Data Table IA + IB and a second variation  code from Data Table IA + IB is directed to the Add Another Variation page

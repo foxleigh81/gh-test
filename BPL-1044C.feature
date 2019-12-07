@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table  'No Variations' enters application contact information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1044C
-        Jira: GS-172
+        Jira: GS-174
 
-    Background: Given the user has completed the GS-171 steps
+    Background: Given the user has completed the GS-173 steps
 
     @BPL-1044C
     Scenario: User is directed to the 'Application Contact Details' page

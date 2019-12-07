@@ -1,5 +1,6 @@
 Feature: User enters products which do not appear in the list on the Select product 2 page
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1005A
         Jira: GS-97
 

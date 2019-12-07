@@ -1,7 +1,8 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, answers the Article 5 question
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1039
-        Jira: GS-161
+        Jira: GS-162
 
     Background: Given the user has completed the GS-142 steps
 

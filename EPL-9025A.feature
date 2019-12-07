@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB Only enters application finance information
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9025A
+        Jira: GS-405
 
-    Background: Given the user has completed the PL-9025 steps
+    Background: Given the user has completed the GS-404 steps
 
     @EPL-9025A
     Scenario: User is directed to the 'Application Finance Details' page

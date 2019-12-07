@@ -1,7 +1,8 @@
 Feature: User who has entered a valid code from Data Table 'No Variations' describes the proposed changes
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1044
-        Jira: GS-169
+        Jira: GS-171
 
     Background: Given the user has completed the GS-98 steps
 

@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA Only enters application contact information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1012B
         Jira: GS-103
 

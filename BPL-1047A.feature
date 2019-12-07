@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special  changes the variation
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1047A
-        Jira: GS-181
+        Jira: GS-185
 
-    Background: Given the user has completed the GS-180 steps
+    Background: Given the user has completed the GS-184 steps
 
     @BPL-1047A
     Scenario Outline: User who has entered a valid code from Data Table Z Special  is directed to 'Confirm Change Variation' page 

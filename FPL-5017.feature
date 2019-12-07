@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters application contact information
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5017
+        Jira: GS-523
 
-    Background: Given the user has completed the PL-5016 steps
+    Background: Given the user has completed the GS-522 steps
 
     @FPL-5017
     Scenario: User is directed to the 'Application Contact Details' page

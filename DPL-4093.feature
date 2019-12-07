@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only Uploads dossier
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4093
+        Jira: GS-368
 
-    Background: Given the user has completed the PL-4092 steps
+    Background: Given the user has completed the GS-367 steps
 
     @DPL-4093
     Scenario: User is directed to the 'Upload Dossier' page

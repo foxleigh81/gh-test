@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB checks, and is able to change answers
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4026
+        Jira: GS-273
 
-    Background: Given the user has completed the PL-4025A steps
+    Background: Given the user has completed the GS-272 steps
 
     @DPL-4026
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 

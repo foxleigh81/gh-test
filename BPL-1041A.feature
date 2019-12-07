@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only, and has selected II variation type, confirms supporting documents
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1041A
-        Jira: GS-163
+        Jira: GS-164
 
-    Background: Given the user has completed the GS-162 steps
+    Background: Given the user has completed the GS-163 steps
 
     @BPL-1041A
     Scenario: User directed to 'Supporting Documents' page 

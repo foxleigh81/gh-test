@@ -1,5 +1,6 @@
 Feature: User who has entered a valid code from Data Table IA + IB and has selected IA variation type changes the variation
     Description:
+        Epic: Procedure A: Single Change, Single Product
         Reference: APL-0020F
         Jira: GS-40
 

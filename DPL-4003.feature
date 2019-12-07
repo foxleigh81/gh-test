@@ -1,9 +1,10 @@
 Feature: User selects procedure option 
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4003
-        Jira: GS-216
+        Jira: GS-243
 
-    Background: Given the user has completed the GS-215 steps
+    Background: Given the user has completed the GS-222 steps
 
     @DPL-4003
     Scenario: User directed to 'Procedure Option Type IA' page

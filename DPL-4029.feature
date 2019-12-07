@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only answers the Article 5 question
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4029
+        Jira: GS-277
 
-    Background: Given the user has completed the PL-4028 steps
+    Background: Given the user has completed the GS-276 steps
 
     @DPL-4029
     Scenario: User directed to 'Article 5' page 

@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only enters Implementation Date 
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9028
+        Jira: GS-409
 
-    Background: Given the user has completed the PL-9027 steps
+    Background: Given the user has completed the GS-408 steps
 
     @EPL-9028
     Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only is directed to 'Enter Implementation Date' page 

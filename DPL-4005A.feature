@@ -1,8 +1,10 @@
 Feature: User enters a product which does not appear in the list on the Select product page
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4005A
+        Jira: GS-245
 
-    Background: Given the user has completed the GS-217 steps
+    Background: Given the user has completed the GS-244 steps
 
     @DPL-4005A
     Scenario: User is directed to the Enter Product 1 page

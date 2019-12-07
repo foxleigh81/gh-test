@@ -1,7 +1,8 @@
 Feature: User who has entered a valid code from Data Table Z Special describes the proposed changes
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1046
-        Jira: GS-176
+        Jira: GS-179
 
     Background: Given the user has completed the GS-98 steps
 

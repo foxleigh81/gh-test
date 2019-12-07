@@ -1,6 +1,8 @@
 Feature: User starts the MA Variation process
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5000
+        Jira: GS-506
 
     @FPL-5000
     Scenario: MA Starts

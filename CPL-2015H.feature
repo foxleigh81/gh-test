@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only changes the variation
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015H
-        Jira: GS-213
+        Jira: GS-219
 
-    Background: Given the user has completed the GS-212 steps
+    Background: Given the user has completed the GS-218 steps
 
     @CPL-2015H
     Scenario Outline: User who has entered a valid code from Data Table Z Only is directed to 'Confirm Change Variation' page 

@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA + IB removes the variation
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9039A
+        Jira: GS-425
 
-    Background: Given the user has completed the PL-9039 steps
+    Background: Given the user has completed the GS-424 steps
 
     @EPL-9039A
     Scenario Outline: User who has entered a valid code from Data Table IA + IB is directed to the Confirm Remove Variation page

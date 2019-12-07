@@ -1,9 +1,10 @@
 Feature: User selects product to be varied
     Description:
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
         Reference: DPL-4005
-        Jira: GS-217
+        Jira: GS-244
 
-    Background: Given the user has completed the GS-216 steps
+    Background: Given the user has completed the GS-243 steps
 
     @DPL-4005
     @TestData::KetaminePlus

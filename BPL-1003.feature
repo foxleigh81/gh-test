@@ -1,5 +1,6 @@
 Feature: User selects procedure option 
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1003
         Jira: GS-95
 

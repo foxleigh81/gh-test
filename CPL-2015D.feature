@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only Uploads dossier
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015D
-        Jira: GS-209
+        Jira: GS-215
 
-    Background: Given the user has completed the GS-208 steps
+    Background: Given the user has completed the GS-214 steps
 
     @CPL-2015D
     Scenario: User is directed to the 'Upload Dossier' page

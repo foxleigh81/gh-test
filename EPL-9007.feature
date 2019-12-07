@@ -1,8 +1,10 @@
 Feature: User enters a variation code
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-9007
+        Jira: GS-379
 
-    Background: Given the user has completed the PL-9005 steps
+    Background: Given the user has completed the GS-377 steps
 
     @EPL-9007
     Scenario: User directed to Enter Variation Code

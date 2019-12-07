@@ -1,8 +1,9 @@
 Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special removes a variation
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5021A
 
-    Background: Given the user has completed the PL-5014 steps
+    Background: Given the user has completed the GS-518 steps
 
     @FPL-5021A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page
@@ -35,15 +36,11 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see a 'Continue' option
         
     Examples: 
-        | First Code | First Code Group | Sub Code | Description | Page | Group | Var Type |
-        | C.II.6(a) | IA Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | C.II.6(a) | IA Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | C.II.6(a) | IA Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | C.II.6(a) | IA Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
-        | B.I.a.1(h) | IB Only | B.I.a.1(h) | Addition of an alternative sterilisation site for the active substance using a Ph.Eur. method | Describe Changes | IB Only | IB |
-        | B.I.a.1(h) | IB Only | B.I.a.1(b) | Introduction of a manufacturer of the active substance supported by an ASMF | Describe changes | II Only | II |
-        | B.I.a.1(h) | IB Only | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes | No Variations | N/a |
-        | B.I.a.1(h) | IB Only | A(z).1 | Change in distributer details | Describe Changes | Z Special | N/a |
+        | Sub Code | Group | Var Type |
+        | B.I.a.1(h) | IB Only | IB |
+        | B.I.a.1(b) | II Only | II |
+        | 1(a) | No Variations | N/a |
+        | A(z).1 | Z Special | N/a |
 
     @FPL-5021A-2
     Scenario: User selects 'Yes'

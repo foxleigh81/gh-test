@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only enters Implementation Date 
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2009
-        Jira: GS-189
+        Jira: GS-193
 
-    Background: Given the user has completed the GS-188 steps
+    Background: Given the user has completed the GS-192 steps
 
     @CPL-2009
     Scenario: Use who has entered a valid code from Data Table IA Only is directed to 'Enter Implementation Date' page 

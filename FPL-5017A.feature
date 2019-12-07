@@ -1,8 +1,10 @@
 Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters application finance information
     Description:
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5017A
+        Jira: GS-524
 
-    Background: Given the user has completed the PL-5017 steps
+    Background: Given the user has completed the GS-523 steps
 
     @FPL-5017A
     Scenario: User is directed to the 'Application Finance Details' page

@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Only answers the Article 5 question
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2015A
-        Jira: GS-206
+        Jira: GS-212
 
-    Background: Given the user has completed the GS-205 steps
+    Background: Given the user has completed the GS-211 steps
 
     @CPL-2015A
     Scenario: User directed to 'Article 5' page 

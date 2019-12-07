@@ -1,9 +1,10 @@
 Feature: User who has entered a valid code from Data Table Z Special enters application contact information
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1046C
-        Jira: GS-179
+        Jira: GS-182
 
-    Background: Given the user has completed the GS-178 steps
+    Background: Given the user has completed the GS-181 steps
 
     @BPL-1046C
     Scenario: User is directed to the 'Application Contact Details' page
