@@ -20,12 +20,12 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'IA' displayed 
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link

@@ -4,7 +4,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         Reference: FPL-5021
         Jira: GS-531
 
-    Background: Given the user has completed the GS-532 steps
+    Background: Given the user has completed the GS-527 steps
 
     @FPL-5021
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is directed to the Application Summary page
@@ -22,11 +22,12 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the '<Var Type A>' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
-        And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
+        And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
+        And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
         And a table with a row with the list item 'Variation Type' and the 'selected variation type' displayed 
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
-        And a table with a row with the list item 'Proposed Change' and the 'Present and Proposed text' displayed and a change link
+        And a table with a row with the list item  and the 'Present' displayed and a change link
+        And a table with a row with the list item 'Present text' and the 'Proposed change' displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
         

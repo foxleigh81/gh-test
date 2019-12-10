@@ -1,15 +1,16 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special checks, and is able to change answers
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB checks, and is able to change answers
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
-        Reference: FPL-5025
+        Reference: FPL-5034
 
-    Background: Given the user has completed the PL-5024A steps
+    Background: Given the user has completed the PL-5033A steps
 
-    @FPL-5025
-    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special is directed to 'Check your answers' page 
+    @FPL-5034
+    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB and has selected Variation type IB is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a first variation code from Data Table 'Group A'
-        And they have entered a second variation code from Data Table 'Group B
+        And they have entered a first variation code from Data Table 'IA Only'
+        And they have entered a second variation code from Data Table 'IA + IB'
+        And they have selected Variation Type 'IA' 
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -23,14 +24,15 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And a table header 'Variation 1'
         And a table with a row with the list item 'Code' and the '<Sub Code A>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and 'Var Type A' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
-        And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
+        And a table with a row with the list item ''Proposed' and the 'proposed change text' displayed and a change link
         And a table header 'Variation 2'
         And a table with a row with the list item 'Code' and the '<Sub Code B>' displayed 
         And a table with a row containing the list item 'Description' and the 'Variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and 'Var Type B' displayed and a change link
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed and a change link
+        And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
         And a table with a row with the list item 'Proposed' and the 'proposed change text' displayed and a change link
         And a section header 'Add another variation' with an 'Add another variation' link
@@ -52,74 +54,43 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see a 'Continue' option
         
     Examples: 
-        | Sub Code A | Group A | Var Type A | Sub Code B | Group B | Var Type B |
-        | C.II.6(a) | IA Only | IA | C.II.6(a) | IA Only | IA |
-        | C.II.6(a) | IA Only | IA | B.I.a.1(h) | IB Only | IB |
-        | C.II.6(a) | IA Only | IA | B.I.a.1(b) | II Only | II |
-        | C.II.6(a) | IA Only | IA | 1(a) | No Variations | N/a |
-        | C.II.6(a) | IA Only | IA | A(z).1 | Z Special | N/a |
-        | B.I.a.1(h) | IB Only | IB | C.II.6(a) | IA Only | IA |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(b) | II Only | II |
-        | B.I.a.1(h) | IB Only | IB | 1(a) | No Variations | N/a |
-        | B.I.a.1(h) | IB Only | IB | A(z).1 | Z Special | N/a |
-        | B.I.a.1(b) | II Only | II | C.II.6(a) | IA Only | IA |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(b) | II Only | II |
-        | B.I.a.1(b) | II Only | II | 1(a) | No Variations | N/a |
-        | B.I.a.1(b) | II Only | II | A(z).1 | Z Special | N/a |
-        | 1(a) | No Variations | N/a | C.II.6(a) | IA Only | IA |
-        | 1(a) | No Variations | N/a | B.I.a.1(h) | IB Only | IB |
-        | 1(a) | No Variations | N/a | B.I.a.1(b) | II Only | II |
-        | 1(a) | No Variations | N/a | 1(a) | No Variations | N/a |
-        | 1(a) | No Variations | N/a | A(z).1 | Z Special | N/a |
-        | A(z).1 | Z Special | N/a | C.II.6(a) | IA Only | IA |
-        | A(z).1 | Z Special | N/a | B.I.a.1(h) | IB Only | IB |
-        | A(z).1 | Z Special | N/a | B.I.a.1(b) | II Only | II |
-        | A(z).1 | Z Special | N/a | 1(a) | No Variations | N/a |
-        | A(z).1 | Z Special | N/a | A(z).1 | Z Special | N/a |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | C.II.6(a) | A.3 | IA Only | IA + IB |
 
-    @FPL-5025-1
+    @FPL-5034-1
     Scenario: User selects change link for Product
         Given the user has been directed to the 'Check Your Answers' page
         And they can see a 'Change' link for 'Product 1'
         When they select 'Product change link'
         Then they will be directed to the 'Select Product 1' page
 
-    @FPL-5025-2
-    Scenario: User selects change link for implementation date
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Implementation Date'
-        When they select 'Implementation Date change link'
-        Then they will be directed to the 'Implementation Date' page
-
-    @FPL-5025-3
+    @FPL-5034-2
     Scenario: User selects change link for Describe changes
         Given the user has been directed to the 'Check Your Answers' page
         And they can see a 'Change' link for 'Describe changes'
         When they select 'Describe changes change link'
         Then they will be directed to the 'Describe changes' page
 
-    @FPL-5025-4
+    @FPL-5034-3
     Scenario: User selects Remove variation link for Variation 1
         Given the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
-    @FPL-5025-5
+    @FPL-5034-4
     Scenario: User selects Remove variation link for Variation 2
         Given the user can see a 'Variation 2 Remove' link
         When the user has selected the link 'Remove variation'
         Then they will be directed to the 'Confirm Remove Variation' page
 
-    @FPL-5025-6
+    @FPL-5034-5
     Scenario: User selects the 'Save and exit' link
         Given the user has been directed to the 'Check Your Answers' page
         And they can see a save and exit link
         When they select 'Save and exit link'
         Then they will be directed to the 'Incomplete applications' page
 
-    @FPL-5025-7
+    @FPL-5034-6
     Scenario: User selects 'Continue' option
         Given the user has been directed to the 'Check Your Answers' page
         When they select 'Continue'

@@ -2,8 +2,9 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5021A
+        Jira: GS-534
 
-    Background: Given the user has completed the GS-518 steps
+    Background: Given the user has completed the GS-531 steps
 
     @FPL-5021A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page

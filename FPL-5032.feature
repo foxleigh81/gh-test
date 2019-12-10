@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IB Only, or II Only, or No Variations, or Z Special Uploads dossier
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB Uploads dossier
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
-        Reference: FPL-5023
+        Reference: FPL-5032
 
-    Background: Given the user has completed the PL-5022 steps
+    Background: Given the user has completed the PL-5031 steps
 
-    @FPL-5023
+    @FPL-5032
     Scenario: User is directed to the 'Upload Dossier' page
         Given the user has been directed to the 'Upload Dossier' page
         When page 'Upload Dossier' loads
@@ -18,14 +18,14 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see Text 'No file chosen'
         And they will see a 'Upload file and continue' option
 
-    @FPL-5023-1
+    @FPL-5032-1
     Scenario: User Uploads a file
         Given the user has been directed to the 'Upload Dossier' page
         And the user has selected 'a file to upload'
         When they select 'Upload file and continue'
         Then they will be directed to the 'Application Contact Details' page
 
-    @FPL-5023-2
+    @FPL-5032-2
     Scenario: User does not upload a file
         Given the user has been directed to the 'Upload Dossier' page
         And they have not selected any 'file to upload'
