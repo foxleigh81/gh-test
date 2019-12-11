@@ -1,12 +1,11 @@
-Feature: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only enters application contact information
+Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB or II enters application contact information
     Description:
-        Epic: Procedure D:  IA changes - sev ch, 1  prd 
-        Reference: DPL-4094
-        Jira: GS-369
+        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
+        Reference: FPL-5043
 
-    Background: Given the user has completed the GS-368 steps
+    Background: Given the user has completed the PL-5042 steps
 
-    @DPL-4094
+    @FPL-5043
     Scenario: User is directed to the 'Application Contact Details' page
         Given the user has been directed to the 'Application Contact Details' page
         When page 'Application Contact Details' loads
@@ -21,14 +20,14 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
-    @DPL-4094-1
+    @FPL-5043-1
     Scenario: User completes all mandatory fields
         Given the user has been directed to the 'Application Contact Details' page
         And there is a non-empty string in all mandatory fields
         When they select 'Continue'
         Then they will be directed to the 'Application Finance Details' page
 
-    @DPL-4094-2
+    @FPL-5043-2
     Scenario: User does not complete all mandatory fields
         Given the user has been directed to the 'Application Contact Details' page
         And one or more mandatory fields are empty

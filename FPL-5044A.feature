@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB removes a variation
+Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB or II removes a variation
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
-        Reference: FPL-5034A
+        Reference: FPL-5044A
 
-    Background: Given the user has completed the PL-5034 steps
+    Background: Given the user has completed the PL-5044 steps
 
-    @FPL-5034A
+    @FPL-5044A
     Scenario Outline: User who has selected Remove variation 1 is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
@@ -22,7 +22,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         | Sub Code | Description | Page |
         | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
 
-    @FPL-5034A-1
+    @FPL-5044A-1
     Scenario Outline: User who has selected Remove variation 2 is directed to the Confirm Remove Variation page
         Given the user has been directed to the 'Confirm Remove Variation' page
         When page 'Confirm Remove Variation' loads
@@ -125,21 +125,21 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         | C.I(z).1 | Changes (Safety/Efficacy) to human and veterinary medicinal products | Variation Type Page 1 |
         | C.II(z) | Changes to Veterinary Medicinal Products: Other Variation | Variation Type Page 1 |
 
-    @FPL-5034A-2
+    @FPL-5044A-2
     Scenario: User selects 'Yes'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
-    @FPL-5034A-3
+    @FPL-5044A-3
     Scenario: User selects 'No'
         Given the user has been directed to the 'Confirm Remove Variation' page
         And the user has selected 'No'
         When they select 'Continue'
         Then they will be directed to the 'Check your answers' page
 
-    @FPL-5034A-4
+    @FPL-5044A-4
     Scenario: User does not select an option
         Given the user has been directed to the 'Confirm Remove Variation' page
         And they have not selected any 'Radio Button'
