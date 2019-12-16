@@ -1,12 +1,12 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB describes the proposed changes
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IA describes the proposed changes
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5029
 
-    Background: Given the user has completed the PL-5027 steps
+    Background: Given the user has completed the PL-5028 steps
 
     @FPL-5029
-    Scenario: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB is directed to 'Describe Changes' page 
+    Scenario: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IA is directed to 'Describe Changes' page 
         Given the user has been directed to the 'Describe changes' page
         When page 'Describe changes' loads
         Then a page header 'Describe the proposed change'

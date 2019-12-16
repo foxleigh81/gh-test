@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB removes a variation
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IA removes a variation
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5030A

@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB checks, and is able to change answers
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IA checks, and is able to change answers
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5034
@@ -6,7 +6,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     Background: Given the user has completed the PL-5033A steps
 
     @FPL-5034
-    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB and has selected Variation type IB is directed to 'Check your answers' page 
+    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB and has selected Variation type IA is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
         And they have entered a first variation code from Data Table 'IA Only'
         And they have entered a second variation code from Data Table 'IA + IB'

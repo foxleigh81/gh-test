@@ -9,8 +9,8 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     @FPL-5014
     Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to the Application Summary page
         Given the user has been directed to the 'Application Summary' page
-        And they have entered a first variation code from Data Table '<Group A>'
-        And they have entered a second variation code from Data Table '<Group B>'
+        And they have entered a first variation code from Data Table '<Sub Code A>'
+        And they have entered a second variation code from Data Table '<Sub Code B>'
         When page 'Application Summary' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -20,12 +20,12 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
         And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
         And a table with a row containing the list item 'Variation 1' and the '<Sub Code A>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and '<Var Type A>' displayed 
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and '<Var Type B>' displayed 
+        And a table with a row with the list item 'Variation Type' and 'IA' displayed 
         And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
@@ -33,107 +33,8 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         And they will see a save and exit link 
         
     Examples: 
-        | Sub Code A | Group A | Var Type A | Sub Code B | Group B | Var Type B |
-        | C.II.6(a) | IA Only | IA | C.II.6(a) | IA Only | IA |
-        | C.II.6(a) | IA Only | IA | B.I.a.1(h) | IB Only | IB |
-        | C.II.6(a) | IA Only | IA | B.I.a.1(b) | II Only | II |
-        | C.II.6(a) | IA Only | IA | 1(a) | No Variations | N/a |
-        | C.II.6(a) | IA Only | IA | A(z).1 | Z Special | N/a |
-        | C.II.6(a) | IA Only | IA | B.I.a.4(a) | IA + IB | IA  |
-        | C.II.6(a) | IA Only | IA | B.I.a.4(a) | IA + IB | IB |
-        | C.II.6(a) | IA Only | IA | B.I.a.2(z) | Z Only | IA  |
-        | C.II.6(a) | IA Only | IA | B.I.a.2(z) | Z Only | IB |
-        | C.II.6(a) | IA Only | IA | B.I.a.2(z) | Z Only | II |
-        | B.I.a.1(h) | IB Only | IB | C.II.6(a) | IA Only | IA |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(b) | II Only | II |
-        | B.I.a.1(h) | IB Only | IB | 1(a) | No Variations | N/a |
-        | B.I.a.1(h) | IB Only | IB | A(z).1 | Z Special | N/a |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.2(z) | Z Only | II |
-        | B.I.a.1(b) | II Only | II | C.II.6(a) | IA Only | IA |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(b) | II Only | II |
-        | B.I.a.1(b) | II Only | II | 1(a) | No Variations | N/a |
-        | B.I.a.1(b) | II Only | II | A(z).1 | Z Special | N/a |
-        | B.I.a.1(b) | II Only | II | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.1(b) | II Only | II | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.1(b) | II Only | II | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.1(b) | II Only | II | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.1(b) | II Only | II | B.I.a.2(z) | Z Only | II |
-        | 1(a) | No Variations | N/a | C.II.6(a) | IA Only | IA |
-        | 1(a) | No Variations | N/a | B.I.a.1(h) | IB Only | IB |
-        | 1(a) | No Variations | N/a | B.I.a.1(b) | II Only | II |
-        | 1(a) | No Variations | N/a | 1(a) | No Variations | N/a |
-        | 1(a) | No Variations | N/a | A(z).1 | Z Special | N/a |
-        | 1(a) | No Variations | N/a | B.I.a.4(a) | IA + IB | IA  |
-        | 1(a) | No Variations | N/a | B.I.a.4(a) | IA + IB | IB |
-        | 1(a) | No Variations | N/a | B.I.a.2(z) | Z Only | IA  |
-        | 1(a) | No Variations | N/a | B.I.a.2(z) | Z Only | IB |
-        | 1(a) | No Variations | N/a | B.I.a.2(z) | Z Only | II |
-        | A(z).1 | Z Special | N/a | C.II.6(a) | IA Only | IA |
-        | A(z).1 | Z Special | N/a | B.I.a.1(h) | IB Only | IB |
-        | A(z).1 | Z Special | N/a | B.I.a.1(b) | II Only | II |
-        | A(z).1 | Z Special | N/a | 1(a) | No Variations | N/a |
-        | A(z).1 | Z Special | N/a | A(z).1 | Z Special | N/a |
-        | A(z).1 | Z Special | N/a | B.I.a.4(a) | IA + IB | IA  |
-        | A(z).1 | Z Special | N/a | B.I.a.4(a) | IA + IB | IB |
-        | A(z).1 | Z Special | N/a | B.I.a.2(z) | Z Only | IA  |
-        | A(z).1 | Z Special | N/a | B.I.a.2(z) | Z Only | IB |
-        | A(z).1 | Z Special | N/a | B.I.a.2(z) | Z Only | II |
-        | B.I.a.4(a) | IA + IB | IA  | C.II.6(a) | IA Only | IA |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.1(b) | II Only | II |
-        | B.I.a.4(a) | IA + IB | IA  | 1(a) | No Variations | N/a |
-        | B.I.a.4(a) | IA + IB | IA  | A(z).1 | Z Special | N/a |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.4(a) | IA + IB | IA  | B.I.a.2(z) | Z Only | II |
-        | B.I.a.4(a) | IA + IB | IB | C.II.6(a) | IA Only | IA |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.1(b) | II Only | II |
-        | B.I.a.4(a) | IA + IB | IB | 1(a) | No Variations | N/a |
-        | B.I.a.4(a) | IA + IB | IB | A(z).1 | Z Special | N/a |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.4(a) | IA + IB | IB | B.I.a.2(z) | Z Only | II |
-        | B.I.a.2(z) | Z Only | IA  | C.II.6(a) | IA Only | IA |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.1(b) | II Only | II |
-        | B.I.a.2(z) | Z Only | IA  | 1(a) | No Variations | N/a |
-        | B.I.a.2(z) | Z Only | IA  | A(z).1 | Z Special | N/a |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.2(z) | Z Only | IA  | B.I.a.2(z) | Z Only | II |
-        | B.I.a.2(z) | Z Only | IB | C.II.6(a) | IA Only | IA |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.1(b) | II Only | II |
-        | B.I.a.2(z) | Z Only | IB | 1(a) | No Variations | N/a |
-        | B.I.a.2(z) | Z Only | IB | A(z).1 | Z Special | N/a |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.2(z) | Z Only | IB | B.I.a.2(z) | Z Only | II |
-        | B.I.a.2(z) | Z Only | II | C.II.6(a) | IA Only | IA |
-        | B.I.a.2(z) | Z Only | II | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.2(z) | Z Only | II | B.I.a.1(b) | II Only | II |
-        | B.I.a.2(z) | Z Only | II | 1(a) | No Variations | N/a |
-        | B.I.a.2(z) | Z Only | II | A(z).1 | Z Special | N/a |
-        | B.I.a.2(z) | Z Only | II | B.I.a.4(a) | IA + IB | IA  |
-        | B.I.a.2(z) | Z Only | II | B.I.a.4(a) | IA + IB | IB |
-        | B.I.a.2(z) | Z Only | II | B.I.a.2(z) | Z Only | IA  |
-        | B.I.a.2(z) | Z Only | II | B.I.a.2(z) | Z Only | IB |
-        | B.I.a.2(z) | Z Only | II | B.I.a.2(z) | Z Only | II |
+        | Sub Code A | Sub Code B | Group A | Group B |
+        | C.II.6(a) | C.II.6(a) | IA Only | IA Only |
 
     @FPL-5014-1
     Scenario: User selects 'Continue'

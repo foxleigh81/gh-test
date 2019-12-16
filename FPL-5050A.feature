@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB  or II enters application finance information
+Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IA  enters application finance information
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
-        Reference: FPL-5043A
+        Reference: FPL-5050A
 
-    Background: Given the user has completed the PL-5043 steps
+    Background: Given the user has completed the PL-5050 steps
 
-    @FPL-5043A
+    @FPL-5050A
     Scenario: User is directed to the 'Application Finance Details' page
         Given the user has been directed to the 'Application Finance Details' page
         When page 'Application Finance Details' loads
@@ -19,14 +19,14 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
-    @FPL-5043A-1
+    @FPL-5050A-1
     Scenario: User completes all mandatory fields
         Given the user has been directed to the 'Application Finance Details' page
         And there is a non-empty string in all mandatory fields
         When they select 'Continue'
         Then they will be directed to the 'Check Your Answers' page
 
-    @FPL-5043A-2
+    @FPL-5050A-2
     Scenario: User does not complete all mandatory fields
         Given the user has been directed to the 'Application Finance Details' page
         And one or more mandatory fields are empty

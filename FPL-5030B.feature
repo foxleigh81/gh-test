@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB is prompted to add another variation
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IA is prompted to add another variation
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5030B
@@ -6,7 +6,7 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
     Background: Given the user has completed the PL-5030 steps
 
     @FPL-5030B
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB and has selected Variation type IB  is directed to the Add Another Variation page
+    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB and has selected Variation type IA  is directed to the Add Another Variation page
         Given the user has been directed to the 'Add Another Variation Code' page
         When page 'Add Another Variation Code' loads
         Then they will see a 'Back' link

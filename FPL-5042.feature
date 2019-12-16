@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB or II Uploads dossier
+Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA + IB and has selected Variation type IB submits the application
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5042
@@ -6,29 +6,20 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
     Background: Given the user has completed the PL-5041 steps
 
     @FPL-5042
-    Scenario: User is directed to the 'Upload Dossier' page
-        Given the user has been directed to the 'Upload Dossier' page
-        When page 'Upload Dossier' loads
+    Scenario: User is directed to the 'Declaration' page
+        Given the user has been directed to the 'Declaration' page
+        When page 'Declaration' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
-        And a sub header 'Renewal of marketing authorisation'
-        And a page header 'Upload Dossier'
-        And they will see Text 'The selected file must be a zip file and smaller than 2gb'
-        And a 'Choose file' button
-        And they will see Text 'No file chosen'
-        And they will see a 'Upload file and continue' option
+        And a sub header 'Vary a marketing authorisation'
+        And a page header 'Declaration'
+        And they will see Text 'By submitting this application you confirm that the information you've provided is correct at the time of submission'
+        And they will see Text '! If any information provided in this application is later found to be false or incorrect, the Secretary of State may suspend or revoke the authorisation'
+        And they will see a 'Agree and submit application' option
 
     @FPL-5042-1
-    Scenario: User Uploads a file
-        Given the user has been directed to the 'Upload Dossier' page
-        And the user has selected 'a file to upload'
-        When they select 'Upload file and continue'
-        Then they will be directed to the 'Application Contact Details' page
-
-    @FPL-5042-2
-    Scenario: User does not upload a file
-        Given the user has been directed to the 'Upload Dossier' page
-        And they have not selected any 'file to upload'
-        When they select 'Upload file and continue'
-        Then they will see an error message containing 'Choose a file to continue'
-        And they will not be able to continue
+    Scenario: User selects the 'Agree and submit application' option
+        Given the user has been directed to the 'Declaration' page
+        And they can see a 'Agree and submit application' option
+        When they select 'Agree and submit application'
+        Then they will be directed to the 'Application Submitted'  page

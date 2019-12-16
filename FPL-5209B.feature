@@ -1,12 +1,12 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB or II is prompted to add another variation
+Feature: User who has entered a valid code from Data Table IA + IB and has selected variation type IB and a second from Data Table Z Only and has selected variation type IA  is prompted to add another variation
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
-        Reference: FPL-5040B
+        Reference: FPL-5209B
 
-    Background: Given the user has completed the PL-5040 steps
+    Background: Given the user has completed the PL-5209 steps
 
-    @FPL-5040B
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table Z Only and has selected variation type IB or II is directed to the Add Another Variation page
+    @FPL-5209B
+    Scenario: User who has entered a valid code from Data Table IA + IB and has selected variation type IB and a second from Data Table Z Only and has selected variation type IA is directed to the Add Another Variation page
         Given the user has been directed to the 'Add Another Variation Code' page
         When page 'Add Another Variation Code' loads
         Then they will see a 'Back' link
@@ -17,21 +17,21 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And they will see a radio button option for 'No'
         And they will see a 'Continue' option
 
-    @FPL-5040B-1
+    @FPL-5209B-1
     Scenario: User selects 'Yes'
         Given the user has been directed to the 'Add Another Variation Code' page
         And the user has selected 'Yes'
         When they select 'Continue'
         Then they will be directed to the 'Enter Variation Code' page
 
-    @FPL-5040B-2
+    @FPL-5209B-2
     Scenario: User selects 'No'
         Given the user has been directed to the 'Add Another Variation Code' page
         And the user has selected 'No'
         When they select 'Continue'
         Then they will be directed to the 'Supporting Documents' page
 
-    @FPL-5040B-3
+    @FPL-5209B-3
     Scenario: User does not select an option
         Given the user has been directed to the  'Add Another Variation Code' page
         And they have not selected any 'Radio Button'
