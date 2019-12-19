@@ -25,7 +25,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And a table with a row containing the list item 'Variation 2' and the '<Sub Code B>' displayed and the 'variation description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation Type' and the 'Var Type B' displayed 
+        And a table with a row with the list item 'Variation Type' and the '<Var Type B>' displayed 
         And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And they will see a 'Continue' option

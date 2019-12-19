@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table IA + IB and has selected variation type IBl and a second from Data Table Z Only and has selected variation type IB or II  answers the Article 5 question
+Feature: User who has entered a valid code from Data Table IA + IB and has selected variation type IB and a second from Data Table Z Only and has selected variation type IB or II  answers the Article 5 question
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5215

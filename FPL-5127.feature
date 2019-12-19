@@ -10,7 +10,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         Given the user has been directed to the 'Application Summary' page
         And they have entered a first variation code from Data Table '<Group B>'
         And they have selected Variation Type '<Var Type B>' 
-        And they have entered a second variation code from Data Table '<Group B>'
+        And they have entered a second variation code from Data Table '<Group A>'
         When page 'Application Summary' loads
         Then they will see a 'Back' link
         And a 'Sign out' link

@@ -8,7 +8,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     @FPL-5116
     Scenario Outline: User who has entered a valid code from Data Table IA Only directed to the Application Summary page
         Given the user has been directed to the 'Application Summary' page
-        And they have entered a value from Data Table '<Sub Code>'
+        And they have entered a value from Data Table 'IA + IB'
         And they have selected Variation Type 'IA' 
         When page 'Application Summary' loads
         Then they will see a 'Back' link

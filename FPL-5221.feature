@@ -9,7 +9,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     Scenario Outline: User who has entered a valid code from Data Table IA + IB and has selected variation type IB  and a second from Data Table Z Only and has selected variation type IB or II is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
         And they have entered a first variation code from Data Table '<Group A>'
-        And they have selected Variation Type '<Var Type B>' 
+        And they have selected Variation Type '<Var Type A>' 
         And they have entered a second variation code from Data Table '<Group B>'
         And they have selected Variation Type '<Var Type B>' 
         When page 'Check Your Answers' loads
