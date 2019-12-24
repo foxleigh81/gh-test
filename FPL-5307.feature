@@ -3,11 +3,12 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5307
 
-    Background: Given the user has completed the PL-5306B steps
+    Background:
+        Given the user has completed the PL-5306B steps
 
-    @FPL-5307
+    @FPL-5307-1
     Scenario: User directed to 'Supporting Documents' page 
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         When page 'Supporting Documents' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -26,24 +27,24 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
         And they will see Text 'Provide any further information we may need to know about your application'
         And they will see a 'Continue' option
 
-    @FPL-5307-1
+    @FPL-5307-2
     Scenario: User selects all check boxes
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
         When they select 'Continue'
-        Then they will be directed to the 'Upload Dossier' page
+        Then they are directed to the 'Upload Dossier' page
 
-    @FPL-5307-2
+    @FPL-5307-3
     Scenario: User does not select all check boxes, and enters reason for omission
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
         And there is a non-empty string in the 'Omitted Documents' text area
         When they select 'Continue'
-        Then they will be directed to the 'Upload Dossier' page
+        Then they are directed to the 'Upload Dossier' page
 
-    @FPL-5307-3
+    @FPL-5307-4
     Scenario: User does not select all check boxes, and does not enter reason for omission
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have not selected at least 4 checkbox options
         And the 'Omitted Documents' text area is empty
         When they select 'Continue'

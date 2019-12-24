@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         Reference: EPL-9091
         Jira: GS-496
 
-    Background: Given the user has completed the GS-495 steps
+    Background:
+        Given the user has completed the PL-9090 steps
 
-    @EPL-9091
-    Scenario Outline: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only is directed to the Application Summary page
-        Given the user has been directed to the 'Application Summary' page
+    @EPL-9091-1
+    Scenario: User who has entered a valid code from Data Table Z Only and a second variation code from Data Table Z Only is directed to the Application Summary page
+        And the user has been directed to the 'Application Summary' page
         And they have entered a first variation code from Data Table '<Sub Code A>'
         And they have selected Variation Type '<Sub Code B>' 
         And they have entered a second variation code from Data Table 'Application Summary'
@@ -35,60 +36,56 @@ Feature: User who has entered a valid code from Data Table Z Only and a second v
         And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
-        
-    Examples: 
-        | Sub Code A | Sub Code B | Group A | Group B |
-        | A(z) | A(z) | Z Only | Z Only |
-
-    @EPL-9091-1
-    Scenario: User selects 'Continue'
-        Given the user is on the 'Application Summary' page
-        When they select 'Continue'
-        Then they will be directed to the 'Add Another Variation Code' page
 
     @EPL-9091-2
-    Scenario: User selects Remove variation link for Variation 1
-        Given the user can see a 'Variation 1 Remove' link
-        When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+    Scenario: User selects 'Continue'
+        And the user is on the 'Application Summary' page
+        When they select 'Continue'
+        Then they are directed to the 'Add Another Variation Code' page
 
     @EPL-9091-3
-    Scenario: User selects Remove variation link for Variation 2
-        Given the user can see a 'Variation 2 Remove' link
+    Scenario: User selects Remove variation link for Variation 1
+        And the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @EPL-9091-4
-    Scenario: User selects change link for Product
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they will be directed to the 'Select Product 2' page
+    Scenario: User selects Remove variation link for Variation 2
+        And the user can see a 'Variation 2 Remove' link
+        When the user has selected the link 'Remove variation'
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @EPL-9091-5
-    Scenario: User selects change link for implementation date
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Implementation Date'
-        When they select 'Implementation Date change link'
-        Then they will be directed to the 'Implementation Date' page
+    Scenario: User selects change link for Product
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Product 1'
+        When they select 'Product change link'
+        Then they are directed to the 'Select Product 2' page
 
     @EPL-9091-6
-    Scenario: User selects change link for Article 5
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Article 5'
-        When they select 'Article 5 change link'
-        Then they will be directed to the 'Article 5' page
+    Scenario: User selects change link for implementation date
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Implementation Date'
+        When they select 'Implementation Date change link'
+        Then they are directed to the 'Implementation Date' page
 
     @EPL-9091-7
-    Scenario: User selects change link for Describe changes
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Proposed changes'
-        When they select 'Proposed changes change link'
-        Then they will be directed to the 'Describe changes' page
+    Scenario: User selects change link for Article 5
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Article 5'
+        When they select 'Article 5 change link'
+        Then they are directed to the 'Article 5' page
 
     @EPL-9091-8
+    Scenario: User selects change link for Describe changes
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Proposed changes'
+        When they select 'Proposed changes change link'
+        Then they are directed to the 'Describe changes' page
+
+    @EPL-9091-9
     Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Application Summary' page
+        And the user has been directed to the 'Application Summary' page
         And they can see a save and exit link
         When they select 'Save and exit link'
-        Then they will be directed to the 'Incomplete applications' page
+        Then they are directed to the 'Incomplete applications' page

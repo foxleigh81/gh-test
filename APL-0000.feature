@@ -4,9 +4,9 @@ Feature: User starts the MA Variation process
         Reference: APL-0000
         Jira: GS-1
 
-    @APL-0000
-    Scenario: MA Starts
-        Given the Public User is authenticated
-        When the user has selected the 'MA Variation' option
-        And the user has selected 'Start Now'
-        Then they will be directed to the 'Procedure Type' page
+    @APL-0000-1
+    Scenario: User can begin variation process
+        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        When they select the 'Vary a marketing authorisation' option and click continue
+        Then they are directed to the 'Select Variation Procedure Type' page

@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table IA + IB Only confirms
         Reference: CPL-2014A
         Jira: GS-204
 
-    Background: Given the user has completed the GS-203 steps
+    Background:
+        Given the user has completed the PL-2014 steps
 
-    @CPL-2014A
+    @CPL-2014A-1
     Scenario: User directed to 'Supporting Documents' page 
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         When page 'Supporting Documents' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -27,24 +28,24 @@ Feature: User who has entered a valid code from Data Table IA + IB Only confirms
         And they will see Text 'Provide any further information we may need to know about your application'
         And they will see a 'Continue' option
 
-    @CPL-2014A-1
+    @CPL-2014A-2
     Scenario: User selects all check boxes
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
         When they select 'Continue'
-        Then they will be directed to the 'Upload Dossier' page
+        Then they are directed to the 'Upload Dossier' page
 
-    @CPL-2014A-2
+    @CPL-2014A-3
     Scenario: User does not select all check boxes, and enters reason for omission
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have selected at least 4 checkbox options
         And there is a non-empty string in the 'Omitted Documents' text area
         When they select 'Continue'
-        Then they will be directed to the 'Upload Dossier' page
+        Then they are directed to the 'Upload Dossier' page
 
-    @CPL-2014A-3
+    @CPL-2014A-4
     Scenario: User does not select all check boxes, and does not enter reason for omission
-        Given the user has been directed to the 'Supporting Documents' page
+        And the user has been directed to the 'Supporting Documents' page
         And they have not selected at least 4 checkbox options
         And the 'Omitted Documents' text area is empty
         When they select 'Continue'

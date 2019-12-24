@@ -4,11 +4,12 @@ Feature: User selects procedure option
         Reference: BPL-1003
         Jira: GS-95
 
-    Background: Given the user has completed the GS-94 steps
+    Background:
+        Given the user has completed the PL-1001 steps
 
-    @BPL-1003
+    @BPL-1003-1
     Scenario: User directed to Procedure Option Type Single page
-        Given the user has been directed to the 'Procedure Option Type Single' page
+        And the user has been directed to the 'Procedure Option Type Single' page
         When page 'Procedure Option Type Single' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -16,11 +17,11 @@ Feature: User selects procedure option
         And a page header 'Select procedure option'
         And they will see a radio button option for 'One change to one product'
         And they will see a radio button option for 'One change to several related products'
-        And they will see a 'Continue' option
+        And undefined
 
-    @BPL-1003-1
+    @BPL-1003-2
     Scenario: User selects 'Single change to several products'
-        Given the user has been directed to the 'Procedure Option Type Single' page
+        And the user has been directed to the 'Procedure Option Type Single' page
         And the user has selected 'One change to several related products'
         When they select 'Continue'
-        Then they will be directed to the 'Select Product 2' page
+        Then they are directed to the 'Select Product 2' page

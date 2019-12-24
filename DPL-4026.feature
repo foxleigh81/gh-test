@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         Reference: DPL-4026
         Jira: GS-273
 
-    Background: Given the user has completed the GS-272 steps
+    Background:
+        Given the user has completed the PL-4025A steps
 
-    @DPL-4026
-    Scenario Outline: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
-        Given the user has been directed to the 'Check Your Answers' page
+    @DPL-4026-1
+    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to 'Check your answers' page 
+        And the user has been directed to the 'Check Your Answers' page
         And they have entered a first variation code from Data Table 'IA Only'
         And they have entered a second variation code from Data Table 'IA + IB'
         When page 'Check Your Answers' loads
@@ -52,53 +53,49 @@ Feature: User who has entered a valid code from Data Table IA Only  and a second
         And a table with a row with the list item 'Further comments' and the 'further comments text' displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code A | Sub Code B | Group A | Group B |
-        | C.II.6(a) | A.3 | IA Only | IA + IB |
-
-    @DPL-4026-1
-    Scenario: User selects change link for Product
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
 
     @DPL-4026-2
-    Scenario: User selects change link for Describe changes
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they will be directed to the 'Describe changes' page
+    Scenario: User selects change link for Product
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Product 1'
+        When they select 'Product change link'
+        Then they are directed to the 'Select Product 1' page
 
     @DPL-4026-3
-    Scenario: User selects change link for implementation date
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Implementation Date'
-        When they select 'Implementation Date change link'
-        Then they will be directed to the 'Implementation Date' page
+    Scenario: User selects change link for Describe changes
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Describe changes'
+        When they select 'Describe changes change link'
+        Then they are directed to the 'Describe changes' page
 
     @DPL-4026-4
-    Scenario: User selects Remove variation link for Variation 1
-        Given the user can see a 'Variation 1 Remove' link
-        When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+    Scenario: User selects change link for implementation date
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Implementation Date'
+        When they select 'Implementation Date change link'
+        Then they are directed to the 'Implementation Date' page
 
     @DPL-4026-5
-    Scenario: User selects Remove variation link for Variation 2
-        Given the user can see a 'Variation 2 Remove' link
+    Scenario: User selects Remove variation link for Variation 1
+        And the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @DPL-4026-6
-    Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a save and exit link
-        When they select 'Save and exit link'
-        Then they will be directed to the 'Incomplete applications' page
+    Scenario: User selects Remove variation link for Variation 2
+        And the user can see a 'Variation 2 Remove' link
+        When the user has selected the link 'Remove variation'
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @DPL-4026-7
+    Scenario: User selects the 'Save and exit' link
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a save and exit link
+        When they select 'Save and exit link'
+        Then they are directed to the 'Incomplete applications' page
+
+    @DPL-4026-8
     Scenario: User selects 'Continue' option
-        Given the user has been directed to the 'Check Your Answers' page
+        And the user has been directed to the 'Check Your Answers' page
         When they select 'Continue'
-        Then they will be directed to the 'Declaration' page
+        Then they are directed to the 'Declaration' page

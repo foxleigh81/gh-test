@@ -4,12 +4,13 @@ Feature: User selects product to be varied
         Reference: EPL-9005
         Jira: GS-377
 
-    Background: Given the user has completed the GS-376 steps
+    Background:
+        Given the user has completed the PL-9003 steps
 
-    @EPL-9005
+    @EPL-9005-1
     @TestData::KetaminePlus
     Scenario: User directed to 'Select Product 2' page 
-        Given the user has been directed to the 'Select product 2' page
+        And the user has been directed to the 'Select product 2' page
         When page 'Select product 2' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -22,23 +23,23 @@ Feature: User selects product to be varied
         And they will see a 'Product not listed' link
         And they will see a 'Continue' option
 
-    @EPL-9005-1
+    @EPL-9005-2
     Scenario: User selects 'Products To Be Varied'
-        Given the user has been directed to the 'Select Product 2'' page
+        And the user has been directed to the 'Select Product 2'' page
         And they have selected at least 2 checkbox options
         When they select 'Continue'
-        Then they will be directed to the 'Enter Variation Code' page
+        Then they are directed to the 'Enter Variation Code' page
 
-    @EPL-9005-2
+    @EPL-9005-3
     Scenario: User does not select a product
-        Given the user has been directed to the 'Select Product 2'' page
+        And the user has been directed to the 'Select Product 2'' page
         And they have not selected at least 2 checkbox options
         When they select 'Continue'
         Then they will see an error message containing 'You must select at least two products'
         And they will not be able to continue
 
-    @EPL-9005-3
+    @EPL-9005-4
     Scenario: User selects 'Product not listed' link
-        Given the user can see a 'Product not listed' link
+        And the user can see a 'Product not listed' link
         When the user has selected the link 'Product not listed'
-        Then they will be directed to the 'Enter Products 2' page
+        Then they are directed to the 'Enter Products 2' page

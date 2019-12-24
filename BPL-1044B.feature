@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table 'No Variations' Uploa
         Reference: BPL-1044B
         Jira: GS-173
 
-    Background: Given the user has completed the GS-172 steps
+    Background:
+        Given the user has completed the PL-1044A steps
 
-    @BPL-1044B
+    @BPL-1044B-1
     Scenario: User is directed to the 'Upload Dossier' page
-        Given the user has been directed to the 'Upload Dossier' page
+        And the user has been directed to the 'Upload Dossier' page
         When page 'Upload Dossier' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -19,16 +20,16 @@ Feature: User who has entered a valid code from Data Table 'No Variations' Uploa
         And they will see Text 'No file chosen'
         And they will see a 'Upload file and continue' option
 
-    @BPL-1044B-1
+    @BPL-1044B-2
     Scenario: User Uploads a file
-        Given the user has been directed to the 'Upload Dossier' page
+        And the user has been directed to the 'Upload Dossier' page
         And the user has selected 'a file to upload'
         When they select 'Upload file and continue'
-        Then they will be directed to the 'Application Contact Details' page
+        Then they are directed to the 'Application Contact Details' page
 
-    @BPL-1044B-2
+    @BPL-1044B-3
     Scenario: User does not upload a file
-        Given the user has been directed to the 'Upload Dossier' page
+        And the user has been directed to the 'Upload Dossier' page
         And they have not selected any 'file to upload'
         When they select 'Upload file and continue'
         Then they will see an error message containing 'Choose a file to continue'

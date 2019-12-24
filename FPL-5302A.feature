@@ -3,11 +3,12 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5302A
 
-    Background: Given the user has completed the PL-5302 steps
+    Background:
+        Given the user has completed the PL-5302 steps
 
-    @FPL-5302A
+    @FPL-5302A-1
     Scenario: User is directed to the 'Application Finance Details' page
-        Given the user has been directed to the 'Application Finance Details' page
+        And the user has been directed to the 'Application Finance Details' page
         When page 'Application Finance Details' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -19,16 +20,16 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
-    @FPL-5302A-1
+    @FPL-5302A-2
     Scenario: User completes all mandatory fields
-        Given the user has been directed to the 'Application Finance Details' page
+        And the user has been directed to the 'Application Finance Details' page
         And there is a non-empty string in all mandatory fields
         When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+        Then they are directed to the 'Check Your Answers' page
 
-    @FPL-5302A-2
+    @FPL-5302A-3
     Scenario: User does not complete all mandatory fields
-        Given the user has been directed to the 'Application Finance Details' page
+        And the user has been directed to the 'Application Finance Details' page
         And one or more mandatory fields are empty
         When they select 'Continue'
         Then they will see an error message containing 'Enter email address to continue'

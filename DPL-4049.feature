@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         Reference: DPL-4049
         Jira: GS-306
 
-    Background: Given the user has completed the GS-293 steps
+    Background:
+        Given the user has completed the PL-4040 steps
 
-    @DPL-4049
+    @DPL-4049-1
     Scenario: User who has entered a valid code from Data Table IA + IB and a second variation  code from Data Table IA + IB is directed to 'Enter Implementation Date' page 
-        Given the user has been directed to the 'Implementation Date' page
+        And the user has been directed to the 'Implementation Date' page
         When page 'Implementation Date' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -19,17 +20,17 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
-    @DPL-4049-1
+    @DPL-4049-2
     Scenario: User enters an implementation date
-        Given the user has been directed to the 'Implementation Date' page
+        And the user has been directed to the 'Implementation Date' page
         And they can see the 'Date' text input box
         And they have entered a valid 'Date'
         When they select 'Continue'
-        Then they will be directed to the 'Describe Changes' page
+        Then they are directed to the 'Describe Changes' page
 
-    @DPL-4049-2
+    @DPL-4049-3
     Scenario: User does not enter a valid implementation date
-        Given the user has been directed to the 'Implementation Date' page
+        And the user has been directed to the 'Implementation Date' page
         And they can see the 'Date' text input box
         And they have not entered a valid 'Date'
         When the user has selected 'Continue'

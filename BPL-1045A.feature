@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table 'No Variations' chang
         Reference: BPL-1045A
         Jira: GS-177
 
-    Background: Given the user has completed the GS-176 steps
+    Background:
+        Given the user has completed the PL-1045 steps
 
-    @BPL-1045A
-    Scenario Outline: User who has entered a valid code from Data Table 'No Variations' is directed to 'Confirm Change Variation' page 
-        Given the user has been directed to the 'Confirm Change Variation' page
+    @BPL-1045A-1
+    Scenario: User who has entered a valid code from Data Table 'No Variations' is directed to 'Confirm Change Variation' page 
+        And the user has been directed to the 'Confirm Change Variation' page
         When page 'Confirm Change Variation' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -17,43 +18,25 @@ Feature: User who has entered a valid code from Data Table 'No Variations' chang
         And they will see the '<Sub Code>' displayed 
         And they will see a radio button option for 'Yes'
         And they will see a radio button option for 'No'
-        And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | 1(a) | Replacement of a chemical active substance by a different salt/ester complex/derivative, with the same therapeutic moiety, where the efficacy/safety characteristics are not significantly different | Describe Changes |
-        | 1(b) | Replacement by a different isomer, a different mixture of isomers, of a mixture by an isolated isomer (e.g. racemate by a single enantiomer), where the efficacy/safety characteristics are not significantly different; | Describe Changes |
-        | 1(c) | Replacement of a biological active substance with one of a slightly different molecular structure where the efficacy/safety characteristics are not significantly different, with the exception of: | Describe Changes |
-        | 1(c).(i) | Changes to the active substance of a seasonal, pre-pandemic or pandemic vaccine against human influenza; | Describe Changes |
-        | 1(c).(ii) | Replacement or addition of a serotype, strain, antigen or combination of serotypes, strains or antigens for a veterinary vaccine against avian influenza, foot-and-mouth disease or bluetongue; | Describe Changes |
-        | 1(c).(iii) | Replacement of a strain for a veterinary vaccine against equine influenza; | Describe Changes |
-        | 1(d) | Modification of the vector used to produce the antigen or the source material, including a new master cell bank from a different source, where the efficacy/safety characteristics are not significantly different; | Describe Changes |
-        | 1(e) | A new ligand or coupling mechanism for a radiopharmaceutical, where the efficacy/safety characteristics are not significantly different; | Describe Changes |
-        | 1(f) | Change to the extraction solvent or the ratio of herbal drug to herbal drug preparation where the efficacy/safety characteristics are not significantly different. | Describe Changes |
-        | 2(a) | Change of bioavailability | Describe Changes |
-        | 2(b) | Change of pharmakinetics | Describe Changes |
-        | 2(c) | Change of bioavailability | Describe Changes |
-        | 2(d) | Change or addition of a new strength/potency | Describe Changes |
-        | 2(e) | Change or addition of a new route of administration | Describe Changes |
-        | 3 | Other changes specific to veterinary medicinal products to be administered to food-producing animals: change or addition of target species | Describe Changes |
-
-    @BPL-1045A-1
-    Scenario: User selects 'Yes' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'Yes'
-        When they select 'Continue'
-        Then they will be directed to the 'Enter Variation Code' page
+        And undefined
 
     @BPL-1045A-2
-    Scenario: User selects 'No' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'No'
+    Scenario: User selects 'Yes' option
+        And the user has been directed to the 'Confirm Change Variation' page
+        And the user has selected 'Yes'
         When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+        Then they are directed to the 'Enter Variation Code' page
 
     @BPL-1045A-3
+    Scenario: User selects 'No' option
+        And the user has been directed to the 'Confirm Change Variation' page
+        And the user has selected 'No'
+        When they select 'Continue'
+        Then they are directed to the 'Check Your Answers' page
+
+    @BPL-1045A-4
     Scenario: User does not select an option
-        Given the user has been directed to the 'Confirm Change Variation' page
+        And the user has been directed to the 'Confirm Change Variation' page
         And they have not selected any 'Radio Button'
         When they select 'Continue'
         Then they will see an error message containing 'Select an option'

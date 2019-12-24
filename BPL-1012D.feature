@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table IA Only checks, and i
         Reference: BPL-1012D
         Jira: GS-105
 
-    Background: Given the user has completed the GS-104 steps
+    Background:
+        Given the user has completed the PL-1012C steps
 
-    @BPL-1012D
-    Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to 'Check your answers' page 
-        Given the user has been directed to the 'Check Your Answers' page
+    @BPL-1012D-1
+    Scenario: User who has entered a valid code from Data Table IA Only is directed to 'Check your answers' page 
+        And the user has been directed to the 'Check Your Answers' page
         And they have entered a value from Data Table 'IA Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
@@ -44,52 +45,44 @@ Feature: User who has entered a valid code from Data Table IA Only checks, and i
         And a table with a row with the list item 'Further comments' and the 'further comments text'  displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
-
-    @BPL-1012D-1
-    Scenario: User selects change link for Product
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
 
     @BPL-1012D-2
-    Scenario: User selects change link for implementation date
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Implementation Date'
-        When they select 'Implementation Date change link'
-        Then they will be directed to the 'Implementation Date' page
+    Scenario: User selects change link for Product
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Product 1'
+        When they select 'Product change link'
+        Then they are directed to the 'Select Product 1' page
 
     @BPL-1012D-3
-    Scenario: User selects change link for Describe changes
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they will be directed to the 'Describe changes' page
+    Scenario: User selects change link for implementation date
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Implementation Date'
+        When they select 'Implementation Date change link'
+        Then they are directed to the 'Implementation Date' page
 
     @BPL-1012D-4
-    Scenario Outline: User selects change variation link
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change variation' link for 'Variation <Sub Code>'
-        When they select 'change variation link'
-        Then they will be directed to the 'Confirm Change Variation' page
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
+    Scenario: User selects change link for Describe changes
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Describe changes'
+        When they select 'Describe changes change link'
+        Then they are directed to the 'Describe changes' page
 
     @BPL-1012D-5
-    Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a save and exit link
-        When they select 'Save and exit link'
-        Then they will be directed to the 'Incomplete applications' page
+    Scenario: User selects change variation link
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change variation' link for 'Variation <Sub Code>'
+        When they select 'change variation link'
+        Then they are directed to the 'Confirm Change Variation' page
 
     @BPL-1012D-6
+    Scenario: User selects the 'Save and exit' link
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a save and exit link
+        When they select 'Save and exit link'
+        Then they are directed to the 'Incomplete applications' page
+
+    @BPL-1012D-7
     Scenario: User selects 'Continue' option
-        Given the user has been directed to the 'Check Your Answers' page
+        And the user has been directed to the 'Check Your Answers' page
         When they select 'Continue'
-        Then they will be directed to the 'Declaration' page
+        Then they are directed to the 'Declaration' page

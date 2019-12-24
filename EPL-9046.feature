@@ -4,11 +4,12 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         Reference: EPL-9046
         Jira: GS-434
 
-    Background: Given the user has completed the GS-433 steps
+    Background:
+        Given the user has completed the PL-9045 steps
 
-    @EPL-9046
+    @EPL-9046-1
     Scenario: User is directed to the 'Application Contact Details' page
-        Given the user has been directed to the 'Application Contact Details' page
+        And the user has been directed to the 'Application Contact Details' page
         When page 'Application Contact Details' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
@@ -21,16 +22,16 @@ Feature: User who has entered a valid code from Data Table IA + IB and a second 
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
-    @EPL-9046-1
+    @EPL-9046-2
     Scenario: User completes all mandatory fields
-        Given the user has been directed to the 'Application Contact Details' page
+        And the user has been directed to the 'Application Contact Details' page
         And there is a non-empty string in all mandatory fields
         When they select 'Continue'
-        Then they will be directed to the 'Application Finance Details' page
+        Then they are directed to the 'Application Finance Details' page
 
-    @EPL-9046-2
+    @EPL-9046-3
     Scenario: User does not complete all mandatory fields
-        Given the user has been directed to the 'Application Contact Details' page
+        And the user has been directed to the 'Application Contact Details' page
         And one or more mandatory fields are empty
         When they select 'Continue'
         Then they will see an error message containing 'Complete all mandatory fields to continue'

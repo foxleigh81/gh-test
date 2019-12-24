@@ -3,11 +3,12 @@ Feature: User who has entered a valid code from Data Table IB Only, II Only, No 
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5111
 
-    Background: Given the user has completed the PL-5110A steps
+    Background:
+        Given the user has completed the PL-5110A steps
 
-    @FPL-5111
-    Scenario Outline: User who has entered a valid code from Data Table IB Only, II Only, No Variations, or Z Special and a second from Data Table Z Only and has selected variation type IB or II is directed to 'Check your answers' page 
-        Given the user has been directed to the 'Check Your Answers' page
+    @FPL-5111-1
+    Scenario: User who has entered a valid code from Data Table IB Only, II Only, No Variations, or Z Special and a second from Data Table Z Only and has selected variation type IB or II is directed to 'Check your answers' page 
+        And the user has been directed to the 'Check Your Answers' page
         And they have entered a first variation code from Data Table '<Group A>'
         And they have entered a second variation code from Data Table '<Group B>'
         And they have selected Variation Type '<Var Type B>' 
@@ -51,60 +52,49 @@ Feature: User who has entered a valid code from Data Table IB Only, II Only, No 
         And a table with a row with the list item 'Further comments' and the 'further comments text' displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code A | Group A | Var Type A | Sub Code B | Group B | Var Type B |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(z) | Z Only | IB |
-        | B.I.a.1(h) | IB Only | IB | B.I.a.1(z) | Z Only | II |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(z) | Z Only | IB |
-        | B.I.a.1(b) | II Only | II | B.I.a.1(z) | Z Only | II |
-        | 1(a) | No Variations | N/a | B.I.a.1(z) | Z Only | IB |
-        | 1(a) | No Variations | N/a | B.I.a.1(z) | Z Only | II |
-        | A(z).1 | Z Special | N/a | B.I.a.1(z) | Z Only | IB |
-        | A(z).1 | Z Special | N/a | B.I.a.1(z) | Z Only | II |
-
-    @FPL-5111-1
-    Scenario: User selects change link for Product
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
 
     @FPL-5111-2
-    Scenario: User selects change link for Article 5
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Article 5'
-        When they select 'Article 5 change link'
-        Then they will be directed to the 'Article 5' page
+    Scenario: User selects change link for Product
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Product 1'
+        When they select 'Product change link'
+        Then they are directed to the 'Select Product 1' page
 
     @FPL-5111-3
-    Scenario: User selects change link for Describe changes
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they will be directed to the 'Describe changes' page
+    Scenario: User selects change link for Article 5
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Article 5'
+        When they select 'Article 5 change link'
+        Then they are directed to the 'Article 5' page
 
     @FPL-5111-4
-    Scenario: User selects Remove variation link for Variation 1
-        Given the user can see a 'Variation 1 Remove' link
-        When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+    Scenario: User selects change link for Describe changes
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a 'Change' link for 'Describe changes'
+        When they select 'Describe changes change link'
+        Then they are directed to the 'Describe changes' page
 
     @FPL-5111-5
-    Scenario: User selects Remove variation link for Variation 2
-        Given the user can see a 'Variation 2 Remove' link
+    Scenario: User selects Remove variation link for Variation 1
+        And the user can see a 'Variation 1 Remove' link
         When the user has selected the link 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @FPL-5111-6
-    Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Check Your Answers' page
-        And they can see a save and exit link
-        When they select 'Save and exit link'
-        Then they will be directed to the 'Incomplete applications' page
+    Scenario: User selects Remove variation link for Variation 2
+        And the user can see a 'Variation 2 Remove' link
+        When the user has selected the link 'Remove variation'
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @FPL-5111-7
+    Scenario: User selects the 'Save and exit' link
+        And the user has been directed to the 'Check Your Answers' page
+        And they can see a save and exit link
+        When they select 'Save and exit link'
+        Then they are directed to the 'Incomplete applications' page
+
+    @FPL-5111-8
     Scenario: User selects 'Continue' option
-        Given the user has been directed to the 'Check Your Answers' page
+        And the user has been directed to the 'Check Your Answers' page
         When they select 'Continue'
-        Then they will be directed to the 'Declaration' page
+        Then they are directed to the 'Declaration' page

@@ -3,11 +3,12 @@ Feature: User who has entered a valid code from Data Table IB Only, II Only, No 
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5062
 
-    Background: Given the user has completed the PL-5061 steps
+    Background:
+        Given the user has completed the PL-5061 steps
 
-    @FPL-5062
-    Scenario Outline: User who has entered a valid code from Data Table IB Only, II Only, No Variations, Z Special directed to the Application Summary page
-        Given the user has been directed to the 'Application Summary' page
+    @FPL-5062-1
+    Scenario: User who has entered a valid code from Data Table IB Only, II Only, No Variations, Z Special directed to the Application Summary page
+        And the user has been directed to the 'Application Summary' page
         And they have entered a value from Data Table '<Sub Code>'
         When page 'Application Summary' loads
         Then they will see a 'Back' link
@@ -23,43 +24,36 @@ Feature: User who has entered a valid code from Data Table IB Only, II Only, No 
         And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
-        
-    Examples: 
-        | Sub Code | Group | Var Type |
-        | B.I.a.1(h) | IB Only | IB |
-        | B.I.a.1(b) | II Only | II |
-        | 1(a) | No Variations | N/a |
-        | A(z).1 | Z Special | N/a |
-
-    @FPL-5062-1
-    Scenario: User selects 'Continue'
-        Given the user is on the 'Application Summary' page
-        When they select 'Continue'
-        Then they will be directed to the 'Enter Second Variation Code' page
 
     @FPL-5062-2
-    Scenario: User selects Remove variation link
-        Given the user is on the 'Application Summary' page
-        When they select 'Remove variation'
-        Then they will be directed to the 'Confirm Remove Variation' page
+    Scenario: User selects 'Continue'
+        And the user is on the 'Application Summary' page
+        When they select 'Continue'
+        Then they are directed to the 'Enter Second Variation Code' page
 
     @FPL-5062-3
-    Scenario: User selects change link for Product
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they will be directed to the 'Select Product 1' page
+    Scenario: User selects Remove variation link
+        And the user is on the 'Application Summary' page
+        When they select 'Remove variation'
+        Then they are directed to the 'Confirm Remove Variation' page
 
     @FPL-5062-4
-    Scenario: User selects change link for Describe changes
-        Given the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Proposed changes'
-        When they select 'Proposed changes change link'
-        Then they will be directed to the 'Describe changes' page
+    Scenario: User selects change link for Product
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Product 1'
+        When they select 'Product change link'
+        Then they are directed to the 'Select Product 1' page
 
     @FPL-5062-5
+    Scenario: User selects change link for Describe changes
+        And the user has been directed to the 'Application Summary' page
+        And they can see a 'Change' link for 'Proposed changes'
+        When they select 'Proposed changes change link'
+        Then they are directed to the 'Describe changes' page
+
+    @FPL-5062-6
     Scenario: User selects the 'Save and exit' link
-        Given the user has been directed to the 'Application Summary' page
+        And the user has been directed to the 'Application Summary' page
         And they can see a save and exit link
         When they select 'Save and exit link'
-        Then they will be directed to the 'Incomplete applications' page
+        Then they are directed to the 'Incomplete applications' page

@@ -4,23 +4,19 @@ Feature: User selects procedure option
         Reference: APL-0003
         Jira: GS-3
 
-    Background: Given the user has completed the GS-2 steps
-
-    @APL-0003
-    Scenario: User directed to Procedure Option Type Single page
-        Given the user has been directed to the 'Procedure Option Type Single' page
-        When page 'Procedure Option Type Single' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Select procedure option'
-        And they will see a radio button option for 'One change to one product'
-        And they will see a radio button option for 'One change to several related products'
-        And they will see a 'Continue' option
+    Background:
+        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Select Variation Procedure Type' page
+        And they select the 'Single' option and click continue
+        And they are directed to the 'Variation Single Procedure Options' page
 
     @APL-0003-1
-    Scenario: User selects 'Single change to one product'
-        Given the user has been directed to the 'Procedure Option Type Single' page
-        And the user has selected 'Single change to one product'
-        When they select 'Continue'
-        Then they will be directed to the 'Select Product 1' page
+    Scenario: User selects 'one change to one product' option
+        And a page header 'Select procedure option'
+        And they will see a radio button option for 'One change to one product'
+        And they will see a radio button option for 'One change to several products'
+        And a 'Continue' button
+        When they select the 'One change to one product' option and click continue
+        Then they are directed to the 'Variation Single One-Product Select Products' page
