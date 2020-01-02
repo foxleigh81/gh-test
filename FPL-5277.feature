@@ -2,6 +2,7 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5277
+        Jira: GS-1330
 
     Background:
         Given the user has completed the PL-5223 steps

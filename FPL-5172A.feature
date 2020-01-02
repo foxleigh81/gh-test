@@ -2,6 +2,7 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5172A
+        Jira: GS-1026
 
     Background:
         Given the user has completed the PL-50172 steps

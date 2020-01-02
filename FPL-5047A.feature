@@ -2,6 +2,7 @@ Feature: User who has entered a valid code from Data Table IA Only and a second 
     Description:
         Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
         Reference: FPL-5047A
+        Jira: GS-665
 
     Background:
         Given the user has completed the PL-5047 steps
