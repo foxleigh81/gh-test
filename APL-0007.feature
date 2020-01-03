@@ -21,8 +21,8 @@ Feature: User enters a variation code
         And a page header 'Choose a variation'
         And a sub header 'Enter variation code or name'
         And a sub header 'Select a common variation'
-        When they enter the text '<Code>' into the text input with id MISSING VALUE and press enter
-        Then they are directed to the 'Variation Code Picker' page
+        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
+        Then they are directed to the '<Destination>' page
         
     Examples: 
         | Code | Destination |
@@ -51,5 +51,5 @@ Feature: User enters a variation code
     @APL-0007-3
     Scenario: User does not enter a valid code or select a radio button option
         When they click the 'Continue' button
-        Then they will see a warning message stating 'Please enter either a variation code/name, or select a common variation'
-        And they are directed to the 'Variation Single One-Product Enter Variation Code' page
+        Then they are directed to the 'Please enter either a variation code/name, or select a common variation' page
+        And they will see a warning message stating 'Variation Single One-Product Enter Variation Code'

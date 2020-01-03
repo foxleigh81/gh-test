@@ -5,38 +5,102 @@ Feature: User selects the variation type
         Jira: GS-32
 
     Background:
-        Given the user has completed the PL-0007 steps
+        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Select Variation Procedure Type' page
+        And they select the 'Single' option and click continue
+        And they are directed to the 'Variation Single Procedure Options' page
+        And they select the 'One change to one product' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Products' page
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Single One-Product Enter Variation Code' page
 
     @APL-0018-1
-    Scenario: User who has entered a valid code from Data Table IA + IB is directed to the 'Variation Type Page 2' page 
-        And the user has been directed to the 'Variation Type Page 2' page
-        When page 'Variation Type Page 2' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
+    Scenario: User selects variation type IA, having previously selected 'IAIB' group code
+        And they select the 'IA.IB.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
         And a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
-        And undefined
+        And a 'Continue' button
+        When they select the 'IA' option and click continue
+        Then they are directed to the 'Variation Single One-Product Implementation Date' page
 
     @APL-0018-2
-    Scenario: User selects variation type IA
-        And the user has been directed to the 'Variation Type Page 2' page
-        And the user has selected 'IA'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+    Scenario: User selects variation type IB, having previously selected 'IAIB' group code
+        And they select the 'IA.IB.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And a 'Continue' button
+        When they select the 'IB' option and click continue
+        Then they are directed to the 'Variation Single One-Product Article 5' page
 
     @APL-0018-3
-    Scenario: User selects variation type IB
-        And the user has been directed to the 'Variation Type Page 2' page
-        And the user has selected 'IB'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+    Scenario: User doesnt select code and clicks continue, having previously selected 'IAIB' group code
+        And they select the 'IA.IB.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And a 'Continue' button
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And they will see a warning message stating 'Please select a variation type'
 
     @APL-0018-4
-    Scenario: User does not select a variation type
-        And the user has been directed to the 'Variation Type Page 2' page
-        And they have not selected any 'Radio Button'
-        When they select 'Continue'
-        Then they will see an error message containing 'Select a variation type'
-        And they will not be able to continue
+    Scenario: User selects variation type IA, having previously selected 'Z Only' group code
+        And they select the 'Z.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And they will see a radio button option for 'II'
+        And a 'Continue' button
+        When they select the 'IA' option and click continue
+        Then they are directed to the 'Variation Single One-Product Implementation Date' page
+
+    @APL-0018-5
+    Scenario: User selects variation type IB, having previously selected 'Z Only' group code
+        And they select the 'Z.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And they will see a radio button option for 'II'
+        And a 'Continue' button
+        When they select the 'IB' option and click continue
+        Then they are directed to the 'Variation Single One-Product Article 5' page
+
+    @APL-0018-6
+    Scenario: User selects variation type II, having previously selected 'Z Only' group code
+        And they select the 'Z.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And they will see a radio button option for 'II'
+        And a 'Continue' button
+        When they select the 'II' option and click continue
+        Then they are directed to the 'Variation Single One-Product Article 5' page
+
+    @APL-0018-7
+    Scenario: User doesnt select code and clicks continue, having previously selected 'Z Only' group code
+        And they select the 'Z.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And a page header 'Select variation type'
+        And they will see a radio button option for 'IA'
+        And they will see a radio button option for 'IB'
+        And a 'Continue' button
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Single One-Product Select Variation Type' page
+        And they will see a warning message stating 'Please select a variation type'
+
+    @APL-0018-8
+    Scenario: User navigates to page, having previously selected 'IA Only' group code
+        And they select the 'IA.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single One-Product Implementation Date' page
+        When they navigate to the 'Variation Single One-Product Select Variation Type' page
+        And they will see a page title with the value 'Sorry, there is a problem with the service'

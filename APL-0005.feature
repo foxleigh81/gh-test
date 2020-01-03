@@ -27,8 +27,8 @@ Feature: User selects product to be varied
     @APL-0005-2
     Scenario: User does not select a product and clicks continue
         When they click the 'Continue' button
-        Then they will see a warning message stating 'You must select a product to be varied'
-        And they are directed to the 'Variation Single One-Product Select Products' page
+        Then they are directed to the 'Variation Single One-Product Select Products' page
+        And they will see a warning message stating 'You must select a product to be varied'
 
 #     @APL-0005-3
 #     Scenario: User selects 'Product not listed' link
