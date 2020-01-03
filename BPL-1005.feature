@@ -18,8 +18,8 @@ Feature: User selects products to be varied
         And a page header 'Select products to be varied'
         And they will see Text 'You must select more than one product'
         And they will see at least 2 checkbox options
-        And a table with headers 'Select', 'Authorisation Number' and 'Product name'
-        And a table with a row containing a checkbox and values '12345/1234' and 'Ketamine Surprise'
+        And a table with headers 'Select', MISSING VALUE and MISSING VALUE
+        And a table with a row containing a checkbox and values 'Authorisation Number' and MISSING VALUE
         And they will see a 'Product not listed' link
         And they will see a 'Continue' option
 

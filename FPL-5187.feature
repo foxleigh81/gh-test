@@ -19,53 +19,53 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And a sub header 'Check your answers before submitting'
         And a page header 'Product Details'
         And a section header 'Procedure Type'
-        And a table with a row with the list item 'selected procedure type' and the 'Procedure Option' displayed and a change link
-        And a table with a row with the list item 'selected procedure option' and the 'Products' displayed and a change link
-        And a table with a row with the list item 'selected product' and the 'Variation Details' displayed and a change link
-        And a section header 'Variation 1'
-        And a table header 'Code'
-        And a table with a row with the list item '<Sub Code B>' and the 'Description' displayed 
-        And a table with a row containing the list item 'Variation description' and the 'Variation Type' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'IB' and 'Present' displayed and a change link
-        And a table with a row with the list item 'present text' and the 'Proposed' displayed and a change link
-        And a table with a row with the list item 'proposed change text' and the 'Variation 2' displayed and a change link
-        And a table header 'Code'
-        And a table with a row with the list item '<Sub Code A>' and the 'Description' displayed 
-        And a table with a row containing the list item 'Variation description' and the 'Variation Type' displayed and a 'Remove variation' link 
-        And a table with a row with the list item '<Var Type A>' and 'Present' displayed and a change link
-        And a table with a row with the list item 'present text' and the 'Proposed' displayed and a change link
-        And a table with a row with the list item 'proposed change text' and the 'Add another variation' displayed and a change link
-        And a section header 'Add another variation' with an 'Supporting Documents' link
-        And a section header 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' with a 'Change' link
-        And a table with a row with the list item 'selection status' and the 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' displayed 
-        And a table with a row with the list item 'selection status' and the 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' displayed 
-        And a table with a row with the list item 'selection status' and the 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' displayed 
-        And a table with a row with the list item 'selection status' and the 'Omitted Documents' displayed 
-        And a table with a row with the list item 'omitted documents text' and the 'Other Information' displayed 
-        And a table with a row with the list item 'other information text' and the 'Contact Details' displayed 
-        And a section header 'Contact name' with a 'Change' link
-        And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
-        And a table with a row with the list item 'entered purchase order number' and the 'Contact number' displayed 
-        And a table with a row with the list item 'entered contact number' and the 'Contact email address' displayed 
-        And a table with a row with the list item 'entered contact email address' and the 'Invoice email address' displayed 
-        And a table with a row with the list item 'entered invoice email address' and the 'Further comments' displayed 
-        And a table with a row with the list item 'further comments text' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'selected procedure type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Procedure Option' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'selected procedure option' and the MISSING VALUE displayed and a change link
+        And a section header 'Products'
+        And a table header 'selected product'
+        And a table with a row with the list item 'Variation Details' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'Variation 1' and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Code' and MISSING VALUE displayed and a change link
+        And a table with a row with the list item '<Sub Code B>' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Description' and the MISSING VALUE displayed and a change link
+        And a table header 'Variation description'
+        And a table with a row with the list item 'Variation Type' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'IB' and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Present' and MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'present text' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Proposed' and the MISSING VALUE displayed and a change link
+        And a section header 'proposed change text' with an MISSING VALUE link
+        And a section header 'Variation 2' with a 'Change' link
+        And a table with a row with the list item 'Code' and the MISSING VALUE displayed 
+        And a table with a row with the list item '<Sub Code A>' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Description' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Variation description' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Variation Type' and the MISSING VALUE displayed 
+        And a table with a row with the list item '<Var Type A>' and the MISSING VALUE displayed 
+        And a section header 'Present' with a 'Change' link
+        And a table with a row with the list item 'present text' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Proposed' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'proposed change text' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Add another variation' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Add another variation' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Supporting Documents' and the MISSING VALUE displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
     @FPL-5187-2
     Scenario: User selects change link for Product
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they are directed to the 'Select Product 1' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Product 1'
+        Then they are directed to the 'Product change link' page
 
     @FPL-5187-3
     Scenario: User selects change link for Describe changes
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they are directed to the 'Describe changes' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Describe changes'
+        Then they are directed to the 'Describe changes change link' page
 
     @FPL-5187-4
     Scenario: User selects Remove variation link for Variation 1

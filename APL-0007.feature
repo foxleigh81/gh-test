@@ -17,13 +17,12 @@ Feature: User enters a variation code
         And they are directed to the 'Variation Single One-Product Enter Variation Code' page
 
     @APL-0007-1
-    @TestData::TDG-Raptors-And-Reptiles-MA
     Scenario Outline: User enters a valid code in type ahead text field, code's group decides <destination>
         And a page header 'Choose a variation'
         And a sub header 'Enter variation code or name'
         And a sub header 'Select a common variation'
-        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
-        Then they are directed to the '<Destination>' page
+        When they enter the text '<Code>' into the text input with id MISSING VALUE and press enter
+        Then they are directed to the 'Variation Code Picker' page
         
     Examples: 
         | Code | Destination |
@@ -36,7 +35,6 @@ Feature: User enters a variation code
         | Z.Only.And.Common | Variation Single One-Product Select Variation Type |
 
     @APL-0007-2
-    @TestData::TDG-Raptors-And-Reptiles-MA
     Scenario Outline: User selects a common code radio option, code's group decides <destination>
         And a page header 'Choose a variation'
         And a sub header 'Enter variation code or name'
@@ -51,7 +49,6 @@ Feature: User enters a variation code
         | Z.Only.And.Common | Variation Single One-Product Select Variation Type |
 
     @APL-0007-3
-    @TestData::TDG-Raptors-And-Reptiles-MA
     Scenario: User does not enter a valid code or select a radio button option
         When they click the 'Continue' button
         Then they will see a warning message stating 'Please enter either a variation code/name, or select a common variation'

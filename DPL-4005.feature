@@ -14,8 +14,8 @@ Feature: User selects product to be varied
         When page 'Select product 1' loads
         Then a page header 'Vary a marketing authorisation'
         And they will see at least 'Select product to be varied' radio button option(s)
-        And a table with headers 2, 'Select' and 'Authorisation Number'
-        And a table with a row containing a radio button and values 'Product name' and '12345/1234'
+        And a table with headers 2, MISSING VALUE and MISSING VALUE
+        And a table with a row containing a radio button and values 'Select' and MISSING VALUE
         And they will see a 'Product not listed' link
         And they will see a 'Continue' option
 

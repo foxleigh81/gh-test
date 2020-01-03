@@ -15,7 +15,6 @@ Feature: User selects product to be varied
         And they are directed to the 'Variation Single One-Product Select Products' page
 
     @APL-0005-1
-    @TestData::TDG-Raptors-And-Reptiles-MA
     Scenario: User selects 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and clicks continue
         And a page header 'Select product to be varied'
         And they will see a radio button option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
@@ -26,7 +25,6 @@ Feature: User selects product to be varied
         Then they are directed to the 'Variation Single One-Product Enter Variation Code' page
 
     @APL-0005-2
-    @TestData::TDG-Raptors-And-Reptiles-MA
     Scenario: User does not select a product and clicks continue
         When they click the 'Continue' button
         Then they will see a warning message stating 'You must select a product to be varied'

@@ -20,17 +20,17 @@ Feature: User who has entered a valid code from Data Table Z Only and has select
     Scenario: User Enters proposed changes
         And the user can see the 'Outline the present situation' text area
         And the user can see the 'Outline the proposed situation' text area
-        And the user has entered 'Present text' into the 'Outline the present situation' text area
-        And the user has entered 'Proposed text' into the 'Outline the proposed situation' text area
-        When the user has selected 'Continue'
-        Then they are directed to the 'Supporting Documents' page
+        And the user has entered 'Present text' into the MISSING VALUE text area
+        And the user has entered 'Outline the present situation' into the MISSING VALUE text area
+        When the user has selected 'Proposed text'
+        Then they are directed to the 'Outline the proposed situation' page
 
     @FPL-5226-3
     Scenario: User does not enter proposed changes text
-        And the user has not entered 'Present text' into the 'Outline the present situation' text area
-        And the user has not entered 'Proposed text' into the 'Outline the proposed situation' text area
-        When the user has selected 'Continue'
-        Then they will see an error message containing 'Describe changes to continue'
+        And the user has not entered 'Present text' into the MISSING VALUE text area
+        And the user has not entered 'Outline the present situation' into the MISSING VALUE text area
+        When the user has selected 'Proposed text'
+        Then they will see an error message containing 'Outline the proposed situation'
         And they will not be able to continue
 
     @FPL-5226-4

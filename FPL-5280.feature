@@ -24,38 +24,38 @@ Feature: User who has entered a valid  code from Data Table Z Only and has selec
     @FPL-5280-2
     Scenario: User enters a valid code from Data Table IA Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA Only'
+        Then they are directed to the 'Continue' page
 
     @FPL-5280-3
     Scenario: User enters a valid code from Data Table IA + IB
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA + IB'
+        Then they are directed to the 'Continue' page
 
     @FPL-5280-4
     Scenario: User enters a valid code from Data Table IB Only, or II Only, or No Variations, or Z Special
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from '<Group>'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select '<Group>'
+        Then they are directed to the 'Continue' page
 
     @FPL-5280-5
     Scenario: User enters a valid code from Data Table Z Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table Z Only'
+        Then they are directed to the 'Continue' page
 
     @FPL-5280-6
     Scenario: User selects a common variation
         And the user has been directed to the 'Enter Second Variation Code' page
         And they will see 5 radio button option(s)
-        And they have selected '<Sub Code>' from 'Data Table Common Variations'
+        And they have selected '<Sub Code>' from MISSING VALUE
         When they select 'Continue'
-        Then they are directed to the '<Page>' page
+        Then they are directed to the 'Data Table Common Variations' page
 
     @FPL-5280-7
     Scenario: User does not enter a valid code or select a radio button option

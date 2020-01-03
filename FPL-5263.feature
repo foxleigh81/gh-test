@@ -17,21 +17,21 @@ Feature: User who has entered a valid code from Data Table Z Only and has select
         And a 'Sign out' link
         And a sub header 'IA'
         And a page header 'Application Summary'
-        And a table with a row with the list item 'Vary a marketing authorisation' and the 'Application summary' displayed and a change link
-        And a table with a row with the list item 'Products' and the 'selected product' displayed 
-        And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed 
-        And a table with a row containing the list item 'Procedure Option' and the 'selected procedure option' displayed and the 'Variation 1' displayed and a 'Remove variation' link 
-        And a table with a row with the list item '<Sub Code A>' and the 'variation description' displayed 
-        And a table with a row with the list item 'Variation Type' and the 'IA' displayed and a change link
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
-        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
-        And a table with a row containing the list item 'Proposed change' and the 'Proposed change text' displayed and the 'Variation 2' displayed and a 'Remove variation' link 
-        And a table with a row with the list item '<Sub Code B>' and the 'variation description' displayed 
-        And a table with a row with the list item 'Variation Type' and the 'IA' displayed and a change link
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation date' displayed and a change link
-        And a table with a row with the list item 'Article 5' and the 'the Article 5 answer' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'Present text' displayed and a change link
+        And a table with a row with the list item 'Vary a marketing authorisation' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Application summary' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Products' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'selected product' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Procedure Type' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'selected procedure type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Procedure Option' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'selected procedure option' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Variation 1' and the MISSING VALUE displayed and a change link
+        And a table with a row containing the list item '<Sub Code A>' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'variation description' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Variation Type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'IA' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Implementation Date' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'entered implementation date' and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
 
@@ -56,23 +56,23 @@ Feature: User who has entered a valid code from Data Table Z Only and has select
     @FPL-5263-5
     Scenario: User selects change link for Product
         And the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they are directed to the 'Select Product 1' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Product 1'
+        Then they are directed to the 'Product change link' page
 
     @FPL-5263-6
     Scenario: User selects change link for Article 5
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Article 5'
-        When they select 'Article 5 change link'
-        Then they are directed to the 'Article 5' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Article 5'
+        Then they are directed to the 'Article 5 change link' page
 
     @FPL-5263-7
     Scenario: User selects change link for Describe changes
         And the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Proposed changes'
-        When they select 'Proposed changes change link'
-        Then they are directed to the 'Describe changes' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Proposed changes'
+        Then they are directed to the 'Proposed changes change link' page
 
     @FPL-5263-8
     Scenario: User selects the 'Save and exit' link

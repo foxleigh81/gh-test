@@ -17,7 +17,7 @@ Feature: User enters a product which does not appear in the list on the Select p
         And a page header 'Enter product to be varied'
         And they will see the mandatory 'Enter product name' text input box
         And they will see the mandatory 'Enter authorisation number' text input box
-        And a table with headers 'Product name', 'Authorisation number' and 'Action'
+        And a table with headers 'Product name', MISSING VALUE and MISSING VALUE
         And they will see a 'Add this product' option
         And they will see a 'Continue' option
 
@@ -29,7 +29,7 @@ Feature: User enters a product which does not appear in the list on the Select p
         And they have entered a valid 'authorisation number'
         When they select the 'Add product' option
         Then they will be directed back to the Enter products 1' page
-        And a table with a row with values 'Ketamine Surprise' and '12345/1234' and a remove link
+        And a table with a row with values 'Ketamine Surprise' and MISSING VALUE and a remove link
 
     @DPL-4005A-3
     Scenario: User enters either product name or authorisation number

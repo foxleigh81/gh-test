@@ -2,7 +2,7 @@ Feature: User starts the MA Variation process
     Description:
         Epic: Procedure A: Single Change, Single Product
         Reference: APL-0000
-        Jira: GS-X
+        Jira: GS-1
 
     @APL-0000-1
     Scenario: User can begin variation process

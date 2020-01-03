@@ -19,17 +19,17 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And a 'Sign out' link
         And a sub header 'Products'
         And a page header 'selected product'
-        And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed and a change link
-        And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed 
-        And a table with a row with the list item 'Variation 1' and the '<Sub Code B>' displayed 
-        And a table with a row containing the list item 'variation description' and the 'Variation Type' displayed and the 'IB' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Present' and the 'Present text' displayed 
-        And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
-        And a table with a row with the list item 'Variation 2' and the '<Sub Code A>' displayed and a change link
-        And a table with a row containing the list item 'variation description' and the 'Variation Type' displayed and the <'Var Type A>' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Present' and the 'Present text' displayed 
-        And a table with a row with the list item 'Proposed change' and the 'Proposed change text' displayed and a change link
-        And a table with a row with the list item MISSING VALUE and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Procedure Type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'selected procedure type' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Procedure Option' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'selected procedure option' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Variation 1' and the MISSING VALUE displayed 
+        And a table with a row with the list item '<Sub Code B>' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'variation description' and the MISSING VALUE displayed and a change link
+        And a table with a row containing the list item 'Variation Type' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'IB' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Present' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Present text' and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
 
@@ -54,16 +54,16 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     @FPL-5183-5
     Scenario: User selects change link for Product
         And the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they are directed to the 'Select Product 1' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Product 1'
+        Then they are directed to the 'Product change link' page
 
     @FPL-5183-6
     Scenario: User selects change link for Describe changes
         And the user has been directed to the 'Application Summary' page
-        And they can see a 'Change' link for 'Proposed changes'
-        When they select 'Proposed changes change link'
-        Then they are directed to the 'Describe changes' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Proposed changes'
+        Then they are directed to the 'Proposed changes change link' page
 
     @FPL-5183-7
     Scenario: User selects the 'Save and exit' link

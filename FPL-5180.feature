@@ -18,36 +18,36 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
         And a 'Sign out' link
         And a sub header 'Vary a marketing authorisation'
         And a page header 'Check your answers before submitting'
-        And a table with a row with the list item 'Product Details' and the 'Procedure Type' displayed and a change link
-        And a table with a row with the list item 'selected procedure type' and the 'Procedure Option' displayed 
-        And a table with a row with the list item 'selected procedure option' and the 'Products' displayed 
-        And a table with a row containing the list item 'selected product' and the 'Variation Details' displayed and the 'Variation 1' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Code' and the '<Sub Code A>' displayed 
-        And a table with a row with the list item 'Description' and the 'Variation description' displayed and a change link
-        And a table with a row with the list item 'Variation Type' and the 'IB' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
-        And a table with a row containing the list item 'Proposed' and the 'proposed change text' displayed and the 'Variation 2' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Code' and the '<Sub Code B>' displayed 
-        And a table with a row with the list item 'Description' and the 'Variation description' displayed and a change link
-        And a table with a row with the list item 'Variation Type' and the 'IA' displayed and a change link
-        And a table with a row with the list item 'Implementation Date' and the 'entered implementation Date' displayed and a change link
-        And a table with a row with the list item 'Present' and the 'present text' displayed and a change link
+        And a table with a row with the list item 'Product Details' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Procedure Type' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'selected procedure type' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'Procedure Option' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'selected procedure option' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Products' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'selected product' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Variation Details' and the MISSING VALUE displayed and a change link
+        And a table with a row containing the list item 'Variation 1' and the MISSING VALUE displayed and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Code' and the MISSING VALUE displayed 
+        And a table with a row with the list item '<Sub Code A>' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Description' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Variation description' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Variation Type' and the MISSING VALUE displayed and a change link
         And they will see a 'Continue' option
         And they will see a save and exit link 
 
     @FPL-5180-2
     Scenario: User selects change link for Product
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they are directed to the 'Select Product 1' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Product 1'
+        Then they are directed to the 'Product change link' page
 
     @FPL-5180-3
     Scenario: User selects change link for Describe changes
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they are directed to the 'Describe changes' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Describe changes'
+        Then they are directed to the 'Describe changes change link' page
 
     @FPL-5180-4
     Scenario: User selects Remove variation link for Variation 1

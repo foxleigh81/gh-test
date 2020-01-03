@@ -24,31 +24,31 @@ Feature: User who has entered a valid code from Data Table IA + IB adds another 
     @EPL-9040-2
     Scenario: User enters a valid code from Data Table IA Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA Only'
+        Then they are directed to the 'Continue' page
 
     @EPL-9040-3
     Scenario: User enters a valid code from Data Table IA + IB
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA + IB'
+        Then they are directed to the 'Continue' page
 
     @EPL-9040-4
     Scenario: User enters a valid code from Data Table Z Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table Z Only'
+        Then they are directed to the 'Continue' page
 
     @EPL-9040-5
     Scenario: User selects a common variation
         And the user has been directed to the 'Enter Second Variation Code' page
         And they will see 5 radio button option(s)
-        And they have selected '<Sub Code>' from 'Data Table Common Variations'
+        And they have selected '<Sub Code>' from MISSING VALUE
         When they select 'Continue'
-        Then they are directed to the '<Page>' page
+        Then they are directed to the 'Data Table Common Variations' page
 
     @EPL-9040-6
     Scenario: User does not enter a valid code or select a radio button option

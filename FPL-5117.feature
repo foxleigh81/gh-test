@@ -24,30 +24,30 @@ Feature: User who has entered a valid code from Data Table IA + IB and has selec
     @FPL-5117-2
     Scenario: User enters a valid code from Data Table IA Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA Only'
+        Then they are directed to the 'Continue' page
 
     @FPL-5117-3
     Scenario: User enters a valid code from Data Table IB Only, or II Only, or No Variations, or Z Special
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from '<Group>'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select '<Group>'
+        Then they are directed to the 'Continue' page
 
     @FPL-5117-4
     Scenario: User enters a valid code from Data Table IA + IB
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 2' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA + IB'
+        Then they are directed to the 'Continue' page
 
     @FPL-5117-5
     Scenario: User enters a valid code from Data Table Z Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 1' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table Z Only'
+        Then they are directed to the 'Continue' page
 
     @FPL-5117-6
     Scenario: User does not enter a valid code or select a radio button option

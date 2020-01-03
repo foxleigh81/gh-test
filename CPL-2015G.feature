@@ -17,63 +17,63 @@ Feature: User who has entered a valid code from Data Table Z Only checks, and is
         And a sub header 'Vary a marketing authorisation'
         And a page header 'Check your answers before submitting'
         And a section header 'Product Details'
-        And a table with a row with the list item 'Procedure Type' and the 'selected procedure type' displayed and a change link
-        And a table with a row with the list item 'Procedure Option' and the 'selected procedure option' displayed and a change link
-        And a table with a row with the list item 'Products' and the 'selected products' displayed and a change link
-        And a section header 'Add another product' with a 'Change' link
-        And a section header 'Add another product'
-        And a table header 'Variation Details'
-        And a table with a row with the list item 'Variation 1' and the 'Code' displayed 
-        And a table with a row containing the list item '<Sub Code>' and the 'Description' displayed and a 'Remove variation' link 
-        And a table with a row with the list item 'Variation description' and 'Variation Type' displayed and a change link
-        And a table with a row with the list item 'IA' and the 'Implementation Date' displayed and a change link
-        And a table with a row with the list item 'entered implementation Date' and the 'Article 5' displayed and a change link
-        And a table with a row with the list item 'Article 5 answer' and the 'Present' displayed and a change link
-        And a table with a row with the list item 'present text' and the 'Proposed' displayed and a change link
-        And a section header 'proposed change text' with a 'Change' link
-        And a table with a row with the list item 'Supporting Documents' and the 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' displayed 
-        And a table with a row with the list item 'selection status' and the 'Mock-Ups, if applicable. Only provide mock-ups if your variation is for the approval of mock-ups, e.g. C.II.6(b)' displayed 
-        And a table with a row with the list item 'selection status' and the 'Copy of the relevant page(s) from the Variation Guideline for the change(s) with the relevant boxes for conditions and documentation ticked' displayed 
-        And a table with a row with the list item 'selection status' and the 'Summary of the product characteristics (SPC), if applicable. If your variation affects the SPC, please provide proposed versions (in editable Word format) for each product included in the application' displayed 
-        And a table with a row with the list item 'selection status' and the 'Omitted Documents' displayed 
-        And a table with a row with the list item 'omitted documents text' and the Other Information' displayed 
-        And a section header 'other information text' with a 'Change' link
-        And a table with a row with the list item 'Contact Details' and the 'Contact name' displayed 
-        And a table with a row with the list item 'entered contact name' and the 'Purchase order number' displayed 
-        And a table with a row with the list item 'entered purchase order number' and the 'Contact number' displayed 
-        And a table with a row with the list item 'entered contact number' and the 'Contact email address' displayed 
-        And a table with a row with the list item 'entered contact email address' and the 'Invoice email address' displayed 
-        And a table with a row with the list item 'entered invoice email address' and the 'Further comments' displayed 
+        And a table with a row with the list item 'Procedure Type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'selected procedure type' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Procedure Option' and the MISSING VALUE displayed and a change link
+        And a section header 'selected procedure option' with a 'Change' link
+        And a section header 'Products'
+        And a table header 'selected products'
+        And a table with a row with the list item 'Add another product' and the MISSING VALUE displayed 
+        And a table with a row containing the list item 'Add another product' and the MISSING VALUE displayed and a 'Remove variation' link 
+        And a table with a row with the list item 'Variation Details' and MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Variation 1' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Code' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item '<Sub Code>' and the MISSING VALUE displayed and a change link
+        And a table with a row with the list item 'Description' and the MISSING VALUE displayed and a change link
+        And a section header 'Variation description' with a 'Change' link
+        And a table with a row with the list item 'Variation Type' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'IA' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Implementation Date' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'entered implementation Date' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Article 5' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Article 5 answer' and the MISSING VALUE displayed 
+        And a section header 'Present' with a 'Change' link
+        And a table with a row with the list item 'present text' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Proposed' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'proposed change text' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Supporting Documents' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'Label/ Package leaflet text (QRD). If your variation affects the labelling and/ or package leaflet (QRD text). Please provide proposed versions (in editable Word format) for each product included in the application; do not provide mock-ups at this stage' and the MISSING VALUE displayed 
+        And a table with a row with the list item 'selection status' and the MISSING VALUE displayed 
         And they will see a save and exit link 
         And they will see a 'Continue' option
 
     @CPL-2015G-2
     Scenario: User selects change link for Product
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Product 1'
-        When they select 'Product change link'
-        Then they are directed to the 'Select Product 2' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Product 1'
+        Then they are directed to the 'Product change link' page
 
     @CPL-2015G-3
     Scenario: User selects change link for Describe changes
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Describe changes'
-        When they select 'Describe changes change link'
-        Then they are directed to the 'Describe changes' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Describe changes'
+        Then they are directed to the 'Describe changes change link' page
 
     @CPL-2015G-4
     Scenario: User selects change link for Article 5
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change' link for 'Article 5'
-        When they select 'Article 5 change link'
-        Then they are directed to the 'Article 5' page
+        And they can see a 'Change' link for MISSING VALUE
+        When they select 'Article 5'
+        Then they are directed to the 'Article 5 change link' page
 
     @CPL-2015G-5
     Scenario: User selects change variation link
         And the user has been directed to the 'Check Your Answers' page
-        And they can see a 'Change variation' link for 'Variation <Sub Code>'
-        When they select 'change variation link'
-        Then they are directed to the 'Confirm Change Variation' page
+        And they can see a 'Change variation' link for MISSING VALUE
+        When they select 'Variation <Sub Code>'
+        Then they are directed to the 'change variation link' page
 
     @CPL-2015G-6
     Scenario: User selects the 'Save and exit' link

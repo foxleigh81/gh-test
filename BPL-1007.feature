@@ -24,59 +24,59 @@ Feature: User enters a variation code
     @BPL-1007-2
     Scenario: User enters a valid code from Data Table IA Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA Only'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-3
     Scenario: User enters a valid code from Data Table IB Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IB Only'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IB Only'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-4
     Scenario: User enters a valid code from Data Table II Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table II Only'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table II Only'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-5
     Scenario: User enters a valid code from Data Table IA + IB
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 2' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table IA + IB'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-6
     Scenario: User enters a valid code from Data Table Z Only
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 1' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table Z Only'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-7
     Scenario: User enters a valid code from Data table No Variations
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table No Variations'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table No Variations'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-8
     Scenario: User enters a code from Data Table Z Special
         And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Special'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+        And they have entered a valid '<Sub Code>' from MISSING VALUE
+        When they select 'Data Table Z Special'
+        Then they are directed to the 'Continue' page
 
     @BPL-1007-9
     Scenario: User selects a common variation
         And the user has been directed to the 'Enter Variation Code' page
         And they will see 5 radio button option(s)
-        And they have selected '<Sub Code>' from 'Data Table Common Variations'
+        And they have selected '<Sub Code>' from MISSING VALUE
         When they select 'Continue'
-        Then they are directed to the '<Page>' page
+        Then they are directed to the 'Data Table Common Variations' page
 
     @BPL-1007-10
     Scenario: User does not enter a valid code or select a radio button option
