@@ -8,7 +8,7 @@ Feature: User selects procedure type
         Given a 'Public User' that is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Select Variation Procedure Type' page
+        And they are directed to the 'Variation Select Procedure Type' page
 
     @APL-0001-1
     Scenario: User selects 'single' procedure type
@@ -24,5 +24,5 @@ Feature: User selects procedure type
     @APL-0001-2
     Scenario: User does not select procedure type
         When they click the 'Continue' button
-        Then they are directed to the 'Select Variation Procedure Type' page
+        Then they are directed to the 'Variation Select Procedure Type' page
         And they will see a warning message stating 'Please select a procedure type'

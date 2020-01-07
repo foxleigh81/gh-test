@@ -8,7 +8,7 @@ Feature: User enters application finance information
         Given a 'Public User' that is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Select Variation Procedure Type' page
+        And they are directed to the 'Variation Select Procedure Type' page
         And they navigate to the 'Variation Single One-Product Finance Details' page
         And a page header 'Finance details'
 
