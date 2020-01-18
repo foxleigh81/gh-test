@@ -5,22 +5,23 @@ Feature: User selects procedure type
         Jira: GS-188
 
     Background:
-        Given the user has completed the PL-2000 steps
+        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
 
     @CPL-2001-1
-    Scenario: User directed to Procedure Type page 
-        And the user has been directed to the 'Procedure type' page
-        When page 'Procedure type' loads
-        Then a page header 'Select procedure type'
+    Scenario: User selects 'Group of Type IA changes' procedure type
+        And a page header 'Select procedure type'
         And they will see a radio button option for 'Single'
-        And they will see a radio button option for 'Group of IA changes'
-        And they will see a radio button option for 'Group of Type IB/II/Extension changes'
+        And they will see a radio button option for 'Group of Type IA changes'
+        And they will see a radio button option for 'Group of Type IB/II changes'
         And they will see a radio button option for 'Workshare'
-        And undefined
+        When they select the 'Group of Type IA changes' option and click continue
+        Then they are directed to the 'Variation Type IA Procedure Options' page
 
     @CPL-2001-2
-    Scenario: User selects procedure type 'Group of IA changes'
-        And the user has been directed to the 'Procedure Type' page
-        And the user has selected 'Group of IA changes'
-        When they select 'Continue'
-        Then they are directed to the 'Procedure Option Type IA' page
+    Scenario: User does not select procedure type
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Select Procedure Type' page
+        And they will see a warning message stating 'Please select a procedure type'

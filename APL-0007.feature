@@ -24,15 +24,6 @@ Feature: User enters a variation code
         When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
         Then they are directed to the '<Destination>' page
         
-    Examples: 
-        | Code | Destination |
-        | IA.Only.And.Common | Variation Single One-Product Implementation Date |
-        | IB.Only.And.Common | Variation Single One-Product Describe Changes |
-        | II.Only | Variation Single One-Product Describe Changes |
-        | Num.Variation | Variation Single One-Product Describe Changes |
-        | Z.Special | Variation Single One-Product Describe Changes |
-        | IA.IB | Variation Single One-Product Select Variation Type |
-        | Z.Only.And.Common | Variation Single One-Product Select Variation Type |
 
     @APL-0007-2
     Scenario Outline: User selects a common code radio option, code's group decides <destination>

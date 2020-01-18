@@ -1,34 +1,48 @@
-Feature: User who has entered a valid code from Data Table IA Only describes proposed changes
+Feature: User describes proposed changes
     Description:
         Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1011
         Jira: GS-100
 
     Background:
-        Given the user has completed the PL-1009 steps
+        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Single' option and click continue
+        And they are directed to the 'Variation Single Procedure Options' page
+        And they select the 'One change to several products' option and click continue
+        And they are directed to the 'Variation Single Multiple-Products Select Products' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Single Multiple-Products Enter Variation Code' page
+        And they select the 'IB.Only.And.Common' option and click continue
+        And they are directed to the 'Variation Single Multiple-Products Describe Changes' page
 
     @BPL-1011-1
-    Scenario: User directed to 'Describe Changes' page 
-        And the user has been directed to the 'Describe changes' page
-        When page 'Describe changes' loads
-        Then a page header 'Describe the proposed change'
-        And the user can see the 'Outline the present situation' text area
-        And the user can see the 'Outline the proposed situation' text area
-        And they will see a 'Continue' option
+    Scenario: User Enters describes proposed changes
+        And they enter the text 'Present' into the 'Present Situation' text area
+        And they enter the text 'Proposed' into the 'Proposed Solution' text area
+        When they click the 'Continue' button
+        And they are directed to the 'Variation Single Multiple-Products Supporting Documents' page
 
     @BPL-1011-2
-    Scenario: User Enters proposed changes
-        And the user can see the 'Outline the present situation' text area
-        And the user can see the 'Outline the proposed situation' text area
-        And the user has entered 'Present text' into the 'Outline the present situation' text area
-        And the user has entered 'Proposed text' into the 'Outline the proposed situation' text area
-        When the user has selected 'Continue'
-        Then they are directed to the 'Supporting Documents' page
+    Scenario: User does not enter text for present situtation or proposed solution
+        When they click the 'Continue' button
+        Then they will see a warning message stating 'Please outline the present situation'
+        And they will see a warning message stating 'Please outline the proposed solution'
+        And they are directed to the 'Variation Single Multiple-Products Describe Changes' page
 
     @BPL-1011-3
-    Scenario: User does not enter proposed changes text
-        And the user has not entered 'Present text' into the 'Outline the present situation' text area
-        And the user has not entered 'Proposed text' into the 'Outline the proposed situation' text area
-        When the user has selected 'Continue'
-        Then they will see an error message containing 'Describe changes to continue'
-        And they will not be able to continue
+    Scenario: User does not enter text for present situation
+        And they enter the text 'Proposed' into the 'Proposed Solution' text area
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Single Multiple-Products Describe Changes' page
+        And they will see a warning message stating 'Please outline the present situation'
+
+    @BPL-1011-4
+    Scenario: User does not enter text for proposed solution
+        And they enter the text 'Present' into the 'Present Situation' text area
+        When they click the 'Continue' button
+        Then they are directed to the 'Please outline the proposed solution' page
+        And they will see a warning message stating 'Variation Single Multiple-Products Describe Changes'

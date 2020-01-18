@@ -16,7 +16,7 @@ Feature: User checks their answers
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
         And they will see a 'Procedure Option' row with value 'One change to one product' and a change link leading to 'Variation Single Procedure Options'
         And they will see a section header 'IB Only And Common variation details' with status 'completed'
-        And they will see a 'IB Only And Common Variation Code' row with value 'IB.Only.And.Common' and a change link leading to 'Variation Single One-Product Enter Variation Code'
+        And they will see a 'IB Only And Common Variation Code' row with value 'IB.Only.And.Common' and a change link leading to 'Variation Single One-Product Confirm-Change-Variation-Code'
         And they will not see a 'IB Only And Common Variation Implementation' row
         And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single One-Product Supporting Documents'
         And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single One-Product Application Contact Details'

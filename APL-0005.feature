@@ -31,7 +31,7 @@ Feature: User selects product to be varied
         And they will see a warning message stating 'You must select a product to be varied'
 
 #     @APL-0005-3
-#     Scenario: User selects 'Product not listed' link
-#         And the user can see a 'Product not listed' link
-#         When the user has selected the link 'Product not listed'
+#     Scenario: User selects 'Enter details for products not listed' link
+#         And the user can see a 'Enter details for products not listed' link
+#         When the user has selected the link 'Enter details for products not listed'
 #         Then they are directed to the 'Enter Product 1' page

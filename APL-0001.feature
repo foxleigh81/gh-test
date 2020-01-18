@@ -11,13 +11,12 @@ Feature: User selects procedure type
         And they are directed to the 'Variation Select Procedure Type' page
 
     @APL-0001-1
-    Scenario: User selects 'single' procedure type
+    Scenario: User selects 'Single' procedure type
         And a page header 'Select procedure type'
         And they will see a radio button option for 'Single'
         And they will see a radio button option for 'Group of Type IA changes'
-        And they will see a radio button option for 'Group of Type IB/II/Extension changes'
+        And they will see a radio button option for 'Group of Type IB/II changes'
         And they will see a radio button option for 'Workshare'
-        And a 'Continue' button
         When they select the 'Single' option and click continue
         Then they are directed to the 'Variation Single Procedure Options' page
 
