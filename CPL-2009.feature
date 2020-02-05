@@ -11,8 +11,9 @@ Feature: User enters Implementation Date
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
-        And they select the 'One change to one product' option and click continue
+        And they select the 'One change to several unrelated products' option and click continue
         And they are directed to the 'Variation Type IA One Change Multiple-Products Select Products' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Type IA One Change Multiple-Products Enter-Variation-Code' page
 
@@ -20,8 +21,8 @@ Feature: User enters Implementation Date
     Scenario: User enters an implementation date
         And they select the 'IA.Only.And.Common' option and click continue
         And they are directed to the 'Variation Type IA One-Change Multiple-Products Implementation-Date' page
-        And a page header 'Enter the implementation date'
-        And a caption 'For example: 31 3 2019'
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input
@@ -32,8 +33,8 @@ Feature: User enters Implementation Date
     Scenario: User enters an implementation date, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
         And they are directed to the 'Variation Type IA One-Change Multiple-Products Implementation-Date' page
-        And a page header 'Enter the implementation date'
-        And a caption 'For example: 31 3 2019'
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input

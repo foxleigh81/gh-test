@@ -14,7 +14,7 @@ Feature: User selects procedure option
 
     @BPL-1003-1
     Scenario: User selects 'One change to several products' option
-        And a page header 'Select procedure option'
+        And they will see a page header 'Select procedure option'
         And they will see a radio button option for 'One change to one product'
         And they will see a radio button option for 'One change to several products'
         And a 'Continue' button

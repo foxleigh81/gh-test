@@ -13,7 +13,7 @@ Feature: User selects procedure option
 
     @DPL-3003-1
     Scenario: User selects 'Several changes to one product' option
-        And a page header 'Select procedure option'
+        And they will see a page header 'Select procedure option'
         And they will see a radio button option for 'Several changes to one product'
         And they will see a radio button option for 'One change to several unrelated products'
         And they will see a radio button option for 'Several changes to several unrelated products'

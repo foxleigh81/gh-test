@@ -11,12 +11,12 @@ Feature: User selects products to be varied
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
-        And they select the 'One change to one product' option and click continue
+        And they select the 'One change to several unrelated products' option and click continue
         And they are directed to the 'Variation Type IA One Change Multiple-Products Select Products' page
 
     @CPL-2005-1
     Scenario: User selects two products and clicks continue
-        And a page header 'Select product to be varied'
+        And they will see a page header 'Select product to be varied'
         And they will see a check box option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
         And they will see a check box option for 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they will see a check box option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'

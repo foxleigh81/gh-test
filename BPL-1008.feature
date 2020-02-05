@@ -20,7 +20,7 @@ Feature: User selects the variation type
     Scenario: User selects variation type IA, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
@@ -31,7 +31,7 @@ Feature: User selects the variation type
     Scenario: User selects variation type IB, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
@@ -42,7 +42,7 @@ Feature: User selects the variation type
     Scenario: User doesnt select code and clicks continue, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
@@ -54,7 +54,7 @@ Feature: User selects the variation type
     Scenario: User selects variation type IA, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
@@ -66,7 +66,7 @@ Feature: User selects the variation type
     Scenario: User selects variation type IB, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
@@ -78,7 +78,7 @@ Feature: User selects the variation type
     Scenario: User selects variation type II, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
@@ -90,7 +90,7 @@ Feature: User selects the variation type
     Scenario: User doesnt select code and clicks continue, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
-        And a page header 'Select variation type'
+        And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button

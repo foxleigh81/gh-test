@@ -44,5 +44,5 @@ Feature: User describes proposed changes
     Scenario: User does not enter text for proposed solution
         And they enter the text 'Present' into the 'Present Situation' text area
         When they click the 'Continue' button
-        Then they are directed to the 'Please outline the proposed solution' page
+        Then they are directed to the 'Outline the proposed solution' page
         And they will see a warning message stating 'Variation Single Multiple-Products Describe Changes'

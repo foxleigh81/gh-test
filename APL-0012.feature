@@ -31,5 +31,5 @@ Feature: User confirms supporting documents
     Scenario: User ticks one check box, and does not enter reason for omission
         And they tick the box for 'Copy of the relevant page(s)'
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single One-Product Describe Changes' page
-        And they will see a warning message stating 'Please outline the proposed solution'
+        Then they are directed to the 'Variation Single One-Product Supporting Documents' page
+        And they will see a warning message stating 'Give a reason for omitting supporting documents'

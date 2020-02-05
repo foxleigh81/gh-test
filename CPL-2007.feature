@@ -11,16 +11,17 @@ Feature: User enters a variation code
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
-        And they select the 'One change to one product' option and click continue
+        And they select the 'One change to several unrelated products' option and click continue
         And they are directed to the 'Variation Type IA One Change Multiple-Products Select Products' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Type IA One Change Multiple-Products Enter-Variation-Code' page
 
     @CPL-2007-1
     Scenario Outline: User enters a valid code in type ahead text field, code's group decides <destination>
-        And a page header 'Choose a variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
         When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
         Then they are directed to the '<Destination>' page
         
@@ -32,9 +33,9 @@ Feature: User enters a variation code
 
     @CPL-2007-2
     Scenario Outline: User selects a common code radio option, code's group decides <destination>
-        And a page header 'Choose a variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
         When they select the '<Code>' option and click continue
         Then they are directed to the '<Destination>' page
         

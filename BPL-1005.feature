@@ -16,7 +16,7 @@ Feature: User selects products to be varied
 
     @BPL-1005-1
     Scenario: User selects two products and clicks continue
-        And a page header 'Select product to be varied'
+        And they will see a page header 'Select product to be varied'
         And they will see a check box option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
         And they will see a check box option for 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they will see a check box option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'

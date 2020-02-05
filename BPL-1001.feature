@@ -12,7 +12,7 @@ Feature: User selects procedure type
 
     @BPL-1001-1
     Scenario: User selects 'single' procedure type
-        And a page header 'Select procedure type'
+        And they will see a page header 'Select procedure type'
         And they will see a radio button option for 'Single'
         And they will see a radio button option for 'Group of Type IA changes'
         And they will see a radio button option for 'Group of Type IB/II changes'

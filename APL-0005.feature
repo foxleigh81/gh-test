@@ -16,7 +16,7 @@ Feature: User selects product to be varied
 
     @APL-0005-1
     Scenario: User selects 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and clicks continue
-        And a page header 'Select product to be varied'
+        And they will see a page header 'Select product to be varied'
         And they will see a radio button option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
         And they will see a radio button option for 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they will see a radio button option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'

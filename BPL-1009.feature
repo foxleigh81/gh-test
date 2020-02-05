@@ -21,8 +21,8 @@ Feature: User enters Implementation Date
     Scenario: User enters an implementation date, having previously selected 'IA Only' group code
         And they select the 'IA.Only.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Implementation Date' page
-        And a page header 'Enter the implementation date'
-        And a caption 'For example: 31 3 2019'
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input
@@ -35,8 +35,8 @@ Feature: User enters Implementation Date
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they select the 'IA' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Implementation Date' page
-        And a page header 'Enter the implementation date'
-        And a caption 'For example: 31 3 2019'
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input

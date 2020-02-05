@@ -18,18 +18,18 @@ Feature: User enters a variation code
 
     @APL-0007-1
     Scenario Outline: User enters a valid code in type ahead text field, code's group decides <destination>
-        And a page header 'Choose a variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
         When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
         Then they are directed to the '<Destination>' page
         
 
     @APL-0007-2
     Scenario Outline: User selects a common code radio option, code's group decides <destination>
-        And a page header 'Choose a variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
         When they select the '<Code>' option and click continue
         Then they are directed to the '<Destination>' page
         
