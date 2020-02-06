@@ -17,7 +17,7 @@ Feature: User enters application finance information
         And they enter the text '12345' into the 'purchase order' text input
         And they enter the text 'test@test.com' into the 'invoice email' text input
         When they click the 'Continue' button
-        And they are directed to the 'Variation Single Multiple-Products Check Your Answers' page
+        And they are directed to the 'Variation Single Multiple-Products Check-Your-Answers' page
 
     @BPL-1012C-2
     Scenario: User completes all mandatory fields and clicks 'Save and exit'

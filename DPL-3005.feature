@@ -1,20 +1,19 @@
 Feature: User selects product to be varied
     Description:
-        Epic: Procedure A: Single Change, Single Product
-        Reference: APL-0005
-        Jira: GS-4
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
+        Reference: DPL-3005
 
     Background:
         Given a 'Public User' that is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
-        And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
-        And they select the 'One change to one product' option and click continue
-        And they are directed to the 'Variation Single One-Product Select-Product-1' page
+        And they select the 'Group of IA changes' option and click continue
+        And they are directed to the 'Variation Type IA Procedure Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IA Several-Changes One-Product Select-Products-1' page
 
-    @APL-0005-1
+    @DPL-3005-1
     Scenario: User selects 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and clicks continue
         And they will see a page header 'Select product to be varied'
         And they will see a radio button option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
@@ -24,15 +23,16 @@ Feature: User selects product to be varied
         When they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         Then they are directed to the 'Variation Single One-Product Enter Variation Code' page
 
-    @APL-0005-2
+    @DPL-3005-2
     Scenario: User does not select a product and clicks continue
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single One-Product Select Products' page
+        Then they are directed to the 'Variation Several-Changes One-Product Select Products' page
         And they will see a warning message stating 'You must select a product to be varied'
         And they will not be able to continue
 
-#     @APL-0005-3
-#     Scenario: User selects 'Enter details for products not listed' link
-#         And the user can see a 'Enter details for products not listed' link
-#         When the user has selected the link 'Enter details for products not listed'
-#         Then they are directed to the 'Enter Product 1' page
+    @DPL-3005-3
+    @TestData::Y
+    Scenario: User selects 'Enter details for products not listed' link
+        And the user can see a 'Enter details for products not listed' link
+        When the user has selected the link 'Enter details for products not listed'
+        Then they are directed to the 'Enter Product 1' page

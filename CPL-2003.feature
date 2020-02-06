@@ -9,11 +9,11 @@ Feature: User selects procedure option
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
-        And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
+        And they select the 'Group of IA changes' option and click continue
+        And they are directed to the 'Variation Type IA Procedure Options' page
 
     @CPL-2003-1
-    Scenario: User selects 'One change to several products' option
+    Scenario: User selects 'One change to several unrelated products' option
         And they will see a page header 'Select procedure option'
         And they will see a radio button option for 'Several changes to one product'
         And they will see a radio button option for 'One change to several unrelated products'

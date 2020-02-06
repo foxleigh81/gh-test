@@ -33,3 +33,4 @@ Feature: User confirms supporting documents
         When they click the 'Continue' button
         Then they are directed to the 'Variation Type IA One-Change Multiple-Products Supporting-Documents' page
         And they will see a warning message stating 'Give a reason for omitting supporting documents'
+        And they will not be able to continue

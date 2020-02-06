@@ -1,51 +1,42 @@
 Feature: User enters Implementation Date 
     Description:
-        Epic: Procedure A: Single Change, Single Product
-        Reference: APL-0009
-        Jira: GS-7
+        Epic: Procedure D:  IA changes - sev ch, 1  prd 
+        Reference: DPL-3009
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
-        And they select 'make application'
-        And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
-        And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
-        And they select the 'One change to one product' option and click continue
-        And they are directed to the 'Variation Single One-Product Select-Product-1' page
+        Given startMaNavToTypeIASevChangesMultipleProductsSelection
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
-        And they are directed to the 'Variation Single One-Product Enter Variation Code' page
+        And they are directed to the 'Variation Type IA Several-Changes One-Product  Enter-Variation-Code' page
 
-    @APL-0009-1
-    Scenario: User enters an implementation date, having previously selected 'IA Only' group code
+    @DPL-3009-1
+    Scenario: User enters an implementation date, having selected a 'IA Only' code
         And they select the 'IA.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single One-Product Implementation Date' page
+        And they are directed to the 'Variation Type IA Several-Changes One-Product Implementation-Date' page
         And they will see a page header 'Enter the implementation date'
         And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input
         And they click the 'Continue' button
-        Then they are directed to the 'Variation Single One-Product Describe Changes' page
+        Then they are directed to the 'Variation Type IA Several-Changes One-Product Describe-Changes' page
 
-    @APL-0009-2
+    @DPL-3009-2
     Scenario: User enters an implementation date, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single One-Product Select Variation Type' page
-        And they select the 'IA' option and click continue
-        And they are directed to the 'Variation Single One-Product Implementation Date' page
+        And they are directed to the 'Variation Type IA Several-Changes One-Product Implementation-Date' page
         And they will see a page header 'Enter the implementation date'
         And they will see a caption 'For example: 31 3 2019'
         When they enter the number '21' into the 'implementation date day' number input
         And they enter the number '11' into the 'implementation date month' number input
         And they enter the number '2020' into the 'implementation date year' number input
         And they click the 'Continue' button
-        Then they are directed to the 'Variation Single One-Product Article 5' page
+        Then they are directed to the 'Variation Type IA Several-Changes One-Product Article-5' page
 
-    @APL-0009-3
+    @DPL-3009-3
     Scenario Outline: User enters an invalid dates
         And they select the 'IA.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single One-Product Implementation Date' page
+        And they are directed to the 'Variation Type IA Several-Changes One-Product Implementation-Date' page
         When they enter the number '<Day>' into the 'implementation date day' number input
         And they enter the number '<Month>' into the 'implementation date month' number input
         And they enter the number '<Year>' into the 'implementation date year' number input

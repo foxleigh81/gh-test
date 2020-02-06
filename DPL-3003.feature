@@ -19,4 +19,4 @@ Feature: User selects procedure option
         And they will see a radio button option for 'Several changes to several unrelated products'
         And a 'Continue' button
         When they select the 'Several changes to one product'' option and click continue
-        Then they are directed to the 'Variation Type IA One-Product Select Products' page
+        Then they are directed to the 'Variation Type IA Several-Changes One-Product Select-Product-1' page

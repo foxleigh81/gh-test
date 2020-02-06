@@ -12,7 +12,7 @@ Feature: User enters a product which does not appear in the list on the Select p
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
         And they select the 'One change to several unrelated products' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Select Products' page
+        And they are directed to the 'Variation Type IA One Change Multiple-Products Select-Products-2' page
         # Need to navigate to manual product selection, not implemented yet
 
     @CPL-2005A-1

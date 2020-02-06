@@ -12,7 +12,7 @@ Feature: User selects products to be varied
         And they select the 'Single' option and click continue
         And they are directed to the 'Variation Single Procedure Options' page
         And they select the 'One change to several products' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Products' page
+        And they are directed to the 'Variation Single Multiple-Products Select-Products-2' page
 
     @BPL-1005-1
     Scenario: User selects two products and clicks continue
@@ -37,10 +37,10 @@ Feature: User selects products to be varied
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single Multiple-Products Select Products' page
         And they will see a warning message stating 'You must select at least two products to be varied'
+        And they will not be able to continue
 
-    @BPL-1005-4
-    @TestData::Y
-    Scenario: User selects 'Enter details for products not listed' link
-        And the user can see a 'Enter details for products not listed' link
-        When the user has selected the link 'Enter details for products not listed'
-        Then they are directed to the 'Enter Products 2' page
+#     @BPL-1005-4
+#     Scenario: User selects 'Enter details for products not listed' link
+#         And the user can see a 'Enter details for products not listed' link
+#         When the user has selected the link 'Enter details for products not listed'
+#         Then they are directed to the 'Enter Products 2' page

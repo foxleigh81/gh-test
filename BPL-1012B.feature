@@ -23,7 +23,7 @@ Feature: User enters application contact information
     @BPL-1012B-2
     Scenario: User does not complete all mandatory fields
         When they click the 'Continue' button
-        And they are directed to the 'Variation Single Multiple-Products Application Contact Details' page
+        And they are directed to the 'Variation Single Multiple-Products Application-Contact-Details' page
         And the 'contact fullname' text input will error with message 'Please enter a Full name'
         And the 'contact telephone' text input will error with message 'Please enter a valid telephone number'
         And the 'contact email' text input will error with message 'Please enter a valid email address'
@@ -34,5 +34,5 @@ Feature: User enters application contact information
         And they enter the text '0123456789' into the 'contact telephone' text input
         And they enter the text 'test' into the 'contact email' text input
         When they click the 'Continue' button
-        And they are directed to the 'Variation Single Multiple-Products Application Contact Details' page
+        And they are directed to the 'Variation Single Multiple-Products Application-Contact-Details' page
         And the 'contact email' text input will error with message 'Please enter a valid email address'

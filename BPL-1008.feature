@@ -11,7 +11,7 @@ Feature: User selects the variation type
         And they select the 'Single' option and click continue
         And they are directed to the 'Variation Single Procedure Options' page
         And they select the 'One change to several products' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Products' page
+        And they are directed to the 'Variation Single Multiple-Products Select-Products-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Enter Variation Code' page
@@ -49,6 +49,7 @@ Feature: User selects the variation type
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a warning message stating 'Please select a variation type'
+        And they will not be able to continue
 
     @BPL-1008-4
     Scenario: User selects variation type IA, having previously selected 'Z Only' group code
@@ -97,6 +98,7 @@ Feature: User selects the variation type
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a warning message stating 'Please select a variation type'
+        And they will not be able to continue
 
     @BPL-1008-8
     Scenario: User navigates to page, having previously selected 'IA Only' group code

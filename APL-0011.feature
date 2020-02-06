@@ -12,7 +12,7 @@ Feature: User describes proposed changes
         And they select the 'Single' option and click continue
         And they are directed to the 'Variation Single Procedure Options' page
         And they select the 'One change to one product' option and click continue
-        And they are directed to the 'Variation Single One-Product Select Products' page
+        And they are directed to the 'Variation Single One-Product Select-Product-1' page
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Single One-Product Enter Variation Code' page
         And they select the 'IB.Only.And.Common' option and click continue
@@ -38,6 +38,7 @@ Feature: User describes proposed changes
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single One-Product Describe Changes' page
         And they will see a warning message stating 'Please outline the present situation'
+        And they will not be able to continue
 
     @APL-0011-4
     Scenario: User does not enter text for proposed solution
@@ -45,3 +46,4 @@ Feature: User describes proposed changes
         When they click the 'Continue' button
         Then they are directed to the 'Please outline the proposed solution' page
         And they will see a warning message stating 'Variation Single One-Product Describe Changes'
+        And they will not be able to continue

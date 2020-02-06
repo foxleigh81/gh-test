@@ -12,7 +12,7 @@ Feature: User enters a product which does not appear in the list on the Select p
         And they select the 'Single' option and click continue
         And they are directed to the 'Variation Single Procedure Options' page
         And they select the 'One change to one product' option and click continue
-        And they are directed to the 'Variation Single One-Product Select Products' page
+        And they are directed to the 'Variation Single One-Product Select-Product-1' page
         # Need to navigate to manual product selection, not implemented yet
 
 #     @APL-0005A-1

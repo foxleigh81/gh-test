@@ -18,14 +18,14 @@ Feature: User confirms supporting documents
         And they tick the box for 'Mock-Ups, if applicable.'
         And they tick the box for 'Copy of the relevant page(s)'
         When they click the 'Continue' button
-        And they are directed to the 'Variation Single Multiple-Products Upload Dossier' page
+        And they are directed to the 'Variation Single Multiple-Products Upload-Dossier' page
 
     @BPL-1012-2
     Scenario: User ticks one check boxes, and enters reason for omission
         And they tick the box for 'Copy of the relevant page(s)'
         And they enter the text 'will submit later' into the 'omitted documents' text area
         When they click the 'Continue' button
-        And they are directed to the 'Variation Single Multiple-Products Upload Dossier' page
+        And they are directed to the 'Variation Single Multiple-Products Upload-Dossier' page
 
     @BPL-1012-3
     Scenario: User ticks one check box, and does not enter reason for omission
@@ -33,3 +33,4 @@ Feature: User confirms supporting documents
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single Multiple-Products Supporting-Documents' page
         And they will see a warning message stating 'Give a reason for omitting supporting documents'
+        And they will not be able to continue

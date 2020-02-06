@@ -12,7 +12,7 @@ Feature: User selects products to be varied
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
         And they select the 'One change to several unrelated products' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Select Products' page
+        And they are directed to the 'Variation Type IA One Change Multiple-Products Select-Products-2' page
 
     @CPL-2005-1
     Scenario: User selects two products and clicks continue
@@ -29,7 +29,7 @@ Feature: User selects products to be varied
     Scenario: User selects one product only and clicks continue
         And they have not selected at least 2 checkbox options
         When they click the 'Continue' button
-        Then they are directed to the 'Variation TypeIA One-Change Multiple-Products Select-Products' page
+        Then they are directed to the 'Variation Type IA One-Change Multiple-Products Select-Products' page
         And they will see a warning message stating 'You must select at least two products to be varied'
 
     @CPL-2005-3
@@ -37,6 +37,7 @@ Feature: User selects products to be varied
         When they click the 'Continue' button
         Then they are directed to the 'Variation TypeIA One-Change Multiple-Products Select-Products' page
         And they will see a warning message stating 'You must select at least two products to be varied'
+        And they will not be able to continue
 
     @CPL-2005-4
     @TestData::Y

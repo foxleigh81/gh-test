@@ -24,3 +24,4 @@ Feature: User selects procedure type
         When they click the 'Continue' button
         Then they are directed to the 'Variation Select Procedure Type' page
         And they will see a warning message stating 'Please select a procedure type'
+        And they will not be able to continue

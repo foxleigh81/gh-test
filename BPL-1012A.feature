@@ -16,16 +16,16 @@ Feature: User uploads dossier
     Scenario: User Uploads a small dossier zip file
         When the Public User clicks 'Choose file' and uploads the file 'files/smallDossier.zip'
         And they click the 'Upload File Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Application Contact Details' page
+        Then they are directed to the 'Variation Single Multiple-Products Application-Contact-Details' page
 
     @BPL-1012A-2
     Scenario: User Uploads a non zip file ** Note this needs to be changed to fail
         When the Public User clicks 'Choose file' and uploads the file 'files/test.png'
         And they click the 'Upload File Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Application Contact Details' page
+        Then they are directed to the 'Variation Single Multiple-Products Application-Contact-Details' page
 
     @BPL-1012A-3
     Scenario: User does not upload a file
         When they click the 'Upload File Continue' button
         Then they will see a warning message stating 'You must upload a file'
-        And they are directed to the 'Variation Single Multiple-Products Upload Dossier' page
+        And they are directed to the 'Variation Single Multiple-Products Upload-Dossier' page
