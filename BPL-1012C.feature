@@ -5,7 +5,7 @@ Feature: User enters application finance information
         Jira: GS-104
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -30,7 +30,7 @@ Feature: User enters application finance information
     Scenario: User does not enter any information and clicks 'continue'
         When they click the 'Continue' button
         And they are directed to the 'Variation Single Multiple-Products Finance Details' page
-        And the 'invoice email' text input will error with message 'Please enter a valid email address'
+        And the 'invoice email' text input will error with message 'Enter a valid email address'
 
     @BPL-1012C-4
     Scenario: User enters an invalid email
@@ -38,4 +38,4 @@ Feature: User enters application finance information
         And they enter the text 'test' into the 'invoice email' text input
         When they click the 'Continue' button
         And they are directed to the 'Variation Single Multiple-Products Finance Details' page
-        And the 'invoice email' text input will error with message 'Please enter a valid email address'
+        And the 'invoice email' text input will error with message 'Enter a valid email address'

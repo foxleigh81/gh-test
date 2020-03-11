@@ -5,7 +5,7 @@ Feature: User selects procedure option
         Jira: GS-95
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -19,4 +19,4 @@ Feature: User selects procedure option
         And they will see a radio button option for 'One change to several products'
         And a 'Continue' button
         When they select the 'One change to several products' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Select Products' page
+        Then they are directed to the 'Variation Single Multiple-Products Select-Products' page

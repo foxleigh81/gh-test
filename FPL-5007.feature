@@ -1,67 +1,63 @@
 Feature: User enters a variation code
     Description:
-        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
+        Epic: Procedure F: IB/II - sev ch, 1  prd 
         Reference: FPL-5007
         Jira: GS-511
 
     Background:
-        Given the user has completed the PL-5005 steps
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Group of IB/II changes' option and click continue
+        And they are directed to the 'Variation Type IB/II Procedure-Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
 
     @FPL-5007-1
-    Scenario: User directed to Enter Variation Code
-        And the user has been directed to the 'Enter Variation Code' page
-        When page 'Enter Variation Code' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Choose a variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
-        And the user can see a text input box
-        And they will see 5 radio button option(s)
-        And they will see a 'Continue' option
+    Scenario Outline: User enters a valid code in type ahead text field, code's group decides <destination>
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
+        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and click Continue
+        Then they are directed to the '<Destination>' page
+        
+    Examples: 
+        | Code | Common | Destination |
+        | IA.Only | IA.Only.And.Common | Variation Type IB/II Several-Changes One-Product Implementation-Date |
+        | IB.Only | IB.Only.And.Common | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | II.Only |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Num.Variation |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Z.Special |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | IA.IB |  | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
+        | Z.Only | Z.Only.And.Common | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
 
     @FPL-5007-2
-    Scenario: User enters a valid code from Data Table IA Only
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+    Scenario Outline: User selects a common code radio option, code's group decides <destination>
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
+        When they select the '<Common>' option and click continue
+        Then they are directed to the '<Destination>' page
+        
+    Examples: 
+        | Code | Common | Destination |
+        | IA.Only | IA.Only.And.Common | Variation Type IB/II Several-Changes One-Product Implementation-Date |
+        | IB.Only | IB.Only.And.Common | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | II.Only |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Num.Variation |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Z.Special |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | IA.IB |  | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
+        | Z.Only | Z.Only.And.Common | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
 
     @FPL-5007-3
-    Scenario: User enters a valid code from Data Table IB Only, or II Only, or No Variations, or Z Special
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from '<Group>'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
-
-    @FPL-5007-4
-    Scenario: User enters a valid code from Data Table IA + IB
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 2' page
-
-    @FPL-5007-5
-    Scenario: User enters a valid code from Data Table Z Only
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 1' page
-
-    @FPL-5007-6
-    Scenario: User selects a common variation
-        And the user has been directed to the 'Enter Variation Code' page
-        And they will see 5 radio button option(s)
-        And they have selected '<Sub Code>' from 'Data Table Common Variations'
-        When they select 'Continue'
-        Then they are directed to the '<Page>' page
-
-    @FPL-5007-7
     Scenario: User does not enter a valid code or select a radio button option
-        And the user has been directed to the 'Enter Variation Code' page
-        And they have not entered a valid 'Code'
-        And they have not selected any 'radio button'
-        When they select 'Continue'
-        Then they will see an error message containing 'Enter variation code to continue'
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
+        And they will see a warning message stating 'Enter either a variation code, name, or select a common variation'
         And they will not be able to continue
+        When they enter the text 'Z.Only' into the text input with id 'Variation Code Picker' and click Continue
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Implementation-Date' page

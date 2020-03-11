@@ -4,7 +4,14 @@ Feature: User enters Implementation Date
         Reference: DPL-3009
 
     Background:
-        Given startMaNavToTypeIASevChangesMultipleProductsSelection
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Group of IA changes' option and click continue
+        And they are directed to the 'Variation Type IA Procedure Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IA Several-Changes Multiple-Products Select-Product-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Type IA Several-Changes One-Product  Enter-Variation-Code' page

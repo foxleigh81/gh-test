@@ -5,7 +5,7 @@ Feature: User checks their answers
         Jira: GS-105
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
 
     @BPL-1012D-1
     @TestData::TDG-Variation-IB-Only-And-Common-Draft-Ready-For-Submission
@@ -14,7 +14,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'IB Only And Common variation details' with status 'completed'
         And they will see a 'IB Only And Common Variation Code' row with value 'IB.Only.And.Common' and a change link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
         And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
@@ -35,7 +36,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'IAIB variation details' with status 'completed'
         And they will see a 'IAIB Variation Code' row with value 'IA.IB' and a change link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
         And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single One-Product Select-Variation-Type'
@@ -57,7 +59,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'IAIB variation details' with status 'completed'
         And they will see a 'IAIB Variation Code' row with value 'IA.IB' and a change link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
         And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single One-Product Select-Variation-Type'
@@ -79,7 +82,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'Z Only And Common variation details' with status 'completed'
         And they will see a 'Z Only And Common Variation Code' row with value 'Z.Only.And.Common' and a change link leading to 'Variation Single Multiple-Products Confirm-Change-Variation-Code'
         And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single Multiple-Products Select-Variation-Type'
@@ -101,7 +105,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check Your Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'Z Only And Common variation details' with status 'completed'
         And they will see a 'Z Only And Common Variation Code' row with value 'Z.Only.And.Common' and a change link leading to 'Variation Single Multiple-Products Confirm-Change-Variation-Code'
         And they will see a 'Variation Type' row with value 'IB' and a change link leading to 'Variation Single Multiple-Products Select-Variation-Type'
@@ -123,7 +128,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'IA Only variation details' with status 'completed'
         And they will see a 'IA Only Variation Code' row with value 'IA.Only' and a change link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
         And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
@@ -144,7 +150,8 @@ Feature: User checks their answers
         And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
         And they will see a section header 'Product Details' with status 'completed'
         And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select Procedure Type'
-        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Procedure Options'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
         And they will see a section header 'IA Only variation details' with status 'completed'
         And they will see a 'IA Only Variation Code' row with value 'IA.Only' and a change link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
         And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'

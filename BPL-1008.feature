@@ -4,14 +4,14 @@ Feature: User selects the variation type
         Reference: BPL-1008
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Single' option and click continue
         And they are directed to the 'Variation Single Procedure Options' page
         And they select the 'One change to several products' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select-Products-2' page
+        And they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Enter Variation Code' page
@@ -39,7 +39,7 @@ Feature: User selects the variation type
         Then they are directed to the 'Variation Single Multiple-Products Article 5' page
 
     @BPL-1008-3
-    Scenario: User doesnt select code and clicks continue, having previously selected 'IAIB' group code
+    Scenario: User doesnt select variation type and clicks continue, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'

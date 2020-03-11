@@ -4,7 +4,7 @@ Feature: User selects the variation type
         Reference: APL-0008
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -35,7 +35,7 @@ Feature: User selects the variation type
         And they will see a radio button option for 'IB'
         And a 'Continue' button
         When they select the 'IB' option and click continue
-        Then they are directed to the 'Variation Single One-Product Article 5' page
+        Then they are directed to the 'Variation Single One-Product Describe Changes' page
 
     @APL-0008-3
     Scenario: User doesnt select code and clicks continue, having previously selected 'IAIB' group code
@@ -47,7 +47,7 @@ Feature: User selects the variation type
         And a 'Continue' button
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single One-Product Select Variation Type' page
-        And they will see a warning message stating 'Please select a variation type'
+        And they will see a warning message stating 'Select a variation type'
         And they will not be able to continue
 
     @APL-0008-4
@@ -96,7 +96,7 @@ Feature: User selects the variation type
         And a 'Continue' button
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single One-Product Select Variation Type' page
-        And they will see a warning message stating 'Please select a variation type'
+        And they will see a warning message stating 'Select a variation type'
         And they will not be able to continue
 
     @APL-0008-8

@@ -5,7 +5,7 @@ Feature: User selects product to be varied
         Jira: GS-4
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -22,7 +22,7 @@ Feature: User selects product to be varied
         And they will see a radio button option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'
         And a 'Continue' button
         When they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
-        Then they are directed to the 'Variation Single One-Product Enter Variation Code' page
+        Then they are directed to the 'Variation Single One-Product Enter-Variation-Code' page
 
     @APL-0005-2
     Scenario: User does not select a product and clicks continue
@@ -31,8 +31,8 @@ Feature: User selects product to be varied
         And they will see a warning message stating 'You must select a product to be varied'
         And they will not be able to continue
 
-#     @APL-0005-3
-#     Scenario: User selects 'Enter details for products not listed' link
-#         And the user can see a 'Enter details for products not listed' link
-#         When the user has selected the link 'Enter details for products not listed'
-#         Then they are directed to the 'Enter Product 1' page
+    @APL-0005-3
+    Scenario: User selects 'Enter details for products not listed' link
+        And the user can see a 'Enter details for products not listed' link
+        When the user has selected the link 'Enter details for products not listed'
+        Then they are directed to the 'Variation Single One-Product Enter-Product-1' page

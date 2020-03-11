@@ -1,41 +1,38 @@
 Feature: User selects product to be varied
     Description:
-        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
+        Epic: Procedure F: IB/II - sev ch, 1  prd 
         Reference: FPL-5005
         Jira: GS-509
 
     Background:
-        Given the user has completed the PL-5003 steps
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Group of IB/II changes' option and click continue
+        And they are directed to the 'Variation Type IB/II Procedure-Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
 
     @FPL-5005-1
-    @TestData::KetaminePlus
-    Scenario: User directed to 'Select Product 1' page 
-        And the user has been directed to the 'Select product 1' page
-        When page 'Select product 1' loads
-        Then a page header 'Vary a marketing authorisation'
-        And they will see at least 'Select product to be varied' radio button option(s)
-        And a table with headers 2, 'Select' and 'Authorisation Number'
-        And a table with a row containing a radio button and values 'Product name' and '12345/1234'
-        And they will see a 'Product not listed' link
-        And they will see a 'Continue' option
+    Scenario: User selects 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and clicks continue
+        And they will see a page header 'Select product to be varied'
+        And they will see a radio button option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
+        And they will see a radio button option for 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they will see a radio button option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'
+        And a 'Continue' button
+        When they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
 
     @FPL-5005-2
-    Scenario: User selects 'Product To Be Varied'
-        And the user has been directed to the 'Select product 1' page
-        And the user has selected 'Product 1'
-        When they select 'Continue'
-        Then they are directed to the 'Enter Variation Code' page
-
-    @FPL-5005-3
-    Scenario: User does not select a product
-        And the user has been directed to the 'Select product 1' page
-        And they have not selected any 'Products'
-        When they select 'Continue'
-        Then they will see an error message containing 'Select a product to continue'
+    Scenario: User does not select a product and clicks continue
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
+        And they will see a warning message stating 'You must select a product to be varied'
         And they will not be able to continue
 
-    @FPL-5005-4
-    Scenario: User selects 'Product not listed' link
-        And the user can see a 'Product not listed' link
-        When the user has selected the link 'Product not listed'
-        Then they are directed to the 'Enter Product 1' page
+    @FPL-5005-3
+    Scenario: User selects 'Enter details for products not listed' link
+        And the user can see a 'Enter details for products not listed' link
+        When the user has selected the link 'Enter details for products not listed'
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Product-1' page

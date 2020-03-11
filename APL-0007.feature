@@ -5,7 +5,7 @@ Feature: User enters a variation code
         Jira: GS-6
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -21,18 +21,18 @@ Feature: User enters a variation code
         And they will see a page header 'Choose a variation'
         And they will see a sub header 'Enter variation code or name'
         And they will see a sub header 'Select a common variation'
-        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and press enter
+        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and click Continue
         Then they are directed to the '<Destination>' page
         
     Examples: 
         | Code | Destination |
-        | IA.Only.And.Common | Variation Single One-Product Implementation Date |
-        | IB.Only.And.Common | Variation Single One-Product Describe Changes |
+        | IA.Only | Variation Single One-Product Implementation Date |
+        | IB.Only | Variation Single One-Product Describe Changes |
         | II.Only | Variation Single One-Product Describe Changes |
         | Num.Variation | Variation Single One-Product Describe Changes |
         | Z.Special | Variation Single One-Product Describe Changes |
         | IA.IB | Variation Single One-Product Select Variation Type |
-        | Z.Only.And.Common | Variation Single One-Product Select Variation Type |
+        | Z.Only | Variation Single One-Product Select Variation Type |
 
     @APL-0007-2
     Scenario Outline: User selects a common code radio option, code's group decides <destination>
@@ -52,5 +52,5 @@ Feature: User enters a variation code
     Scenario: User does not enter a valid code or select a radio button option
         When they click the 'Continue' button
         Then they are directed to the 'Variation Single One-Product Enter Variation Code' page
-        And they will see a warning message stating 'Please enter either a variation code/name, or select a common variation'
+        And they will see a warning message stating 'Enter either a variation code/name, or select a common variation'
         And they will not be able to continue

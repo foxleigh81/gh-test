@@ -5,14 +5,14 @@ Feature: User selects products to be varied
         Jira: GS-190
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
         And they select the 'One change to several unrelated products' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Select-Products-2' page
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Select-Product-2' page
 
     @CPL-2005-1
     Scenario: User selects two products and clicks continue
@@ -40,8 +40,14 @@ Feature: User selects products to be varied
         And they will not be able to continue
 
     @CPL-2005-4
-    @TestData::Y
     Scenario: User selects 'Enter details for products not listed' link
         And the user can see a 'Enter details for products not listed' link
         When the user has selected the link 'Enter details for products not listed'
-        Then they are directed to the 'Enter Products 2' page
+        Then they are directed to the 'Variation TypeIA One-Change Multiple-Products Enter-Products-2' page
+
+    @CPL-2005-5
+    Scenario: User removes a product
+        And they can see a table with value 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and a 'Remove' link
+        When they select 'Remove'
+        Then they will be directed back to the 'Variation TypeIA One-Change Multiple-Products Select-Product-2' page
+        And 'Isocare 1000 mg/g Inhalation Vapour, Liquid' will no longer appear in the table

@@ -5,7 +5,7 @@ Feature: User enters application contact information
         Jira: GS-197
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
@@ -26,7 +26,7 @@ Feature: User enters application contact information
         And they are directed to the 'Variation Type IA One-Change Multiple-Products Application-Contact-Details' page
         And the 'contact fullname' text input will error with message 'Please enter a Full name'
         And the 'contact telephone' text input will error with message 'Please enter a valid telephone number'
-        And the 'contact email' text input will error with message 'Please enter a valid email address'
+        And the 'contact email' text input will error with message 'Enter a valid email address'
 
     @CPL-2012B-3
     Scenario: User enters an invalid email format
@@ -35,4 +35,4 @@ Feature: User enters application contact information
         And they enter the text 'test' into the 'contact email' text input
         When they click the 'Continue' button
         And they are directed to the 'Variation Type IA One-Change Multiple-Products Application-Contact-Details' page
-        And the 'contact email' text input will error with message 'Please enter a valid email address'
+        And the 'contact email' text input will error with message 'Enter a valid email address'

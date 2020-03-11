@@ -1,38 +1,70 @@
-Feature: User who has entered a valid code from Data Table IA Only  and a second variation code from Data Table IA Only enters Implementation Date 
+Feature: User enters a second variation code
     Description:
-        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
+        Epic: Procedure F: IB/II - sev ch, 1  prd 
         Reference: FPL-5012
         Jira: GS-517
 
     Background:
-        Given the user has completed the PL-5011 steps
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Group of IB/II changes' option and click continue
+        And they are directed to the 'Variation Type IB/II Procedure-Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
+        And they select the 'IA.Only' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Implementation-Date' page
+        And they enter an implementation date and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Describe-Changes' page
+        And they enter the 'Present' text
+        And they enter the 'Proposed' text and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Second-Variation-Code' page
 
     @FPL-5012-1
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA Only is directed to 'Enter Implementation Date' page 
-        And the user has been directed to the 'Implementation Date' page
-        When page 'Implementation Date' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        Then a page header 'Enter the implementation date'
-        And they will see the mandatory 'Date' text input box
-        And the user will see the 'Additional comments' text area
-        And they will see a save and exit link 
-        And they will see a 'Continue' option
+    Scenario Outline: User enters a valid code in type ahead text field, code's group decides <destination>
+        And they will see a page header 'Choose a second variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
+        When they enter the text '<Code>' into the text input with id 'Variation Code Picker' and click Continue
+        Then they are directed to the '<Destination>' page
+        
+    Examples: 
+        | Code | Common | Destination |
+        | IA.Only | IA.Only.And.Common | Variation Type IB/II Several-Changes One-Product Implementation-Date |
+        | IB.Only | IB.Only.And.Common | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | II.Only |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Num.Variation |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Z.Special |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | IA.IB |  | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
+        | Z.Only | Z.Only.And.Common | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
 
     @FPL-5012-2
-    Scenario: User enters an implementation date
-        And the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have entered a valid 'Date'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+    Scenario Outline: User selects a common code radio option, code's group decides <destination>
+        And they will see a page header 'Choose a variation'
+        And they will see a sub header 'Enter variation code or name'
+        And they will see a sub header 'Select a common variation'
+        When they select the '<Common>' option and click continue
+        Then they are directed to the '<Destination>' page
+        
+    Examples: 
+        | Code | Common | Destination |
+        | IA.Only | IA.Only.And.Common | Variation Type IB/II Several-Changes One-Product Implementation-Date |
+        | IB.Only | IB.Only.And.Common | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | II.Only |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Num.Variation |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | Z.Special |  | Variation Type IB/II Several-Changes One-Product Describe-Changes |
+        | IA.IB |  | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
+        | Z.Only | Z.Only.And.Common | Variation Type IB/II Several-Changes One-Product Select-Variation-Type |
 
     @FPL-5012-3
-    Scenario: User does not enter a valid implementation date
-        And the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have not entered a valid 'Date'
-        When the user has selected 'Continue'
-        Then they will see an error message containing 'Enter implementation date'
+    Scenario: User does not enter a valid code or select a radio button option
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
+        And they will see a warning message stating 'Enter either a variation code, name, or select a common variation'
         And they will not be able to continue
+        When they enter the text 'Z.Only' into the text input with id 'Variation Code Picker' and click Continue
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Implementation-Date' page

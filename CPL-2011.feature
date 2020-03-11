@@ -5,21 +5,21 @@ Feature: User describes proposed changes
         Jira: GS-194
 
     Background:
-        Given a 'Public User' that is authenticated for organisation with reference '10347'
+        Given a 'Public User' is authenticated for organisation with reference '10347'
         And they select 'make application'
         And they select the 'Vary a marketing authorisation' option and click continue
         And they are directed to the 'Variation Select Procedure Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
         And they select the 'One change to several unrelated products' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Select-Products-2' page
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Select-Product-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Enter-Variation-Code' page
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Enter-Variation-Code' page
         And they select the 'IA.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Implementation-Date' page
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Implementation-Date' page
         And they enter an implementation date and click continue
-        And they are directed to the 'Variation Type IA One Change Multiple-Products Describe-Changes' page
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Describe-Changes' page
 
     @CPL-2011-1
     Scenario: User Enters describes proposed changes

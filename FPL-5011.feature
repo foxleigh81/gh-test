@@ -1,59 +1,52 @@
-Feature: User who has entered a valid code from Data Table IA Only  adds another variation
+Feature: User describes proposed changes
     Description:
-        Epic: Procedure F: IB/II/Ext - sev ch, 1  prd 
+        Epic: Procedure F: IB/II - sev ch, 1  prd 
         Reference: FPL-5011
         Jira: GS-516
 
     Background:
-        Given the user has completed the PL-5010 steps
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'make application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select Procedure Type' page
+        And they select the 'Group of IB/II changes' option and click continue
+        And they are directed to the 'Variation Type IB/II Procedure-Options' page
+        And they select the 'Several changes to one product' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
+        And they select the 'IA.Only' option and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Implementation-Date' page
+        And they enter an implementation date and click continue
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Describe-Changes' page
 
     @FPL-5011-1
-    Scenario: User who has entered a valid code from Data Table IA Only is directed to Enter Second Variation Code page
-        And the user has been directed to the 'Enter Second Variation Code' page
-        When page 'Enter Second Variation Code' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Choose a second variation'
-        And a sub header 'Enter variation code or name'
-        And a sub header 'Select a common variation'
-        And the user can see a text input box
-        And they will see 5 radio button option(s)
-        And they will see a 'Continue' option
+    Scenario: User Enters describes proposed changes
+        And they enter the text 'Present' into the 'Present Situation' text area
+        And they enter the text 'Proposed' into the 'Proposed Solution' text area
+        When they click the 'Continue' button
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Second-Variation-Code' page
 
     @FPL-5011-2
-    Scenario: User enters a valid code from Data Table IA Only
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA Only'
-        When they select 'Continue'
-        Then they are directed to the 'Implementation Date' page
+    Scenario: User does not enter text for present situtation or proposed solution
+        When they click the 'Continue' button
+        Then they will see a warning message stating 'Please outline the present situation'
+        And they will see a warning message stating 'Please outline the proposed solution'
+        And they are directed to the 'Variation Type IB/II Several-Changes One-Product Describe-Changes' page
 
     @FPL-5011-3
-    Scenario: User enters a valid code from Data Table IB Only, or II Only, or No Variations, or Z Special
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from '<Group>'
-        When they select 'Continue'
-        Then they are directed to the 'Describe Changes' page
+    Scenario: User does not enter text for present situation
+        And they enter the text 'Proposed' into the 'Proposed Solution' text area
+        When they click the 'Continue' button
+        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Describe-Changes' page
+        And they will see a warning message stating 'Please outline the present situation'
+        And they will not be able to continue
 
     @FPL-5011-4
-    Scenario: User enters a valid code from Data Table IA + IB
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table IA + IB'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 2' page
-
-    @FPL-5011-5
-    Scenario: User enters a valid code from Data Table Z Only
-        And the user can see a text input box
-        And they have entered a valid '<Sub Code>' from 'Data Table Z Only'
-        When they select 'Continue'
-        Then they are directed to the 'Variation Type Page 1' page
-
-    @FPL-5011-6
-    Scenario: User does not enter a valid code or select a radio button option
-        And the user has been directed to the 'Enter Second Variation Code' page
-        And they have not entered a valid 'Code'
-        And they have not selected any 'radio button'
-        When they select 'Continue'
-        Then they will see an error message containing 'Enter a second variation code to continue'
+    Scenario: User does not enter text for proposed solution
+        And they enter the text 'Present' into the 'Present Situation' text area
+        When they click the 'Continue' button
+        Then they are directed to the 'Please outline the proposed solution' page
+        And they will see a warning message stating 'Variation Type IB/II Several-Changes One-Product Describe-Changes'
         And they will not be able to continue
