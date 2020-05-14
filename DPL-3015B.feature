@@ -5,9 +5,9 @@ Feature: User enters application contact information
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they navigate to the 'Variation Type IA Several-Changes One-Product Application-Contact-Details' page
         And they can see a page header 'Enter application contact details'
 
@@ -17,12 +17,12 @@ Feature: User enters application contact information
         And they enter the text '0123456789' into the 'contact telephone' text input
         And they enter the text 'test@test.com' into the 'contact email' text input
         When they click the 'Continue' button
-        And they are directed to the 'Variation Type IA Several-Changes One-Product Finance-Details' page
+        And they will be directed to the 'Variation Type IA Several-Changes One-Product Finance-Details' page
 
     @DPL-3015B-2
     Scenario: User does not complete all mandatory fields
         When they click the 'Continue' button
-        And they are directed to the 'Variation Type IA Several-Changes One-Product Application-Contact-Details' page
+        And they will be directed to the 'Variation Type IA Several-Changes One-Product Application-Contact-Details' page
         And the 'contact fullname' text input will error with message 'Please enter a Full name'
         And the 'contact telephone' text input will error with message 'Please enter a valid telephone number'
         And the 'contact email' text input will error with message 'Enter a valid email address'
@@ -33,5 +33,5 @@ Feature: User enters application contact information
         And they enter the text '0123456789' into the 'contact telephone' text input
         And they enter the text 'test' into the 'contact email' text input
         When they click the 'Continue' button
-        And they are directed to the 'Variation Type IA Several-Changes One-Product Application-Contact-Details' page
+        And they will be directed to the 'Variation Type IA Several-Changes One-Product Application-Contact-Details' page
         And the 'contact email' text input will error with message 'Enter a valid email address'

@@ -6,9 +6,9 @@ Feature: User selects procedure option
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they select the 'Group of IA changes' option and click continue
         And they are directed to the 'Variation Type IA Procedure Options' page
 
@@ -20,4 +20,11 @@ Feature: User selects procedure option
         And they will see a radio button option for 'Several changes to several unrelated products'
         And a 'Continue' button
         When they select the 'One change to several products' option and click continue
-        Then they are directed to the 'Variation Type IA One-Change Multiple-Products Select-Products' page
+        Then they will be directed to the 'Variation Type IA One-Change Multiple-Products Select-Products' page
+
+    @CPL-2003-2
+    Scenario: User does not select procedure option
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Type IA Select-Procedure-Option' page
+        And they will see a warning message stating 'Select a procedure option'
+        And they will not be able to continue

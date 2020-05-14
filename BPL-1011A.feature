@@ -5,11 +5,11 @@ Feature: User answers the Article 5 question
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
+        And they are directed to the 'Variation Single Procedure-Options' page
         And they select the 'One change to several products' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
@@ -31,11 +31,11 @@ Feature: User answers the Article 5 question
         And they will see a radio button option for 'No'
         And a 'Continue' button
         When they select the 'Yes' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Describe-Changes' page
+        Then they will be directed to the 'Variation Single Multiple-Products Describe-Changes' page
 
     @BPL-1011A-2
     Scenario: User does not answer the Article 5 question
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Article-5' page
+        Then they will be directed back to the 'Variation Single Multiple-Products Article-5' page
         And they will see a warning message stating 'Select an option'
         And they will not be able to continue

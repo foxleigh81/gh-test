@@ -6,9 +6,9 @@ Feature: User selects product to be varied
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they select the 'Group of IB/II changes' option and click continue
         And they are directed to the 'Variation Type IB/II Procedure-Options' page
         And they select the 'Several changes to one product' option and click continue
@@ -22,12 +22,12 @@ Feature: User selects product to be varied
         And they will see a radio button option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'
         And a 'Continue' button
         When they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
-        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
+        Then they will be directed to the 'Variation Type IB/II Several-Changes One-Product Enter-Variation-Code' page
 
     @FPL-5005-2
     Scenario: User does not select a product and clicks continue
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
+        Then they will be directed back to the 'Variation Type IB/II Several-Changes One-Product Select-Product-1' page
         And they will see a warning message stating 'You must select a product to be varied'
         And they will not be able to continue
 

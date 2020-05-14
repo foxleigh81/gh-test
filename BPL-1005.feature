@@ -6,48 +6,57 @@ Feature: User selects products to be varied
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
+        And they are directed to the 'Variation Single Procedure-Options' page
         And they select the 'One change to several products' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
 
     @BPL-1005-1
-    Scenario: User selects two products and clicks continue
+    Scenario: User adds a product
         And they will see a page header 'Select product to be varied'
         And they will see a check box option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid'
         And they will see a check box option for 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
         And they will see a check box option for 'Benazecare Flavour 5 mg Tablets for Dogs and Cats'
+        And an 'Add selected products' option
         And a 'Continue' button
-        When they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option 
-        And they select the 'Acecare 2mg/ml Solution for Injection for Dogs and Cats' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Enter-Variation-Code' page
+        And they will see a table with headers 'Products selected' and 'Action'
+        When they select the checkbox option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and click the 'Add selected products' option
+        Then they will be directed back to the 'Variation Single Multiple-Products Select-Product-2' page
+        And they will see a table with value 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and a 'Remove' link
 
     @BPL-1005-2
-    Scenario: User selects one product only and clicks continue
-        And they have not selected at least 2 checkbox options
+    Scenario: User adds two products and clicks continue
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option 
+        And they select the 'Acecare 2mg/ml Solution for Injection for Dogs and Cats' option and click the 'Add selected products' option
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
-        And they will see a warning message stating 'You must select at least two products to be varied'
+        Then they will be directed to the 'Variation Single Multiple-Products Enter-Variation-Code' page
 
     @BPL-1005-3
-    Scenario: User does not select a product and clicks continue
+    Scenario: User adds one product only and clicks continue
+        And they select the checkbox option for 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and click the 'Add selected products' option
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Select-Products' page
-        And they will see a warning message stating 'You must select at least two products to be varied'
-        And they will not be able to continue
+        Then they will be directed back to the 'Variation Single Multiple-Products Select-Product-2' page
+        And they will see a warning message stating 'You must add at least two products to the list before continuing'
 
     @BPL-1005-4
+    Scenario: User does not add a product and clicks continue
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Single Multiple-Products Select-Products' page
+        And they will see a warning message stating 'You must add at least two products to the list before continuing'
+        And they will not be able to continue
+
+    @BPL-1005-5
     Scenario: User selects 'Enter details for products not listed' link
         And the user can see a 'Enter details for products not listed' link
         When the user has selected the link 'Enter details for products not listed'
         Then they are directed to the 'Variation Single Multiple-Products Enter-Products-2' page
 
-    @BPL-1005-5
+    @BPL-1005-6
     Scenario: User removes a product
-        And they can see a table with value 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and a 'Remove' link
-        When they select 'Remove'
-        Then they will be directed back to the 'Variation Single Multiple-Products Select-Product-2' page
-        And 'Isocare 1000 mg/g Inhalation Vapour, Liquid' will no longer appear in the table
+        And they can see a table row with values 'Isocare 1000 mg/g Inhalation Vapour, Liquid' and 'Remove' and a 'Remove' link
+        When they select 'Variation Single Multiple-Products Select-Product-2'
+        Then they will be directed back to the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' page
+        And  and  will no longer appear in the table

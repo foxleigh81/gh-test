@@ -5,11 +5,11 @@ Feature: User selects the variation type
 
     Background:
         Given a 'Public User' is authenticated for organisation with reference '10347'
-        And they select 'make application'
+        And they select 'Start an application'
         And they select the 'Vary a marketing authorisation' option and click continue
-        And they are directed to the 'Variation Select Procedure Type' page
+        And they are directed to the 'Variation Select-Procedure-Type' page
         And they select the 'Single' option and click continue
-        And they are directed to the 'Variation Single Procedure Options' page
+        And they are directed to the 'Variation Single Procedure-Options' page
         And they select the 'One change to several products' option and click continue
         And they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
         And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
@@ -17,92 +17,100 @@ Feature: User selects the variation type
         And they are directed to the 'Variation Single Multiple-Products Enter Variation Code' page
 
     @BPL-1008-1
+    @TestData::IAIB variation type IA
     Scenario: User selects variation type IA, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
         When they select the 'IA' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Implementation Date' page
+        Then they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
 
     @BPL-1008-2
+    @TestData::IAIB variation type IA
     Scenario: User selects variation type IB, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
         When they select the 'IB' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Article 5' page
+        Then they will be directed to the 'Variation Single Multiple-Products Article 5' page
 
     @BPL-1008-3
+    @TestData::IAIB
     Scenario: User doesnt select variation type and clicks continue, having previously selected 'IAIB' group code
         And they select the 'IA.IB.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        Then they will be directed back to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a warning message stating 'Please select a variation type'
         And they will not be able to continue
 
     @BPL-1008-4
+    @TestData::Z Only variation type IA
     Scenario: User selects variation type IA, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
         And a 'Continue' button
         When they select the 'IA' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Implementation Date' page
+        Then they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
 
     @BPL-1008-5
+    @TestData::Z Only variation type IB
     Scenario: User selects variation type IB, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
         And a 'Continue' button
         When they select the 'IB' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Article 5' page
+        Then they will be directed to the 'Variation Single Multiple-Products Article 5' page
 
     @BPL-1008-6
+    @TestData::Z Only variation type II
     Scenario: User selects variation type II, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And they will see a radio button option for 'II'
         And a 'Continue' button
         When they select the 'II' option and click continue
-        Then they are directed to the 'Variation Single Multiple-Products Article 5' page
+        Then they will be directed to the 'Variation Single Multiple-Products Article 5' page
 
     @BPL-1008-7
+    @TestData::Z Only
     Scenario: User doesnt select code and clicks continue, having previously selected 'Z Only' group code
         And they select the 'Z.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page header 'Select variation type'
         And they will see a radio button option for 'IA'
         And they will see a radio button option for 'IB'
         And a 'Continue' button
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        Then they will be directed back to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a warning message stating 'Please select a variation type'
         And they will not be able to continue
 
     @BPL-1008-8
+    @TestData::IA Only
     Scenario: User navigates to page, having previously selected 'IA Only' group code
         And they select the 'IA.Only.And.Common' option and click continue
-        And they are directed to the 'Variation Single Multiple-Products Implementation Date' page
+        And they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
         When they navigate to the 'Variation Single Multiple-Products Select Variation Type' page
         And they will see a page title with the value 'Sorry, there is a problem with the service'

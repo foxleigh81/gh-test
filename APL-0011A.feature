@@ -21,11 +21,11 @@ Feature: User answers the Article 5 question
         And they will see a radio button option for 'No'
         And a 'Continue' button
         When they select the 'Yes' option and click continue
-        Then they are directed to the 'Variation Single One-Product Describe-Changes' page
+        Then they will be directed to the 'Variation Single One-Product Describe-Changes' page
 
     @APL-0011A-2
     Scenario: User does not answer the Article 5 question
         When they click the 'Continue' button
-        Then they are directed to the 'Variation Single One-Product Article-5' page
+        Then they will be directed back to the 'Variation Single One-Product Article-5' page
         And they will see a warning message stating 'Select an option'
         And they will not be able to continue
