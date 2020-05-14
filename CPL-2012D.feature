@@ -1,44 +1,91 @@
-Feature: User who has entered a valid code from Data Table IA Only changes the variation
+Feature: User checks their answers
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2012D
+        Jira: GS-199
 
-    Background: Given the user has completed the PL-2012C steps
-
-    @CPL-2012D
-    Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to 'Confirm Change Variation' page 
-        Given the user has been directed to the 'Confirm Change Variation' page
-        When page 'Confirm Change Variation' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing variation'
-        And a page header 'Are you sure you want to change variation: variation: variation:'
-        And they will see the 'Variation <Sub Code>' displayed 
-        And they will see a radio button option for 'Yes'
-        And they will see a radio button option for 'No'
-        And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
 
     @CPL-2012D-1
-    Scenario: User selects 'Yes' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'Yes'
-        When they select 'Continue'
-        Then they will be directed to the 'Enter Variation Code' page
+    @TestData::IA only
+    Scenario: User checks their answers, having previously selected an 'IA Only' code and completing all sections
+        And they resume the incomplete application where product name contains 'CPL-2012D-1'
+        And they navigate to the 'Variation Type IA One-Change Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Group of IA Changes' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several unrelated products' and a change link leading to 'Variation Type IA Procedure Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Type IA One-Change Multiple-Products Select-Product-2'
+        And they will see an 'Add another product' link
+        And they will see a sub header 'IA Only variation details' with status 'completed'
+        And they will see a 'Variation Type' row with value 'IA'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Type IA One-Change Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will not see a 'IA Only Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Type IA One-Change Multiple-Products Declaration' page
 
     @CPL-2012D-2
-    Scenario: User selects 'No' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'No'
-        When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+    @TestData::Z Only
+    Scenario: User checks their answers, having previously selected an 'Z Only' code and completing all sections
+        And they resume the incomplete application where product name contains 'CPL-2012D-2'
+        And they navigate to the 'Variation Type IA One-Change Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Group of IA Changes' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several unrelated products' and a change link leading to 'Variation Type IA Procedure Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Type IA One-Change Multiple-Products Select-Product-2'
+        And they will see an 'Add another product' link
+        And they will see a sub header 'Z Only variation details' with status 'completed'
+        And they will see a 'Variation Type' row with value 'IA'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Type IA One-Change Multiple-Products Implementation-Date'
+        And they will see a 'Article 5' row with value 'Yes' and a change link leading to 'Variation Single Multiple-Products Article 5'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Type IA One-Change Multiple-Products Declaration' page
 
     @CPL-2012D-3
-    Scenario: User does not select an option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And they have not selected any 'Radio Button'
-        When they select 'Continue'
-        Then they will see an error message containing 'Select an option'
+    @TestData::IA only
+    Scenario: User checks thier answers having not completed all sections
+        And they resume the incomplete application where product name contains 'CPL-2012D-3'
+        And they navigate to the 'Variation Type IA One-Change Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Group of IA Changes' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several unrelated products' and a change link leading to 'Variation Type IA Procedure Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Type IA One-Change Multiple-Products Select-Product-2'
+        And they will see an 'Add another product' link
+        And they will see a sub header 'IA Only variation details' with status 'completed'
+        And they will see a 'Variation Type' row with value 'IA'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Type IA One-Change Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Type IA One-Change Multiple-Products Describe-Changes'
+        And they will not see a 'IA Only Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'Incomplete' and a change link leading to 'Variation Type IA One-Change Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Type IA One-Change Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Type IA One-Change Multiple-Products Check-Your-Answers' page
+        And they will see a warning message stating 'You must complete all sections to continue'
         And they will not be able to continue
+
+    @CPL-2012D-4
+    @TestData::IA only
+    Scenario: User replaces the variation
+        And they resume the incomplete application where product name contains 'CPL-2012D-4'
+        And they navigate to the 'Variation Type IA One-Change Multiple-Products Check-Your-Answers' page
+        And they can see a 'Code' row with value 'IA.Only' and a replace link 
+        When they select the 'Replace' link for 'IA.Only'
+        Then they will be directed to the 'Variation Type IA One-Change Multiple-Products Enter-Variation-Code' page

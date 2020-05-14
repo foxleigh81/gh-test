@@ -1,77 +1,66 @@
-Feature: User enters products which do not appear in the list on the Select product 2 page
+Feature: User enters a product which does not appear in the list on the Select product page
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2005A
+        Jira: GS-191
 
-    Background: Given the user has completed the PL-2005 steps
-
-    @CPL-2005A
-    Scenario: User is directed to the Enter Products 2 page
-        Given the user has been directed to the 'Enter Products 2' page
-        When page ' Enter Products 2' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Enter products to be varied'
-        And they will see the mandatory 'Enter product name' text input box
-        And they will see the mandatory 'Enter authorisation number' text input box
-        And a table with headers 'Product name', 'Authorisation number' and 'Action'
-        And they will see a 'Add this product' option
-        And they will see a 'Continue' option
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'Start an application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select-Procedure-Type' page
+        And they select the 'Group of IA changes' option and click continue
+        And they are directed to the 'Variation Type IA Procedure Options' page
+        And they select the 'One change to several unrelated products' option and click continue
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Select-Product-2' page
+        And they select the 'Enter details for products not listed' link
+        And they are directed to the 'Variation Type IA One-Change Multiple-Products Enter-Products-2' page
 
     @CPL-2005A-1
-    @TestData::KetaminePlus
-    Scenario: User who has previously selected a product, is directed to the Enter Products 2 page
-        Given the user has been directed to the 'Enter Products 2' page
-        And they have selected a product on the 'Product 2' page
-        When page 'Enter Products 2' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Enter products to be varied'
-        And they will see the mandatory 'Enter product name' text input box
-        And they will see the mandatory 'Enter authorisation number' text input box
-        And a table with headers 'Product name', 'Authorisation number' and 'Action'
-        And a table with a row with values 'Ketamine Surprise' and '12345/1234' and a remove link
-        And they will see a 'Add this product' option
-        And they will see a 'Continue' option
+    Scenario: User adds a product 
+        And they will see a page header 'Enter products to be varied'
+        And they will see the mandatory 'Enter the name of the product' text input box
+        And they will see the mandatory 'Enter the products UK authorisation number' text input box
+        And a table with headers 'Products selected' and 'Action'
+        And they will see an 'Add product' option
+        And a 'Continue' button
+        And they have entered 'a product name'
+        And they have entered 'an authorisation number'
+        When they select the 'Add product' option
+        Then they will be directed back to the 'Variation Type IA One-Change Multiple-Products Enter-Products-2' page
+        And they will see a table row with values 'Product name' and 'Authorisation number' and a 'Remove' link
 
     @CPL-2005A-2
-    @TestData::KetaminePlus
-    Scenario: User enters product name and authorisation number
-        Given the user has been directed to the 'Enter Products 2' page
-        And they have entered a valid 'product name'
-        And they have entered a valid 'authorisation number'
-        When they select the 'Add this product' option
-        Then they will be directed back to the Enter products 2' page
-        And a table with a row with values 'Ketamine Surprise' and '12345/1234' and a remove link
+    Scenario: User adds two products and clicks cntinue
+        And they have added at least two 'Products'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Type IA One-Change Multiple-Products Enter-Variation-Code' page
 
     @CPL-2005A-3
-    Scenario: User adds at least two products
-        Given the user is on the 'Enter Products 2' page
-        And there are at least 2 'products' in the table
-        When they select 'Continue'
-        Then they will be directed to the 'Enter Variation Code' page
+    Scenario: User adds one product only and clicks continue
+        And they have added a 'Product'
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Type IA One-Change Multiple-Products Enter-Products-2' page
+        And they will see a warning message stating 'You must add at least two products to the list before continuing'
+        And they will not be able to continue
 
     @CPL-2005A-4
-    Scenario: User enters either product name or authorisation number
-        Given the user has been directed to the 'Enter Products 2' page
-        And one or more mandatory fields are empty
-        When they select 'Add this product'
-        Then they will see an error message containing 'You must enter product name and authorisation number'
+    Scenario: User enters either product name only and selects 'Add selected products'
+        And they have entered 'product name'
+        When they select 'Add selected products'
+        Then they will see an error message containing 'You must complete both fields'
         And they will not be able to continue
 
     @CPL-2005A-5
-    Scenario: User who has not previously selected a product, enters one product only
-        Given the user has been directed to the 'Enter Products 2' page
-        And they have not selected a product on the 'Product 2' page
-        And they have not added at least 2 products on the 'Enter Products 2' page
+    Scenario: User enters either product name only and selects 'Continue'
+        And they have entered 'product name'
         When they select 'Continue'
-        Then they will see an error message containing 'You must add at least two products'
+        Then they will see an error message containing 'You must add at least two products to the list before continuing'
         And they will not be able to continue
 
     @CPL-2005A-6
     Scenario: User removes a product
-        Given they can see a 'Remove' link
+        And they can see a table row with values 'Product name' and 'Authorisation number' and a 'Remove' link
         When they select 'Remove'
-        Then they will be directed back to the 'Enter Products 2' page
-        And the 'product' will no longer appear in the table
+        Then they will be directed back to the 'Variation Type IA One-Change Multiple-Products Enter-Products-2' page
+        And 'Product name' and 'Authorisation number' will no longer appear in the table

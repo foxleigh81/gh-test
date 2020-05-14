@@ -1,33 +1,36 @@
-Feature: User who has entered a valid code from Data Table IA Only and a second variation code from Data Table IA + IB enters Implementation Date 
+Feature: User confirms supporting documents
     Description:
+        Epic: Procedure E:  IA changes - sev ch, sev unr prds 
         Reference: EPL-4015
+        Jira: GS-257
 
-    Background: Given the user has completed the PL-4011 steps
-
-    @EPL-4015
-    Scenario: User who has entered a valid code from Data Table IA Only and a second variation  code from Data Table IA + IB is directed to 'Enter Implementation Date' page 
-        Given the user has been directed to the 'Implementation Date' page
-        When page 'Implementation Date' loads
-        Then a page header 'Enter the implementation date'
-        And the user will see the 'Date' text input box
-        And the user will see the 'Month' text input box
-        And the user will see the 'Year' text input box
-        And the user will see the 'Additional comments' text area
-        And they will see a 'Continue' option
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'Start an application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select-Procedure-Type' page
+        And they navigate to the 'Variation Type IA Several-Changes Multiple-Products Supporting-Documents' page
 
     @EPL-4015-1
-    Scenario: User enters an implementation date
-        Given the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have entered a valid 'Date'
-        When they select 'Continue'
-        Then they will be directed to the 'Describe Changes' page
+    Scenario: User ticks all check boxes
+        And they tick the box for 'Label/ Package leaflet text (QRD).'
+        And they tick the box for 'Summary of the product characteristics (SPC), if applicable.'
+        And they tick the box for 'Mock-Ups, if applicable.'
+        And they tick the box for 'Copy of the relevant page(s)'
+        When they click the 'Continue' button
+        And they will be directed to the 'VariationType IA Several-Changes Multiple-Products Upload-Dossier' page
 
     @EPL-4015-2
-    Scenario: User does not enter a valid implementation date
-        Given the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have not entered a valid 'Date'
-        When the user has selected 'Continue'
-        Then they will see an error message containing 'Enter implementation date'
+    Scenario: User ticks one check boxes, and enters reason for omission
+        And they tick the box for 'Copy of the relevant page(s)'
+        And they enter the text 'will submit later' into the 'omitted documents' text area
+        When they click the 'Continue' button
+        And they will be directed to the 'Variation Type IA Several-Changes Multiple-Products Upload-Dossier' page
+
+    @EPL-4015-3
+    Scenario: User ticks one check box, and does not enter reason for omission
+        And they tick the box for 'Copy of the relevant page(s)'
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Type IA Several-Changes Multiple-Products Supporting-Documents' page
+        And they will see a warning message stating 'Give a reason for omitting supporting documents'
         And they will not be able to continue

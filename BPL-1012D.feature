@@ -1,44 +1,187 @@
-Feature: User who has entered a valid code from Data Table IA Only changes the variation
+Feature: User checks their answers
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1012D
+        Jira: GS-105
 
-    Background: Given the user has completed the PL-1012C steps
-
-    @BPL-1012D
-    Scenario Outline: User who has entered a valid code from Data Table IA Only is directed to 'Confirm Change Variation' page 
-        Given the user has been directed to the 'Confirm Change Variation' page
-        When page 'Confirm Change Variation' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing variation'
-        And a page header 'Are you sure you want to change variation: variation: variation:'
-        And they will see the 'Variation <Sub Code>' displayed 
-        And they will see a radio button option for 'Yes'
-        And they will see a radio button option for 'No'
-        And they will see a 'Continue' option
-        
-    Examples: 
-        | Sub Code | Description | Page |
-        | C.II.6(a) | Administrative information concerning the holder's representative | Implementation Date |
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
 
     @BPL-1012D-1
-    Scenario: User selects 'Yes' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'Yes'
-        When they select 'Continue'
-        Then they will be directed to the 'Enter Variation Code' page
+    @TestData::TDG-Variation-IB-Only-And-Common-Draft-Ready-For-Submission
+    Scenario: User checks their answers, having previously selected an 'IB Only And Common' code and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-1'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'IB Only And Common variation details' with status 'completed'
+        And they will see a 'IB Only And Common Variation Code' row with value 'IB.Only.And.Common' and a replace link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IB'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'IB Only And Common Variation Implementation' row
+        And they will not see a 'IB Only And Common Variation Article 5' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
 
     @BPL-1012D-2
-    Scenario: User selects 'No' option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And the user has selected 'No'
-        When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+    @TestData::IAIB  IA variation type
+    Scenario: User checks their answers, having previously selected an 'IAIB' code and 'IA' variation type, and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-2'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'IAIB variation details' with status 'completed'
+        And they will see a 'IAIB Variation Code' row with value 'IA.IB' and a replace link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single One-Product Select-Variation-Type'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'IAIB Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
 
     @BPL-1012D-3
-    Scenario: User does not select an option
-        Given the user has been directed to the 'Confirm Change Variation' page
-        And they have not selected any 'Radio Button'
-        When they select 'Continue'
-        Then they will see an error message containing 'Select an option'
+    @TestData::IAIB  IB variation type
+    Scenario: User checks their answers, having previously selected an 'IAIB' code and 'IB' variation type, and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-3'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'IAIB variation details' with status 'completed'
+        And they will see a 'IAIB Variation Code' row with value 'IA.IB' and a replace link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single One-Product Select-Variation-Type'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'IAIB Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
+
+    @BPL-1012D-4
+    @TestData::Z Only  IA variation type
+    Scenario: User checks their answers, having previously selected a 'Z Only' code and 'IA' variation type, and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-4'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'Z Only And Common variation details' with status 'completed'
+        And they will see a 'Z Only And Common Variation Code' row with value 'Z.Only.And.Common' and a replace link leading to 'Variation Single Multiple-Products Confirm-Change-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IA' and a change link leading to 'Variation Single Multiple-Products Select-Variation-Type'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
+        And they will see a 'Article 5' row with value 'Yes' and a change link leading to 'Variation Single Multiple-Products Article 5'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
+
+    @BPL-1012D-5
+    @TestData::Z Only  IB variation type
+    Scenario: User checks their answers, having previously selected 'Z Only' and 'IB' variation type, and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-5'
+        And they navigate to the 'Variation Single Multiple-Products Check Your Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'Z Only And Common variation details' with status 'completed'
+        And they will see a 'Z Only And Common Variation Code' row with value 'Z.Only.And.Common' and a replace link leading to 'Variation Single Multiple-Products Confirm-Change-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IB' and a change link leading to 'Variation Single Multiple-Products Select-Variation-Type'
+        And they will see a 'Article 5' row with value 'Yes' and a change link leading to 'Variation Single Multiple-Products Article 5'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'Z Only And Common Variation Implementation-Date' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
+
+    @BPL-1012D-6
+    @TestData::IA only
+    Scenario: User checks their answers, having previously selected an 'IA Only' code and completing all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-6'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'IA Only variation details' with status 'completed'
+        And they will see a 'IA Only Variation Code' row with value 'IA.Only' and a replace link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IA'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'IA Only Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Declaration' page
+
+    @BPL-1012D-7
+    @TestData::IA only
+    Scenario: User checks thier answers having not completed all sections
+        And they resume the incomplete application where product name contains 'BPL-1012D-7'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a page header 'Check your answers before submitting'
+        And they will see a section header 'Product Details' with status 'completed'
+        And they will see a 'Procedure Type' row with value 'Single' and a change link leading to 'Variation Select-Procedure-Type'
+        And they will see a 'Procedure Option' row with value 'One change to several products' and a change link leading to 'Variation Single Multiple-Products Procedure-Options'
+        And they will see a 'Product(s)' row with value 'Selected product' and a change link leading to 'Variation Single Multiple-Products Select-Product-2'
+        And they will see a sub header 'IA Only variation details' with status 'completed'
+        And they will see a 'IA Only Variation Code' row with value 'IA.Only' and a replace link leading to 'Variation Single Multiple-Products Confirm-Remove-Variation-Code'
+        And they will see a 'Variation Type' row with value 'IA'
+        And they will see a 'Implementation Date' row with value '21/11/2020' and a change link leading to 'Variation Single Multiple-Products Implementation-Date'
+        And they will see a 'Present' row with value 'Present Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will see a 'Proposed' row with value 'Proposed Text' and a change link leading to 'Variation Single Multiple-Products Describe-Changes'
+        And they will not see a 'IA Only Variation Article-5' row
+        And they will see a section header 'Supporting Documents' with status 'Incomplete' and a change link leading to 'Variation Single Multiple-Products Supporting-Documents'
+        And they will see a section header 'Uploaded Files' with status 'Completed' and a change link leading to 'Variation Single Multiple-Products Upload-Dossier'
+        And they will see a section header 'Contact Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Application-Contact-Details'
+        And they will see a section header 'Finance Details' with status 'completed' and a change link leading to 'Variation Single Multiple-Products Finance-Details'
+        When they click the 'Continue' button
+        Then they will be directed back to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they will see a warning message stating 'You must complete all sections to continue'
         And they will not be able to continue
+
+    @BPL-1012D-8
+    @TestData::IA only
+    Scenario: User replaces the variation
+        And they resume the incomplete application where product name contains 'BPL-1012D-8'
+        And they navigate to the 'Variation Single Multiple-Products Check-Your-Answers' page
+        And they can see a 'Code' row with value 'IA.Only' and a replace link 
+        When they select the 'Replace' link for 'IA.Only'
+        Then they will be directed to the 'Variation Single Multiple-Products Enter-Variation-Code' page

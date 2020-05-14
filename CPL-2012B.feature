@@ -1,39 +1,38 @@
-Feature: User who has entered a valid code from Data Table IA Only enters application contact information
+Feature: User enters application contact information
     Description:
+        Epic: Procedure C:  IA changes - 1 ch, sev un prds 
         Reference: CPL-2012B
+        Jira: GS-197
 
-    Background: Given the user has completed the PL-2012A steps
-
-    @CPL-2012B
-    Scenario: User is directed to the 'Application Contact Information' page
-        Given the user has been directed to the 'Application Contact Information' page
-        When page 'Application Contact Information' loads
-        Then they will see a 'Back' link
-        And a 'Sign out' link
-        And a sub header 'Vary a marketing authorisation'
-        And a page header 'Application contact information'
-        And the user will see the 'Application contact name' text input box
-        And they will see Text 'The person that the VMD will liase with during the application process'
-        And the user will see the 'Application contact email' text input box
-        And the user will see the 'Application contact number' text input box
-        And the user will see the 'Purchase order number (optional)' text input box
-        And they will see Text 'This number will appear on your invoice'
-        And the user will see the 'Invoice email address' text input box
-        And the user will see the 'Further comments (optional)' text area
-        And they will see a save and exit link 
-        And they will see a 'Continue' option
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'Start an application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select-Procedure-Type' page
+        And they navigate to the 'Variation Type IA One-Change Multiple-Products Application-Contact-Details' page
+        And a page header 'Enter application contact details'
 
     @CPL-2012B-1
     Scenario: User completes all mandatory fields
-        Given the user has been directed to the 'Application Contact Information' page
-        And there is a non-empty string in all mandatory fields
-        When they select 'Continue'
-        Then they will be directed to the 'Check Your Answers' page
+        And they enter the text 'John Doe' into the 'contact fullname' text input
+        And they enter the text '0123456789' into the 'contact telephone' text input
+        And they enter the text 'test@test.com' into the 'contact email' text input
+        When they click the 'Continue' button
+        And they will be directed to the 'Variation Type IA One-Change Multiple-Products Finance-Details' page
 
     @CPL-2012B-2
     Scenario: User does not complete all mandatory fields
-        Given the user has been directed to the 'Application Contact Information' page
-        And one or more mandatory fields are empty
-        When they select 'Continue'
-        Then they will see an error message containing 'Complete all mandatory fields to continue'
-        And they will not be able to continue
+        When they click the 'Continue' button
+        And they will be directed to the 'Variation Type IA One-Change Multiple-Products Application-Contact-Details' page
+        And the 'contact fullname' text input will error with message 'Please enter a Full name'
+        And the 'contact telephone' text input will error with message 'Please enter a valid telephone number'
+        And the 'contact email' text input will error with message 'Enter a valid email address'
+
+    @CPL-2012B-3
+    Scenario: User enters an invalid email format
+        And they enter the text 'John Doe' into the 'contact fullname' text input
+        And they enter the text '0123456789' into the 'contact telephone' text input
+        And they enter the text 'test' into the 'contact email' text input
+        When they click the 'Continue' button
+        And they will be directed to the 'Variation Type IA One-Change Multiple-Products Application-Contact-Details' page
+        And the 'contact email' text input will error with message 'Enter a valid email address'

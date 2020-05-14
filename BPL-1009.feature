@@ -1,33 +1,65 @@
-Feature: User who has entered a valid code from Data Table IA Only enters Implementation Date 
+Feature: User enters Implementation Date 
     Description:
+        Epic: Procedure B: Single Change, Several Products
         Reference: BPL-1009
+        Jira: GS-99
 
-    Background: Given the user has completed the PL-1007 steps
-
-    @BPL-1009
-    Scenario: Use who has entered a valid code from Data Table IA Only is directed to 'Enter Implementation Date' page 
-        Given the user has been directed to the 'Implementation Date' page
-        When page 'Implementation Date' loads
-        Then a page header 'Enter the implementation date'
-        And the user will see the 'Date' text input box
-        And the user will see the 'Month' text input box
-        And the user will see the 'Year' text input box
-        And the user will see the 'Additional comments' text area
-        And they will see a 'Continue' option
+    Background:
+        Given a 'Public User' is authenticated for organisation with reference '10347'
+        And they select 'Start an application'
+        And they select the 'Vary a marketing authorisation' option and click continue
+        And they are directed to the 'Variation Select-Procedure-Type' page
+        And they select the 'Single' option and click continue
+        And they are directed to the 'Variation Single Procedure-Options' page
+        And they select the 'One change to several products' option and click continue
+        And they are directed to the 'Variation Single Multiple-Products Select-Product-2' page
+        And they select 'Acecare 2mg/ml Solution for Injection for Dogs and Cats'
+        And they select the 'Isocare 1000 mg/g Inhalation Vapour, Liquid' option and click continue
+        And they are directed to the 'Variation Single Multiple-Products Enter Variation Code' page
 
     @BPL-1009-1
-    Scenario: User enters an implementation date
-        Given the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have entered a valid 'Date'
-        When they select 'Continue'
-        Then they will be directed to the 'Describe Changes' page
+    Scenario: User enters an implementation date, having previously selected 'IA Only' group code
+        And they select the 'IA.Only.And.Common' option and click continue
+        And they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
+        When they enter the number '21' into the 'implementation date day' number input
+        And they enter the number '11' into the 'implementation date month' number input
+        And they enter the number '2020' into the 'implementation date year' number input
+        And they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Describe Changes' page
 
     @BPL-1009-2
-    Scenario: User does not enter a valid implementation date
-        Given the user has been directed to the 'Implementation Date' page
-        And they can see the 'Date' text input box
-        And they have not entered a valid 'Date'
-        When the user has selected 'Continue'
-        Then they will see an error message containing 'Enter implementation date'
-        And they will not be able to continue
+    Scenario: User enters an implementation date, having previously selected 'Z Only' group code
+        And they select the 'Z.Only.And.Common' option and click continue
+        And they will be directed to the 'Variation Single Multiple-Products Select Variation Type' page
+        And they select the 'IA' option and click continue
+        And they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
+        And they will see a page header 'Enter the implementation date'
+        And they will see a caption 'For example: 31 3 2019'
+        When they enter the number '21' into the 'implementation date day' number input
+        And they enter the number '11' into the 'implementation date month' number input
+        And they enter the number '2020' into the 'implementation date year' number input
+        And they click the 'Continue' button
+        Then they will be directed to the 'Variation Single Multiple-Products Article 5' page
+
+    @BPL-1009-3
+    Scenario Outline: User enters an invalid dates
+        And they select the 'IA.Only.And.Common' option and click continue
+        And they will be directed to the 'Variation Single Multiple-Products Implementation Date' page
+        When they enter the number '<Day>' into the 'implementation date day' number input
+        And they enter the number '<Month>' into the 'implementation date month' number input
+        And they enter the number '<Year>' into the 'implementation date year' number input
+        And they click the 'Continue' button
+        Then they will see an error message stating '<Error>'
+        
+    Examples: 
+        | Day | Month | Year | Error |
+        | 33 | 9  | 2019 | Enter a real Implementation date |
+        |    | 9  | 2019 | Implementation date must include a day  |
+        | 21 |    | 2019 | Implementation date must include a month |
+        | 21 | 9  |      | Implementation date must include a year |
+        |    |    | 2019 | Implementation date must include a day and month |
+        |    | 9  |      | Implementation date must include a day and year |
+        | 21 |    |      | Implementation date must include a month and year |
+        |    |    |      | Implementation date must include a day, month and year |
