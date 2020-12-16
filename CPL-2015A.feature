@@ -1,4 +1,4 @@
-Feature: User who has entered a valid code from Data Table Z Only, and has selected IA variation type, answers the Article 5 question
+Feature: User who has entered a valid code from Data Table Z Only answers the Article 5 question
     Description:
         Reference: CPL-2015A
 
