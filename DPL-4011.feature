@@ -1,11 +1,11 @@
-Feature: User who has entered a valid code from Data Table IA Only or IA + IB adds another variation
+Feature: User who has entered a valid code from Data Table IA Only  adds another variation
     Description:
         Reference: DPL-4011
 
     Background: Given the user has completed the PL-4010 steps
 
     @DPL-4011
-    Scenario: User who has entered a valid code from Data Table IA Only or IA + IB directed to Enter Second Variation Code page
+    Scenario: User who has entered a valid code from Data Table IA Only is directed to Enter Second Variation Code page
         Given the user has been directed to the 'Enter Second Variation Code' page
         When page 'Enter Second Variation Code' loads
         Then they will see a 'Back' link
