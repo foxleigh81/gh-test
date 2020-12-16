@@ -8,7 +8,7 @@ Feature: User who has entered a valid code from Data Table IB Only checks, and i
     @APL-0013D
     Scenario Outline: User who has entered a valid code from Data Table IB Only is directed to 'Check your answers' page 
         Given the user has been directed to the 'Check Your Answers' page
-        And they have entered a variation code from Data Table 'Data Table IB Only'
+        And they have entered a variation code from Data Table 'IB Only'
         When page 'Check Your Answers' loads
         Then they will see a 'Back' link
         And a 'Sign out' link
